@@ -48,7 +48,7 @@
     <Attribute id="ent2#att19" name="caixa" type="string"/>
     <Attribute id="ent2#att28" name="tipo" type="string"/>
   </Entity>
-  <Entity gr:x="110" gr:y="300" id="ent3" name="Encomenda" duration="persistent" attributeOrder="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33">
+  <Entity gr:x="110" gr:y="330" id="ent3" name="Encomenda" duration="persistent" attributeOrder="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer"/>
     <Attribute id="ent3#att30" name="serie" type="integer"/>
     <Attribute id="ent3#att31" name="numSerie" type="integer"/>
@@ -98,7 +98,8 @@
     <RelationshipRole1 id="rel8#role15" name="UserToOr&#231;amento" maxCard="1"/>
     <RelationshipRole2 id="rel8#role16" name="Or&#231;amentoToUser" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="50" gr:y="80" id="ent7" name="Cliente" duration="persistent" attributeOrder="ent7#att2 ent7#att3 ent7#att4 ent7#att5 ent7#att6 ent7#att35">
+  <Entity gr:x="50" gr:y="80" id="ent7" name="Cliente" duration="persistent" attributeOrder="ent7#att1 ent7#att2 ent7#att3 ent7#att4 ent7#att5 ent7#att6 ent7#att35">
+    <Attribute id="ent7#att1" key="true" name="oid" type="integer"/>
     <Attribute id="ent7#att2" name="nomeCompleto" type="string"/>
     <Attribute id="ent7#att3" name="telefone" type="string"/>
     <Attribute id="ent7#att4" name="dataNascimento" type="date"/>

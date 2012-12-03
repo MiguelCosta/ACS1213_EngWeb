@@ -1,15 +1,15 @@
 <DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="335" gr:y="85" gr:hideAttributes="false" attributeOrder="userOID userName password email">
+  <Entity id="User" name="User" duration="persistent" gr:x="20" gr:y="10" gr:hideAttributes="false" attributeOrder="userOID userName password email">
     <Attribute name="oid" id="userOID" type="integer" key="true"/>
     <Attribute name="userName" id="userName" type="string"/>
     <Attribute name="password" id="password" type="password"/>
     <Attribute name="email" id="email" type="string"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="565" gr:y="85" gr:hideAttributes="false" attributeOrder="groupOID groupName">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="250" gr:y="10" gr:hideAttributes="false" attributeOrder="groupOID groupName">
     <Attribute name="oid" id="groupOID" type="integer" key="true"/>
     <Attribute name="groupName" id="groupName" type="string"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="795" gr:y="85" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="480" gr:y="10" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
     <Attribute name="oid" id="moduleOID" type="integer" key="true"/>
     <Attribute name="moduleID" id="moduleID" type="string"/>
     <Attribute name="moduleName" id="moduleName" type="string"/>
@@ -30,14 +30,14 @@
     <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
     <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="570" gr:y="200" id="ent1" name="Or&#231;amento" duration="persistent" attributeOrder="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27">
+  <Entity gr:x="580" gr:y="250" id="ent1" name="Or&#231;amento" duration="persistent" attributeOrder="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27">
     <Attribute id="ent1#att7" key="true" name="oid" type="integer"/>
     <Attribute id="ent1#att24" name="serie" type="integer"/>
     <Attribute id="ent1#att25" name="numSerie" type="integer"/>
     <Attribute id="ent1#att26" name="data" type="date"/>
     <Attribute id="ent1#att27" name="anexos" type="string"/>
   </Entity>
-  <Entity gr:x="340" gr:y="370" id="ent2" name="Produto" duration="persistent" attributeOrder="ent2#att8 ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19">
+  <Entity gr:x="270" gr:y="240" id="ent2" name="Produto" duration="persistent" attributeOrder="ent2#att8 ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19">
     <Attribute id="ent2#att8" key="true" name="oid" type="integer"/>
     <Attribute id="ent2#att13" name="nome" type="string"/>
     <Attribute id="ent2#att14" name="cor" type="string"/>
@@ -48,25 +48,25 @@
     <Attribute id="ent2#att19" name="caixa" type="string"/>
     <Attribute id="ent2#att28" name="tipo" type="string"/>
   </Entity>
-  <Entity gr:x="110" gr:y="300" id="ent3" name="Encomenda" duration="persistent" attributeOrder="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33">
+  <Entity gr:x="50" gr:y="240" id="ent3" name="Encomenda" duration="persistent" attributeOrder="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer"/>
     <Attribute id="ent3#att30" name="serie" type="integer"/>
     <Attribute id="ent3#att31" name="numSerie" type="integer"/>
     <Attribute id="ent3#att32" name="data" type="date"/>
     <Attribute id="ent3#att33" name="anexos" type="string"/>
   </Entity>
-  <Entity gr:x="570" gr:y="430" id="ent4" name="Promo&#231;&#227;o" duration="persistent" attributeOrder="ent4#att10 ent4#att20 ent4#att21 ent4#att22 ent4#att23">
+  <Entity gr:x="300" gr:y="540" id="ent4" name="Promo&#231;&#227;o" duration="persistent" attributeOrder="ent4#att10 ent4#att20 ent4#att21 ent4#att22 ent4#att23">
     <Attribute id="ent4#att10" key="true" name="oid" type="integer"/>
     <Attribute id="ent4#att20" name="nome" type="string"/>
     <Attribute id="ent4#att21" name="descricao" type="string"/>
     <Attribute id="ent4#att22" name="dataInicial" type="date"/>
     <Attribute id="ent4#att23" name="dataFinal" type="date"/>
   </Entity>
-  <Entity gr:x="110" gr:y="530" id="ent5" name="Encomenda Linha" duration="persistent" attributeOrder="ent5#att11 ent5#att34">
+  <Entity gr:x="50" gr:y="460" id="ent5" name="Encomenda Linha" duration="persistent" attributeOrder="ent5#att11 ent5#att34">
     <Attribute id="ent5#att11" key="true" name="oid" type="integer"/>
     <Attribute id="ent5#att34" name="descricao" type="string"/>
   </Entity>
-  <Entity gr:x="350" gr:y="240" id="ent6" name="Or&#231;amento Linha" duration="persistent" attributeOrder="ent6#att12 ent6#att29">
+  <Entity gr:x="590" gr:y="470" id="ent6" name="Or&#231;amento Linha" duration="persistent" attributeOrder="ent6#att12 ent6#att29">
     <Attribute id="ent6#att12" key="true" name="oid" type="integer"/>
     <Attribute id="ent6#att29" name="descricao" type="string"/>
   </Entity>
@@ -98,13 +98,4 @@
     <RelationshipRole1 id="rel8#role15" name="UserToOr&#231;amento" maxCard="1"/>
     <RelationshipRole2 id="rel8#role16" name="Or&#231;amentoToUser" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="50" gr:y="80" id="ent7" name="Cliente" duration="persistent" attributeOrder="ent7#att2 ent7#att3 ent7#att4 ent7#att5 ent7#att6 ent7#att35">
-    <Attribute id="ent7#att2" name="nomeCompleto" type="string"/>
-    <Attribute id="ent7#att3" name="telefone" type="string"/>
-    <Attribute id="ent7#att4" name="dataNascimento" type="date"/>
-    <Attribute id="ent7#att5" name="particular" type="boolean"/>
-    <Attribute id="ent7#att6" name="empresa" type="string"/>
-    <Attribute id="ent7#att35" name="contacto" type="string"/>
-    <Generalization superEntity="User"/>
-  </Entity>
 </DataModel>

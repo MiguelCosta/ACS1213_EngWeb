@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="40" version="2.0">
+<workbench progressCount="45" version="2.0">
 <workbenchAdvisor/>
 <window height="775" maximized="true" width="1196" x="27" y="25">
 <fastViewData fastViewLocation="1024"/>
@@ -34,7 +34,7 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" partName="Vidriluz" path="/Users/miltonnunes52/ACS1213_EngWeb/Documentacao/Vidriluz/Model.wr" title="Vidriluz" tooltip="Vidriluz/Model.wr" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" partName="Vidriluz" path="/Users/hugofrade/Documents/Universidade/ACS/GIT_EngWeb/Documentacao/Vidriluz/Model.wr" title="Vidriluz" tooltip="Vidriluz/Model.wr" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Vidriluz/Model.wr"/>
 </editor>
 </editors>
@@ -204,10 +204,15 @@
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="com.webratio.ide.ui.views.WRAerialView"/>
-<view id="com.webratio.ide.ui.grid.views.GridView"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="com.webratio.ide.ui.views.GenerationErrorsView"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="com.webratio.ide.ui.grid.views.GridView" style="0">
+<fastViews>
+<view id="com.webratio.ide.ui.grid.views.GridView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="com.webratio.ide.ui.views.GenerationErrorsView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
@@ -231,17 +236,13 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="254" ratioRight="762" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.24982505" ratioLeft="357" ratioRight="1072" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.6998536" ratioLeft="478" ratioRight="205" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.webratio.ide.ui.grid.views.GridView" appearance="2" expanded="2">
-<page content="com.webratio.ide.ui.grid.views.GridView" label="Grid"/>
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="com.webratio.ide.ui.views.GenerationErrorsView" label="Generation Errors"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<folder appearance="2" expanded="2">
+<page content="com.webratio.ide.ui.grid.views.GridView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="com.webratio.ide.ui.views.GenerationErrorsView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="leftBottom" ratio="0.5988287" ratioLeft="409" ratioRight="274" relationship="4" relative="left">
@@ -263,7 +264,156 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" path="/Vidriluz/Model.wr"/>
 </editors>
-<item active="true" historyLabel="Vidriluz" index="0"/>
+<item historyLabel="Vidriluz &gt; dataNascimento" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent7#att4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Informação Cliente_User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;rel3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Informação Cliente_User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;rel3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Informação Cliente_User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;rel3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Informação Cliente_User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;rel3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent7&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6#att12&apos;)$id(&apos;ent6#att29&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento Linha" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento Linha" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Produto" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent2&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Encomenda" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; oid" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent5#att11&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Encomenda Linha" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Encomenda" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Encomenda Linha" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Produto" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent2&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento Linha" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento Linha" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Promoção" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Produto" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent2&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Orçamento Linha" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Promoção" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent4&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; package1" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;pkg1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; package1" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;pkg1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; package2" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;pkg2&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; oid" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent7#att1&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Encomenda" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; oid" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3#att9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;userOID&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent7#att3&apos;)$id(&apos;ent2#att13&apos;)$id(&apos;User&apos;)$id(&apos;ent6#att29&apos;)$id(&apos;moduleID&apos;)$id(&apos;ent7#att35&apos;)$id(&apos;ent7&apos;)$id(&apos;ent6&apos;)$id(&apos;Module&apos;)$id(&apos;ent1#att26&apos;)$id(&apos;ent5#att34&apos;)$id(&apos;ent1#att7&apos;)$id(&apos;ent5&apos;)$id(&apos;ent4#att21&apos;)$id(&apos;userName&apos;)$id(&apos;ent2#att14&apos;)$id(&apos;groupName&apos;)$id(&apos;ent1#att25&apos;)$id(&apos;ent2#att15&apos;)$id(&apos;ent3#att33&apos;)$id(&apos;ent7#att6&apos;)$id(&apos;ent7#att5&apos;)$id(&apos;ent2#att17&apos;)$id(&apos;ent7#att4&apos;)$id(&apos;ent2#att19&apos;)$id(&apos;ent4#att10&apos;)$id(&apos;ent1#att24&apos;)$id(&apos;ent3#att32&apos;)$id(&apos;ent7#att2&apos;)$id(&apos;ent4#att20&apos;)$id(&apos;ent2#att16&apos;)$id(&apos;ent3#att9&apos;)$id(&apos;ent3#att31&apos;)$id(&apos;ent2#att18&apos;)$id(&apos;ent5#att11&apos;)$id(&apos;ent2#att28&apos;)$id(&apos;ent6#att12&apos;)$id(&apos;ent4#att23&apos;)$id(&apos;userOID&apos;)$id(&apos;password&apos;)$id(&apos;moduleOID&apos;)$id(&apos;ent2#att8&apos;)$id(&apos;ent4#att22&apos;)$id(&apos;ent1#att27&apos;)$id(&apos;groupOID&apos;)$id(&apos;ent2&apos;)$id(&apos;email&apos;)$id(&apos;ent1&apos;)$id(&apos;Group&apos;)$id(&apos;ent3&apos;)$id(&apos;moduleName&apos;)$id(&apos;ent4&apos;)$id(&apos;ent3#att30&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item active="true" historyLabel="Vidriluz &gt; Data Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+</item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -277,6 +427,7 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
