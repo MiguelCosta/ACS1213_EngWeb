@@ -30,12 +30,14 @@
     <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
     <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="570" gr:y="200" id="ent1" name="Or&#231;amento" duration="persistent" attributeOrder="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27">
+  <Entity gr:x="570" gr:y="200" id="ent1" name="Or&#231;amento" duration="persistent" attributeOrder="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37">
     <Attribute id="ent1#att7" key="true" name="oid" type="integer"/>
     <Attribute id="ent1#att24" name="serie" type="integer"/>
     <Attribute id="ent1#att25" name="numSerie" type="integer"/>
     <Attribute id="ent1#att26" name="data" type="date"/>
     <Attribute id="ent1#att27" name="anexos" type="string"/>
+    <Attribute id="ent1#att36" name="estado" type="string"/>
+    <Attribute id="ent1#att37" name="valorTotal" type="float"/>
   </Entity>
   <Entity gr:x="340" gr:y="370" id="ent2" name="Produto" duration="persistent" attributeOrder="ent2#att8 ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19">
     <Attribute id="ent2#att8" key="true" name="oid" type="integer"/>
@@ -48,12 +50,13 @@
     <Attribute id="ent2#att19" name="caixa" type="string"/>
     <Attribute id="ent2#att28" name="tipo" type="string"/>
   </Entity>
-  <Entity gr:x="110" gr:y="300" id="ent3" name="Encomenda" duration="persistent" attributeOrder="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33">
+  <Entity gr:x="110" gr:y="300" id="ent3" name="Encomenda" duration="persistent" attributeOrder="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33 ent3#att1">
     <Attribute id="ent3#att9" key="true" name="oid" type="integer"/>
     <Attribute id="ent3#att30" name="serie" type="integer"/>
     <Attribute id="ent3#att31" name="numSerie" type="integer"/>
     <Attribute id="ent3#att32" name="data" type="date"/>
     <Attribute id="ent3#att33" name="anexos" type="string"/>
+    <Attribute id="ent3#att1" name="estado" type="string"/>
   </Entity>
   <Entity gr:x="570" gr:y="430" id="ent4" name="Promo&#231;&#227;o" duration="persistent" attributeOrder="ent4#att10 ent4#att20 ent4#att21 ent4#att22 ent4#att23">
     <Attribute id="ent4#att10" key="true" name="oid" type="integer"/>
@@ -66,9 +69,10 @@
     <Attribute id="ent5#att11" key="true" name="oid" type="integer"/>
     <Attribute id="ent5#att34" name="descricao" type="string"/>
   </Entity>
-  <Entity gr:x="350" gr:y="240" id="ent6" name="Or&#231;amento Linha" duration="persistent" attributeOrder="ent6#att12 ent6#att29">
+  <Entity gr:x="350" gr:y="240" id="ent6" name="Or&#231;amento Linha" duration="persistent" attributeOrder="ent6#att12 ent6#att29 ent6#att38">
     <Attribute id="ent6#att12" key="true" name="oid" type="integer"/>
     <Attribute id="ent6#att29" name="descricao" type="string"/>
+    <Attribute id="ent6#att38" name="valor" type="float"/>
   </Entity>
   <Relationship id="rel1" name="Promo&#231;&#227;o_Produto" sourceEntity="ent4" targetEntity="ent2">
     <RelationshipRole1 id="rel1#role1" name="Promo&#231;&#227;oToProduto" maxCard="1"/>
@@ -107,4 +111,16 @@
     <Attribute id="ent7#att35" name="contacto" type="string"/>
     <Generalization superEntity="User"/>
   </Entity>
+  <Entity gr:x="770" gr:y="240" id="ent8" name="Album" duration="persistent" attributeOrder="ent8#att39 ent8#att41 ent8#att42">
+    <Attribute id="ent8#att39" key="true" name="oid" type="integer"/>
+    <Attribute id="ent8#att41" name="nome" type="string"/>
+    <Attribute id="ent8#att42" name="data" type="date"/>
+  </Entity>
+  <Entity gr:x="780" gr:y="400" id="ent9" name="Fotografia" duration="persistent">
+    <Attribute id="ent9#att40" key="true" name="oid" type="integer"/>
+  </Entity>
+  <Relationship id="rel3" name="Album_Fotografia" sourceEntity="ent8" targetEntity="ent9">
+    <RelationshipRole1 id="rel3#role5" name="AlbumToFotografia" maxCard="1"/>
+    <RelationshipRole2 id="rel3#role6" name="FotografiaToAlbum" maxCard="N"/>
+  </Relationship>
 </DataModel>
