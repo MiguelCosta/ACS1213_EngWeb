@@ -123,6 +123,6 @@
     <RelationshipRole1 id="rel3#role5" name="AlbumToFotografia" maxCard="1"/>
     <RelationshipRole2 id="rel3#role6" name="FotografiaToAlbum" maxCard="N"/>
   </Relationship>
-  <db:Database id="db4" name="VidriluzDB" type="MySQL" url="jdbc:mysql://localhost:3306/VidriluzDB" username="root" cryptedPassword="true" password="MTIzNA==">
+  <db:Database id="db4" name="VidriluzDB" type="MySQL" url="jdbc:mysql://localhost:3306/VidriluzDB" username="EngWeb" password="MTIzNA==" cryptedPassword="true">
   </db:Database>
 </DataModel>
