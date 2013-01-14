@@ -1,7 +1,8 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="160" gr:y="0" id="sv2#area1#page3" name="Lista de Produtos">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="160" gr:y="0" id="sv2#area1#page3" name="Lista de Produtos" linkOrder="sv2#area1#page3#ln6">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv2#area1#page3#inu1" name="Lista de Produtos" entity="ent2" displayAttributes="ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16" linkOrder="sv2#area1#page3#inu1#ln4">
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#area1#page3#inu1" name="Lista de Produtos" entity="ent2" displayAttributes="ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16" linkOrder="sv2#area1#page3#inu1#ln4 sv2#area1#page3#inu1#ln5">
       <Link id="sv2#area1#page3#inu1#ln4" name="detalhes" to="sv2#area1#page5#dau1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area1#page3#inu1#ln5" name="Apagar produto" to="sv2#dlu1" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
   </ContentUnits>
   <layout:Grid>
@@ -14,6 +15,7 @@
           <layout:Attribute attribute="ent2#att15"/>
           <layout:Attribute attribute="ent2#att16"/>
           <layout:Link link="sv2#area1#page3#inu1#ln4"/>
+          <layout:Link link="sv2#area1#page3#inu1#ln5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -30,4 +32,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv2#area1#page3#ln6" name="Novo Produto" to="sv2#area1#page4" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

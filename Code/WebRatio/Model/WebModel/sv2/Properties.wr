@@ -1,7 +1,23 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="VidriluzSite" homePage="sv2#page1" landmarks="sv2#area1 sv2#rstu1 sv2#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="VidriluzSite" landmarks="sv2#area1 sv2#rstu1 sv2#page1 sv2#page6 sv2#page7" homePage="sv2#page1">
   <OperationUnits>
     <ResetUnit gr:x="255" gr:y="45" id="sv2#rstu1" name="Home" landmark="true">
       <OKLink id="sv2#rstu1#oln2" name="OKLink2" to="sv2#page1" automaticCoupling="true"/>
     </ResetUnit>
+    <CreateUnit id="sv2#cru1" name="Adicionar novo produto" gr:x="80" gr:y="380" entity="ent2">
+      <KOLink id="sv2#cru1#kln2" name="KOLink1" to="sv2#area1#page4#enu1" automaticCoupling="true" gr:bendpoints="25,-72,5,69"/>
+      <OKLink id="sv2#cru1#oln3" name="OKLink1" to="sv2#area1#page4" automaticCoupling="true" gr:bendpoints="-18,-69,-38,82"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="618" gr:y="383" id="sv2#mfu1" name="Modificar Produto" entity="ent2">
+      <Selector id="sv2#mfu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#mfu1#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#mfu1#oln4" name="OKLink4" to="sv2#area1#page5" automaticCoupling="true" gr:bendpoints="-83,-59,63,80"/>
+      <KOLink id="sv2#mfu1#kln3" name="KOLink3" to="sv2#area1#page5#dau1" automaticCoupling="true" gr:bendpoints="-83,-59,63,80"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="270" gr:y="370" id="sv2#dlu1" name="Apagar Produto" entity="ent2">
+      <Selector id="sv2#dlu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#dlu1#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
   </OperationUnits>
 </SiteView>
