@@ -1,15 +1,15 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="335" gr:y="85" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db4" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="310" gr:y="40" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db4" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
     <Attribute name="email" id="email" type="string" db:column="email"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="565" gr:y="85" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db4" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="580" gr:y="30" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db4" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="795" gr:y="85" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db4" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="800" gr:y="50" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db4" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -55,7 +55,7 @@
     <Attribute id="ent1#att36" name="estado" type="string" db:column="estado"/>
     <Attribute id="ent1#att37" name="valorTotal" type="float" db:column="valortotal"/>
   </Entity>
-  <Entity gr:x="340" gr:y="370" id="ent2" name="Produto" duration="persistent" attributeOrder="ent2#att8 ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19" db:database="db4" db:table="produto">
+  <Entity gr:x="340" gr:y="410" id="ent2" name="Produto" duration="persistent" attributeOrder="ent2#att8 ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19" db:database="db4" db:table="produto">
     <Attribute id="ent2#att8" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att13" name="nome" type="string" db:column="nome"/>
     <Attribute id="ent2#att14" name="cor" type="string" db:column="cor"/>
@@ -85,68 +85,7 @@
     <Attribute id="ent5#att11" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent5#att34" name="descricao" type="string" db:column="descricao"/>
   </Entity>
-  <Entity gr:x="350" gr:y="240" id="ent6" name="Or&#231;amento Linha" duration="persistent" attributeOrder="ent6#att12 ent6#att29 ent6#att38" db:database="db4" db:table="orcamento_linha">
-    <Attribute id="ent6#att12" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent6#att29" name="descricao" type="string" db:column="descricao"/>
-    <Attribute id="ent6#att38" name="valor" type="float" db:column="valor"/>
-  </Entity>
-  <Relationship id="rel1" name="Promo&#231;&#227;o_Produto" sourceEntity="ent4" targetEntity="ent2" db:database="db4" db:table="promocao">
-    <RelationshipRole1 id="rel1#role1" name="Promo&#231;&#227;oToProduto" maxCard="1">
-      <db:JoinColumn attribute="ent4#att10" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel1#role2" name="ProdutoToPromo&#231;&#227;o" maxCard="N">
-      <db:JoinColumn attribute="ent2#att8" name="produto_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel2" name="Or&#231;amento_Or&#231;amento Linha" sourceEntity="ent1" targetEntity="ent6" db:database="db4" db:table="orcamento">
-    <RelationshipRole1 id="rel2#role3" name="Or&#231;amentoToOr&#231;amento Linha" maxCard="1">
-      <db:JoinColumn attribute="ent1#att7" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel2#role4" name="Or&#231;amento LinhaToOr&#231;amento" maxCard="N">
-      <db:JoinColumn attribute="ent6#att12" name="orcamento_linha_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel4" name="Or&#231;amento Linha_Produto" sourceEntity="ent6" targetEntity="ent2" db:database="db4" db:table="produto">
-    <RelationshipRole1 id="rel4#role7" name="Or&#231;amento LinhaToProduto" maxCard="1">
-      <db:JoinColumn attribute="ent6#att12" name="orcamento_linha_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel4#role8" name="ProdutoToOr&#231;amento Linha" maxCard="1">
-      <db:JoinColumn attribute="ent2#att8" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel5" name="Encomenda Linha_Produto" sourceEntity="ent5" targetEntity="ent2" db:database="db4" db:table="produto">
-    <RelationshipRole1 id="rel5#role9" name="Encomenda LinhaToProduto" maxCard="1">
-      <db:JoinColumn attribute="ent5#att11" name="encomenda_linha_oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="ProdutoToEncomenda Linha" maxCard="1">
-      <db:JoinColumn attribute="ent2#att8" name="oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel6" name="Encomenda_Encomenda Linha" sourceEntity="ent3" targetEntity="ent5" db:database="db4" db:table="encomenda">
-    <RelationshipRole1 id="rel6#role11" name="EncomendaToEncomenda Linha" maxCard="1">
-      <db:JoinColumn attribute="ent3#att9" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel6#role12" name="Encomenda LinhaToEncomenda" maxCard="N">
-      <db:JoinColumn attribute="ent5#att11" name="encomenda_linha_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel7" name="User_Encomenda" sourceEntity="User" targetEntity="ent3" db:database="db4" db:table="user">
-    <RelationshipRole1 id="rel7#role13" name="UserToEncomenda" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel7#role14" name="EncomendaToUser" maxCard="N">
-      <db:JoinColumn attribute="ent3#att9" name="encomenda_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Relationship id="rel8" name="User_Or&#231;amento" sourceEntity="User" targetEntity="ent1" db:database="db4" db:table="user">
-    <RelationshipRole1 id="rel8#role15" name="UserToOr&#231;amento" maxCard="1">
-      <db:JoinColumn attribute="userOID" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel8#role16" name="Or&#231;amentoToUser" maxCard="N">
-      <db:JoinColumn attribute="ent1#att7" name="orcamento_oid"/>
-    </RelationshipRole2>
-  </Relationship>
-  <Entity gr:x="50" gr:y="80" id="ent7" name="Cliente" duration="persistent" attributeOrder="ent7#att2 ent7#att3 ent7#att4 ent7#att5 ent7#att6 ent7#att35" db:database="db4" db:table="cliente">
+  <Entity gr:x="40" gr:y="40" id="ent7" name="Cliente" duration="persistent" attributeOrder="ent7#att2 ent7#att3 ent7#att4 ent7#att5 ent7#att6 ent7#att35" db:database="db4" db:table="cliente">
     <Attribute id="ent7#att2" name="nomeCompleto" type="string" db:column="nomecompleto"/>
     <Attribute id="ent7#att3" name="telefone" type="string" db:column="telefone"/>
     <Attribute id="ent7#att4" name="dataNascimento" type="date" db:column="datanascimento"/>
@@ -165,14 +104,75 @@
   <Entity gr:x="780" gr:y="400" id="ent9" name="Fotografia" duration="persistent" db:database="db4" db:table="fotografia">
     <Attribute id="ent9#att40" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
-  <Relationship id="rel3" name="Album_Fotografia" sourceEntity="ent8" targetEntity="ent9" db:database="db4" db:table="album">
-    <RelationshipRole1 id="rel3#role5" name="AlbumToFotografia" maxCard="1">
-      <db:JoinColumn attribute="ent8#att39" name="oid"/>
-    </RelationshipRole1>
-    <RelationshipRole2 id="rel3#role6" name="FotografiaToAlbum" maxCard="N">
-      <db:JoinColumn attribute="ent9#att40" name="fotografia_oid"/>
-    </RelationshipRole2>
-  </Relationship>
   <db:Database id="db4" name="VidriluzDB" type="MySQL" url="jdbc:mysql://localhost:3306/VidriluzDB" username="EngWeb" password="MTIzNA==" cryptedPassword="true">
   </db:Database>
+  <Entity gr:x="340" gr:y="240" id="ent10" name="Or&#231;amento Linha" duration="persistent" attributeOrder="ent10#att43 ent10#att44 ent10#att45" db:database="db4" db:table="orcamento_linha">
+    <Attribute id="ent10#att43" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent10#att44" name="Descri&#231;&#227;o" type="string" db:column="descricao"/>
+    <Attribute id="ent10#att45" name="Valor" type="float" db:column="valor"/>
+  </Entity>
+  <Relationship id="rel14" name="Or&#231;amento_Or&#231;amento Linha" sourceEntity="ent1" targetEntity="ent10" db:database="db4" db:table="orcamento_linha">
+    <RelationshipRole1 id="rel14#role27" name="Or&#231;amentoToOr&#231;amento Linha" maxCard="1">
+      <db:JoinColumn attribute="ent1#att7" name="orcamento_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="Or&#231;amento LinhaToOr&#231;amento" maxCard="1">
+      <db:JoinColumn attribute="ent10#att43" name="orcamento_linha_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel18" name="Produto_Or&#231;amento Linha" sourceEntity="ent2" targetEntity="ent10" db:database="db4" db:table="orcamento_linha">
+    <RelationshipRole1 id="rel18#role35" name="ProdutoToOr&#231;amento Linha" maxCard="1">
+      <db:JoinColumn attribute="ent2#att8" name="produto_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel18#role36" name="Or&#231;amento LinhaToProduto" maxCard="1">
+      <db:JoinColumn attribute="ent10#att43" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel19" name="Encomenda_Encomenda Linha" sourceEntity="ent3" targetEntity="ent5" db:database="db4" db:table="encomenda_linha">
+    <RelationshipRole1 id="rel19#role37" name="EncomendaToEncomenda Linha" maxCard="1">
+      <db:JoinColumn attribute="ent3#att9" name="encomenda_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel19#role38" name="Encomenda LinhaToEncomenda" maxCard="1">
+      <db:JoinColumn attribute="ent5#att11" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel20" name="Album_Fotografia" sourceEntity="ent8" targetEntity="ent9" db:database="db4" db:table="fotografia">
+    <RelationshipRole1 id="rel20#role39" name="AlbumToFotografia" maxCard="N">
+      <db:JoinColumn attribute="ent8#att39" name="album_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel20#role40" name="FotografiaToAlbum" maxCard="1">
+      <db:JoinColumn attribute="ent9#att40" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel21" name="Produto_Encomenda Linha" sourceEntity="ent2" targetEntity="ent5" db:database="db4" db:table="encomenda_linha">
+    <RelationshipRole1 id="rel21#role41" name="ProdutoToEncomenda Linha" maxCard="1">
+      <db:JoinColumn attribute="ent2#att8" name="produto_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel21#role42" name="Encomenda LinhaToProduto" maxCard="1">
+      <db:JoinColumn attribute="ent5#att11" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel24" name="User_Encomenda" sourceEntity="User" targetEntity="ent3" db:database="db4" db:table="encomenda">
+    <RelationshipRole1 id="rel24#role47" name="UserToEncomenda" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel24#role48" name="EncomendaToUser" maxCard="1">
+      <db:JoinColumn attribute="ent3#att9" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel25" name="User_Or&#231;amento" sourceEntity="User" targetEntity="ent1" db:database="db4" db:table="orcamento">
+    <RelationshipRole1 id="rel25#role49" name="UserToOr&#231;amento" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel25#role50" name="Or&#231;amentoToUser" maxCard="1">
+      <db:JoinColumn attribute="ent1#att7" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel29" name="Produto_Promo&#231;&#227;o" sourceEntity="ent2" targetEntity="ent4" db:database="db4" db:table="promocao">
+    <RelationshipRole1 id="rel29#role57" name="ProdutoToPromo&#231;&#227;o" maxCard="1">
+      <db:JoinColumn attribute="ent2#att8" name="produto_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel29#role58" name="Promo&#231;&#227;oToProduto" maxCard="1">
+      <db:JoinColumn attribute="ent4#att10" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>

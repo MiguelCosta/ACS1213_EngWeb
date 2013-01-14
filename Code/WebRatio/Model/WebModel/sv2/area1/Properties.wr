@@ -1,0 +1,8 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="70" gr:y="160" id="sv2#area1" name="Produtos" landmark="true" defaultPage="sv2#area1#page3">
+  <OperationUnits>
+    <CreateUnit gr:x="120" gr:y="200" id="sv2#area1#cru2" name="Adicionar novo produto" entity="ent2">
+      <KOLink id="sv2#area1#cru2#kln1" name="KOLink1" to="sv2#area1#page4#enu1" automaticCoupling="true" gr:bendpoints="25,-72,5,69"/>
+      <OKLink id="sv2#area1#cru2#oln1" name="OKLink1" to="sv2#area1#page4" automaticCoupling="true" gr:bendpoints="-18,-69,-38,82"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

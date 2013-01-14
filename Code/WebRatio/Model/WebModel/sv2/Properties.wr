@@ -1,0 +1,7 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="VidriluzSite" homePage="sv2#page1" landmarks="sv2#area1 sv2#rstu1 sv2#page1">
+  <OperationUnits>
+    <ResetUnit gr:x="255" gr:y="45" id="sv2#rstu1" name="Home" landmark="true">
+      <OKLink id="sv2#rstu1#oln2" name="OKLink2" to="sv2#page1" automaticCoupling="true"/>
+    </ResetUnit>
+  </OperationUnits>
+</SiteView>
