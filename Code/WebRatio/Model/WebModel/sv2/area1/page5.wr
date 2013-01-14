@@ -1,11 +1,31 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="350" gr:y="10" id="sv2#area1#page5" name="P&#225;gina do Produto">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="446" gr:y="0" id="sv2#area1#page5" name="P&#225;gina do Produto">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv2#area1#page5#dau1" name="Detalhes do Produto" entity="ent2" displayAttributes="ent2#att8 ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19">
       <Selector id="sv2#area1#page5#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area1#page5#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv2#area1#page5#dau1#ln3" name="Modificar Produto" to="sv2#mfu1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area1#page5#dau1#ln8" name="Modificar produto" to="sv2#area1#page5#enu3" type="transport" validate="true" automaticCoupling="true"/>
     </DataUnit>
+    <EntryUnit gr:x="10" gr:y="116" id="sv2#area1#page5#enu3" name="Modificar Produto" fieldOrder="sv2#area1#page5#enu3#fld15 sv2#area1#page5#enu3#fld16 sv2#area1#page5#enu3#fld17 sv2#area1#page5#enu3#fld18 sv2#area1#page5#enu3#fld19 sv2#area1#page5#enu3#fld20 sv2#area1#page5#enu3#fld21 sv2#area1#page5#enu3#fld22" linkOrder="sv2#area1#page5#enu3#ln16">
+      <Field id="sv2#area1#page5#enu3#fld22" name="caixa" type="string" modifiable="true"/>
+      <Field id="sv2#area1#page5#enu3#fld21" name="manufacturas" type="string" modifiable="true"/>
+      <Field id="sv2#area1#page5#enu3#fld20" name="dimensao" type="string" modifiable="true"/>
+      <Field id="sv2#area1#page5#enu3#fld19" name="espessura" type="float" modifiable="true"/>
+      <Field id="sv2#area1#page5#enu3#fld18" name="padr&#227;o" type="string" modifiable="true"/>
+      <Field id="sv2#area1#page5#enu3#fld17" name="cor" type="string" modifiable="true"/>
+      <Field id="sv2#area1#page5#enu3#fld16" name="tipo" type="string" modifiable="true"/>
+      <Field id="sv2#area1#page5#enu3#fld15" name="nome" type="string" modifiable="true"/>
+      <Link id="sv2#area1#page5#enu3#ln16" name="Link16" to="sv2#mfu1" type="normal" validate="true">
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par13" name="caixa_caixa" source="sv2#area1#page5#enu3#fld22" target="sv2#mfu1.ent2#att19"/>
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par14" name="cor_cor" source="sv2#area1#page5#enu3#fld17" target="sv2#mfu1.ent2#att14"/>
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par15" name="dimensao_dimensaoMAX" source="sv2#area1#page5#enu3#fld20" target="sv2#mfu1.ent2#att17"/>
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par16" name="espessura_espessura" source="sv2#area1#page5#enu3#fld19" target="sv2#mfu1.ent2#att16"/>
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par17" name="manufacturas_manufacturas" source="sv2#area1#page5#enu3#fld21" target="sv2#mfu1.ent2#att18"/>
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par18" name="nome_nome" source="sv2#area1#page5#enu3#fld15" target="sv2#mfu1.ent2#att13"/>
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par19" name="padr&#227;o_padrao" source="sv2#area1#page5#enu3#fld18" target="sv2#mfu1.ent2#att15"/>
+        <LinkParameter id="sv2#area1#page5#enu3#ln16#par20" name="tipo_tipo" source="sv2#area1#page5#enu3#fld16" target="sv2#mfu1.ent2#att28"/>
+      </Link>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -22,7 +42,19 @@
           <layout:Attribute attribute="ent2#att19"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area1#page5#enu3">
+          <layout:Field field="sv2#area1#page5#enu3#fld15"/>
+          <layout:Field field="sv2#area1#page5#enu3#fld16"/>
+          <layout:Field field="sv2#area1#page5#enu3#fld17"/>
+          <layout:Field field="sv2#area1#page5#enu3#fld18"/>
+          <layout:Field field="sv2#area1#page5#enu3#fld19"/>
+          <layout:Field field="sv2#area1#page5#enu3#fld20"/>
+          <layout:Field field="sv2#area1#page5#enu3#fld21"/>
+          <layout:Field field="sv2#area1#page5#enu3#fld22"/>
+          <layout:Link link="sv2#area1#page5#enu3#ln16"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
