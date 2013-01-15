@@ -1,0 +1,45 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="312" gr:y="262" id="sv2#area4#page18" name="Modificar Linha">
+  <ContentUnits>
+    <EntryUnit gr:x="134" gr:y="14" id="sv2#area4#page18#enu8" name="Editar Linha" fieldOrder="sv2#area4#page18#enu8#fld41 sv2#area4#page18#enu8#fld42 sv2#area4#page18#enu8#fld43" linkOrder="sv2#area4#page18#enu8#ln35">
+      <Field id="sv2#area4#page18#enu8#fld43" name="Produto" type="integer" modifiable="true"/>
+      <Field id="sv2#area4#page18#enu8#fld42" name="Valor" type="float" modifiable="true"/>
+      <Field id="sv2#area4#page18#enu8#fld41" name="Descri&#231;&#227;o" type="string" modifiable="true"/>
+      <Link id="sv2#area4#page18#enu8#ln35" name="Guardar" to="sv2#mfu1" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page18#enu8#ln35#par17" name="Descri&#231;&#227;o_Descri&#231;&#227;o" source="sv2#area4#page18#enu8#fld41" target="sv2#mfu1.ent10#att44"/>
+        <LinkParameter id="sv2#area4#page18#enu8#ln35#par18" name="Produto_Valor" source="sv2#area4#page18#enu8#fld43" target="sv2#mfu1.ent10#att45"/>
+        <LinkParameter id="sv2#area4#page18#enu8#ln35#par29" name="Produto_Produto.oid(Or&#231;amento LinhaToProduto)" source="sv2#area4#page18#enu8#fld43" target="sv2#mfu1.rel18#role36.ent2#att8"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#area4#page18#dau7" name="Or&#231;amentoLinha" entity="ent10" displayAttributes="rel18#role36.ent2#att8">
+      <Selector id="sv2#area4#page18#dau7#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#page18#dau7#su15#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area4#page18#dau7#ln25" name="Link25" to="sv2#area4#page18#enu8" type="transport" validate="true"/>
+      <Link id="sv2#area4#page18#dau7#ln28" name="Link28" to="sv2#mfu1" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page18#enu8">
+          <layout:Field field="sv2#area4#page18#enu8#fld41"/>
+          <layout:Field field="sv2#area4#page18#enu8#fld42"/>
+          <layout:Field field="sv2#area4#page18#enu8#fld43"/>
+          <layout:Link link="sv2#area4#page18#enu8#ln35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

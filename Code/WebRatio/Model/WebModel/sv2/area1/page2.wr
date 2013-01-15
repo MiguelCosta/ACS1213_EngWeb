@@ -11,15 +11,15 @@
     <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area1#page2#dau2">
+          <layout:Link link="sv2#area1#page2#dau2#ln16"/>
           <layout:Attribute attribute="ent2#att13"/>
-          <layout:Attribute attribute="ent2#att28"/>
           <layout:Attribute attribute="ent2#att14"/>
           <layout:Attribute attribute="ent2#att15"/>
           <layout:Attribute attribute="ent2#att16"/>
           <layout:Attribute attribute="ent2#att17"/>
           <layout:Attribute attribute="ent2#att18"/>
           <layout:Attribute attribute="ent2#att19"/>
-          <layout:Link link="sv2#area1#page2#dau2#ln16"/>
+          <layout:Attribute attribute="ent2#att28"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

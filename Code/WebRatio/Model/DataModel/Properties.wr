@@ -74,12 +74,13 @@
     <Attribute id="ent3#att33" name="anexos" type="string" db:column="anexos"/>
     <Attribute id="ent3#att1" name="estado" type="string" db:column="estado"/>
   </Entity>
-  <Entity gr:x="570" gr:y="430" id="ent4" name="Promo&#231;&#227;o" duration="persistent" attributeOrder="ent4#att10 ent4#att20 ent4#att21 ent4#att22 ent4#att23" db:database="db4" db:table="promocao">
+  <Entity gr:x="570" gr:y="430" id="ent4" name="Promo&#231;&#227;o" duration="persistent" attributeOrder="ent4#att10 ent4#att20 ent4#att21 ent4#att22 ent4#att23 ent4#att12" db:database="db4" db:table="promocao">
     <Attribute id="ent4#att10" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent4#att20" name="nome" type="string" db:column="nome"/>
     <Attribute id="ent4#att21" name="descricao" type="string" db:column="descricao"/>
     <Attribute id="ent4#att22" name="dataInicial" type="date" db:column="datainicial"/>
     <Attribute id="ent4#att23" name="dataFinal" type="date" db:column="datafinal"/>
+    <Attribute id="ent4#att12" name="asdas" type="integer" derivationQuery="simpleImported::Self.rel29#role58.ent2#att8"/>
   </Entity>
   <Entity gr:x="110" gr:y="530" id="ent5" name="Encomenda Linha" duration="persistent" attributeOrder="ent5#att11 ent5#att34" db:database="db4" db:table="encomenda_linha">
     <Attribute id="ent5#att11" key="true" name="oid" type="integer" db:column="oid"/>

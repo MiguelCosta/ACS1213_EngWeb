@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="160" id="sv2#area3#page14" name="Nova Promo&#231;&#227;o">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area3#page14#enu5" name="Adicionar Promo&#231;&#227;o" linkOrder="sv2#area3#page14#enu5#ln22" fieldOrder="sv2#area3#page14#enu5#fld1 sv2#area3#page14#enu5#fld5 sv2#area3#page14#enu5#fld14 sv2#area3#page14#enu5#fld15 sv2#area3#page14#enu5#fld16">
+      <Link id="sv2#area3#page14#enu5#ln22" name="Adicionar" to="sv2#cru4" type="normal" validate="true">
+        <LinkParameter id="sv2#area3#page14#enu5#ln22#par1" name="dataFinal_dataFinal" source="sv2#area3#page14#enu5#fld14" target="sv2#cru4.ent4#att23"/>
+        <LinkParameter id="sv2#area3#page14#enu5#ln22#par2" name="dataInicial_dataInicial" source="sv2#area3#page14#enu5#fld15" target="sv2#cru4.ent4#att22"/>
+        <LinkParameter id="sv2#area3#page14#enu5#ln22#par3" name="descri&#231;&#227;o_descricao" source="sv2#area3#page14#enu5#fld5" target="sv2#cru4.ent4#att21"/>
+        <LinkParameter id="sv2#area3#page14#enu5#ln22#par4" name="nome_nome" source="sv2#area3#page14#enu5#fld1" target="sv2#cru4.ent4#att20"/>
+        <LinkParameter id="sv2#area3#page14#enu5#ln22#par12" name="produto_Produto.oid(Promo&#231;&#227;oToProduto)" source="sv2#area3#page14#enu5#fld16" target="sv2#cru4.rel29#role58.ent2#att8"/>
+      </Link>
+      <Field id="sv2#area3#page14#enu5#fld15" name="dataInicial" type="date" modifiable="true"/>
+      <Field id="sv2#area3#page14#enu5#fld14" name="dataFinal" type="date" modifiable="true"/>
+      <Field id="sv2#area3#page14#enu5#fld5" name="descri&#231;&#227;o" type="string" modifiable="true"/>
+      <Field id="sv2#area3#page14#enu5#fld1" name="nome" type="string" modifiable="true"/>
+      <Field id="sv2#area3#page14#enu5#fld16" name="produto" type="string" modifiable="true"/>
+    </EntryUnit>
+    <MultiDataUnit gr:x="144" gr:y="4" id="sv2#area3#page14#mdu1" name="Produtos existentes" entity="ent2" displayAttributes="ent2#att8 ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19"/>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area3#page14#enu5">
+          <layout:Link link="sv2#area3#page14#enu5#ln22"/>
+          <layout:Field field="sv2#area3#page14#enu5#fld1"/>
+          <layout:Field field="sv2#area3#page14#enu5#fld5"/>
+          <layout:Field field="sv2#area3#page14#enu5#fld14"/>
+          <layout:Field field="sv2#area3#page14#enu5#fld15"/>
+          <layout:Field field="sv2#area3#page14#enu5#fld16"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area3#page14#mdu1">
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute attribute="ent2#att13"/>
+          <layout:Attribute attribute="ent2#att28"/>
+          <layout:Attribute attribute="ent2#att14"/>
+          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att17"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

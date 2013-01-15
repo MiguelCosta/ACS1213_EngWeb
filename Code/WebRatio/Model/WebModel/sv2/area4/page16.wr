@@ -1,0 +1,50 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="190" gr:y="4" id="sv2#area4#page16" name="Detalhes do Pedido">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#area4#page16#dau6" name="Detalhes de Pedido" entity="ent1" displayAttributes="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37">
+      <Selector id="sv2#area4#page16#dau6#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#page16#dau6#su13#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area4#page16#dau6#ln36" name="Link36" to="sv2#area4#page16#inu6" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <IndexUnit gr:x="16" gr:y="102" id="sv2#area4#page16#inu6" name="Linhas do Pedido" entity="ent10" displayAttributes="ent10#att43 ent10#att44 ent10#att45 rel18#role36.ent2#att8" linkOrder="sv2#area4#page16#inu6#ln37">
+      <Link id="sv2#area4#page16#inu6#ln37" name="Editar Linha" to="sv2#area4#page18#dau7" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page16#inu6#ln37#par16" name="Or&#231;amento LinhaToOr&#231;amento.oid_KeyCondition15 [oid]" source="data[].ent10#att43" target="sv2#area4#page18#dau7#su15#kcond15.ent10#att43"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page16#dau6">
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att24"/>
+          <layout:Attribute attribute="ent1#att25"/>
+          <layout:Attribute attribute="ent1#att26"/>
+          <layout:Attribute attribute="ent1#att27"/>
+          <layout:Attribute attribute="ent1#att36"/>
+          <layout:Attribute attribute="ent1#att37"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page16#inu6">
+          <layout:Link link="sv2#area4#page16#inu6#ln37"/>
+          <layout:Attribute attribute="ent10#att43"/>
+          <layout:Attribute attribute="ent10#att44"/>
+          <layout:Attribute attribute="ent10#att45"/>
+          <layout:Attribute attribute="rel18#role36.ent2#att8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
