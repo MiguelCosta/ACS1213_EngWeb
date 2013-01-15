@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="422" gr:y="32" id="sv2#area5#page22" name="Alterar estado">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="482" gr:y="12" id="sv2#area5#page22" name="Alterar estado">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv2#area5#page22#dau10" name="Encomenda" entity="ent3">
       <Selector id="sv2#area5#page22#dau10#su21" defaultPolicy="fill" booleanOperator="and">

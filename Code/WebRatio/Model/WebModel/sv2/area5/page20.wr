@@ -2,7 +2,9 @@
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv2#area5#page20#inu7" name="Pedidos de Encomenda" entity="ent3" displayAttributes="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33 ent3#att1" linkOrder="sv2#area5#page20#inu7#ln26 sv2#area5#page20#inu7#ln33 sv2#area5#page20#inu7#ln42">
       <Link id="sv2#area5#page20#inu7#ln26" name="Eliminar" to="sv2#dlu6" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv2#area5#page20#inu7#ln33" name="Ver Detalhes" to="sv2#area5#page21#dau9" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area5#page20#inu7#ln33" name="Ver Detalhes" to="sv2#area5#page21#dau9" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page20#inu7#ln33#par43" name="oid_KeyCondition20 [oid]" source="data[].ent3#att9" target="sv2#area5#page21#dau9#su20#kcond25.ent3#att9"/>
+      </Link>
       <Link id="sv2#area5#page20#inu7#ln42" name="Alterar Estado" to="sv2#area5#page22#dau10" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
   </ContentUnits>

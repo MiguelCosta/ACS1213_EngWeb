@@ -99,7 +99,7 @@
       <OKLink id="sv2#dlu6#oln16" name="OKLink16" to="sv2#area5#page20#inu7" automaticCoupling="true" gr:bendpoints="115,15,-137,13"/>
       <KOLink id="sv2#dlu6#kln12" name="KOLink12" to="sv2#area5#page20#inu7" automaticCoupling="true" gr:bendpoints="115,-15,-137,-17"/>
     </DeleteUnit>
-    <ModifyUnit gr:x="1980" gr:y="1000" id="sv2#mfu4" name="Alterar Estado" entity="ent3">
+    <ModifyUnit gr:x="2020" gr:y="1000" id="sv2#mfu4" name="Alterar Estado" entity="ent3">
       <Selector id="sv2#mfu4#su22" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu4#su22#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
       </Selector>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="376" gr:y="26" id="sv2#area4#page19" name="Alterar Estado">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="422" gr:y="22" id="sv2#area4#page19" name="Alterar Estado">
   <ContentUnits>
     <EntryUnit gr:x="110" gr:y="20" id="sv2#area4#page19#enu6" name="Alterar Estado" linkOrder="sv2#area4#page19#enu6#ln39" fieldOrder="sv2#area4#page19#enu6#fld19">
       <Link id="sv2#area4#page19#enu6#ln39" name="Guardar" to="sv2#mfu2" type="normal" validate="true">

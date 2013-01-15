@@ -2,14 +2,19 @@
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv2#area5#page21#dau9" name="Detalhes do Pedido" entity="ent3" displayAttributes="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33 ent3#att1">
       <Selector id="sv2#area5#page21#dau9#su20" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv2#area5#page21#dau9#su20#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
+        <KeyCondition id="sv2#area5#page21#dau9#su20#kcond25" predicate="in" implied="false" name="KeyCondition20"/>
       </Selector>
-      <Link id="sv2#area5#page21#dau9#ln41" name="Link41" to="sv2#area5#page21#inu8" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area5#page21#dau9#ln54" name="Link54" to="sv2#area5#page21#inu8" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page21#dau9#ln54#par45" name="oid_pedido [oid]" source="data.ent3#att9" target="sv2#area5#page21#inu8#su25#rcond2.ent5#att11"/>
+      </Link>
     </DataUnit>
-    <IndexUnit gr:x="14" gr:y="94" id="sv2#area5#page21#inu8" name="Linhas do Pedido" linkOrder="sv2#area5#page21#inu8#ln49" entity="ent5" displayAttributes="ent5#att11 ent5#att34 rel21#role42.ent2#att8">
+    <IndexUnit gr:x="14" gr:y="114" id="sv2#area5#page21#inu8" name="Linhas do Pedido" linkOrder="sv2#area5#page21#inu8#ln49" entity="ent5" displayAttributes="ent5#att11 ent5#att34">
       <Link id="sv2#area5#page21#inu8#ln49" name="Modificar Linha" to="sv2#area5#page24#dau11" type="normal" validate="true">
         <LinkParameter id="sv2#area5#page21#inu8#ln49#par39" name="oid_KeyCondition23 [oid]" source="data[].ent5#att11" target="sv2#area5#page24#dau11#su23#kcond23.ent5#att11"/>
       </Link>
+      <Selector id="sv2#area5#page21#inu8#su25" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area5#page21#inu8#su25#rcond2" name="pedido" predicate="in" implied="false" role="rel19#role38.rel19#role37"/>
+      </Selector>
     </IndexUnit>
   </ContentUnits>
   <layout:Grid>
@@ -29,7 +34,6 @@
           <layout:Link link="sv2#area5#page21#inu8#ln49"/>
           <layout:Attribute attribute="ent5#att11"/>
           <layout:Attribute attribute="ent5#att34"/>
-          <layout:Attribute attribute="rel21#role42.ent2#att8"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
