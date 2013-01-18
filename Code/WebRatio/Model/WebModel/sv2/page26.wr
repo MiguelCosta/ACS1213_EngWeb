@@ -1,0 +1,22 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="840" gr:y="430" id="sv2#page26" name="Backoffice" linkOrder="sv2#page26#ln30 sv2#page26#ln56">
+  <ContentUnits/>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page26#ln30" name="Link30" to="sv2#area5" automaticCoupling="true" type="normal" validate="true"/>
+  <Link id="sv2#page26#ln56" name="Link56" to="sv2#area4" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

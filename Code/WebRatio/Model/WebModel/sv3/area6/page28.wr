@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area6#page28" name="Registar">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area6#page28#enu15" name="Registar" linkOrder="sv3#area6#page28#enu15#ln61">
+      <Field id="sv3#area6#page28#enu15#fld53" name="Username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page28#enu15#fld53#mnd2" name="Required"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#area6#page28#enu15#fld54" name="Password" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page28#enu15#fld54#mnd1" name="Required"/>
+          <CompareValidationRule id="sv3#area6#page28#enu15#fld54#cmp1" name="Comparar" predicate="eq" valueField="sv3#area6#page28#enu15#fld55"/>
+        </VRules>
+      </Field>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv3#area6#page28#enu15#fnevr1" name="Form Not Empty1"/>
+      </VRules>
+      <Field id="sv3#area6#page28#enu15#fld55" name="Confirmar Password" type="string" modifiable="true"/>
+      <Field id="sv3#area6#page28#enu15#fld56" name="Email" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area6#page28#enu15#fld56#mnd3" name="Required"/>
+        </VRules>
+      </Field>
+      <Link id="sv3#area6#page28#enu15#ln61" name="Link61" to="sv3#opg1#cru10" type="normal" validate="true">
+        <LinkParameter id="sv3#area6#page28#enu15#ln61#par61" name="Email_email" source="sv3#area6#page28#enu15#fld56" target="sv3#opg1#cru10.email"/>
+        <LinkParameter id="sv3#area6#page28#enu15#ln61#par62" name="Password_password" source="sv3#area6#page28#enu15#fld54" target="sv3#opg1#cru10.password"/>
+        <LinkParameter id="sv3#area6#page28#enu15#ln61#par63" name="Username_userName" source="sv3#area6#page28#enu15#fld53" target="sv3#opg1#cru10.userName"/>
+      </Link>
+      <Link id="sv3#area6#page28#enu15#ln62" name="Link62" to="sv3#lgu2" automaticCoupling="true" type="transport" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area6#page28#enu15">
+          <layout:Field field="sv3#area6#page28#enu15#fld53"/>
+          <layout:Field field="sv3#area6#page28#enu15#fld54"/>
+          <layout:Field field="sv3#area6#page28#enu15#fld55"/>
+          <layout:Field field="sv3#area6#page28#enu15#fld56"/>
+          <layout:Link link="sv3#area6#page28#enu15#ln61"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,8 +1,23 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="170" gr:y="0" id="sv2#page1" name="Home" landmark="true">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="960" gr:y="610" id="sv2#page1" name="Home" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="-1" gr:y="0" id="sv2#page1#enu9" name="Login" linkOrder="sv2#page1#enu9#ln58">
+      <Field id="sv2#page1#enu9#fld38" name="Username" type="string" modifiable="true"/>
+      <Field id="sv2#page1#enu9#fld39" name="Password" type="string" modifiable="true"/>
+      <Link id="sv2#page1#enu9#ln58" name="Link14" to="sv2#lgu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page1#enu9#ln58#par42" name="Username_Username" source="sv2#page1#enu9#fld38" target="sv2#lgu1.username"/>
+        <LinkParameter id="sv2#page1#enu9#ln58#par44" name="Password_Password" source="sv2#page1#enu9#fld39" target="sv2#lgu1.password"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
   <layout:Grid>
     <layout:Row>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#page1#enu9">
+          <layout:Field field="sv2#page1#enu9#fld38"/>
+          <layout:Field field="sv2#page1#enu9#fld39"/>
+          <layout:Link link="sv2#page1#enu9#ln58"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
