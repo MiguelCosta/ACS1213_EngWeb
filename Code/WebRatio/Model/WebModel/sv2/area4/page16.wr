@@ -1,17 +1,24 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="640" gr:y="270" id="sv2#area4#page16" name="Detalhes do Pedido">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="199" gr:y="230" id="sv2#area4#page16" name="Detalhes do Pedido">
   <ContentUnits>
-    <DataUnit gr:x="14" gr:y="0" id="sv2#area4#page16#dau6" name="Detalhes de Pedido" entity="ent1" displayAttributes="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37">
+    <DataUnit gr:x="0" gr:y="0" id="sv2#area4#page16#dau6" name="Detalhes de Pedido" entity="ent1" displayAttributes="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37">
       <Selector id="sv2#area4#page16#dau6#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area4#page16#dau6#su13#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv2#area4#page16#dau6#ln36" name="Link36" to="sv2#area4#page16#inu6" type="transport" validate="true">
         <LinkParameter id="sv2#area4#page16#dau6#ln36#par46" name="oid_pedidoOr [oid]" source="data.ent1#att7" target="sv2#area4#page16#inu6#su26#rcond1.ent10#att43"/>
       </Link>
+      <Link id="sv2#area4#page16#dau6#ln63" name="Link63" to="sv2#area4#page16#inu10" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#area4#page16#dau6#ln64" name="Link56" to="sv2#area4#cnu2" type="transport" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <IndexUnit gr:x="0" gr:y="94" id="sv2#area4#page16#inu6" name="Linhas do Pedido" entity="ent10" displayAttributes="ent10#att43 ent10#att44" linkOrder="sv2#area4#page16#inu6#ln37">
+    <IndexUnit gr:x="161" gr:y="1" id="sv2#area4#page16#inu6" name="Linhas do Pedido" entity="ent10" displayAttributes="ent10#att43 ent10#att44" linkOrder="sv2#area4#page16#inu6#ln37">
       <Link id="sv2#area4#page16#inu6#ln37" name="Editar Linha" to="sv2#area4#page18" type="normal" validate="true"/>
       <Selector id="sv2#area4#page16#inu6#su26" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv2#area4#page16#inu6#su26#rcond1" name="pedidoOr" predicate="in" implied="false" role="rel14#role28.rel14#role27"/>
+        <RelationshipRoleCondition id="sv2#area4#page16#inu6#su26#rcond7" name="RoleCondition7" predicate="in" implied="false" role="rel14#role27"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit gr:x="76" gr:y="94" id="sv2#area4#page16#inu10" name="Listar Linhas" entity="ent10" displayAttributes="ent10#att43 ent10#att44 ent10#att45">
+      <Selector id="sv2#area4#page16#inu10#su31" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area4#page16#inu10#su31#rcond8" name="RoleCondition8" predicate="in" implied="false" role="rel14#role27"/>
       </Selector>
     </IndexUnit>
   </ContentUnits>
@@ -35,7 +42,13 @@
           <layout:Attribute attribute="ent10#att44"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page16#inu10">
+          <layout:Attribute attribute="ent10#att43"/>
+          <layout:Attribute attribute="ent10#att44"/>
+          <layout:Attribute attribute="ent10#att45"/>
+        </layout:Unit>
+      </layout:Cell>
     </layout:Row>
     <layout:Row>
       <layout:Cell/>
@@ -48,4 +61,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv2#area4#page16#ln57" name="Inserir Linha" to="sv2#area4#page25" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

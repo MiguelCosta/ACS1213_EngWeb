@@ -24,14 +24,14 @@
       <OKLink id="sv2#cru2#oln1" name="OKLink1" to="sv2#area2#page10#inu2" automaticCoupling="true"/>
       <KOLink id="sv2#cru2#kln1" name="KOLink1" to="sv2#area2#page12#enu2" automaticCoupling="true" gr:bendpoints="-33,-68,1,70"/>
     </CreateUnit>
-    <CreateUnit gr:x="1480" gr:y="300" id="sv2#cru3" name="Adicionar nova foto" entity="ent9" linkOrder="sv2#cru3#ln8">
+    <CreateUnit gr:x="1480" gr:y="310" id="sv2#cru3" name="Adicionar nova foto" entity="ent9" linkOrder="sv2#cru3#ln8">
       <KOLink id="sv2#cru3#kln3" name="KOLink3" to="sv2#area2#page13#enu4" automaticCoupling="true" gr:bendpoints="-86,36,81,33"/>
       <OKLink id="sv2#cru3#oln5" name="OKLink5" to="sv2#area2#page11" automaticCoupling="true" gr:bendpoints="-70,-51,-40,197;-75,-136,-45,112"/>
       <Link id="sv2#cru3#ln8" name="Link8" to="sv2#cnu1" type="transport" validate="true">
         <LinkParameter id="sv2#cru3#ln8#par26" name="oid_KeyCondition2 [oid] [Fotografia] [Source]" source="ent9#att40Array" target="sv2#cnu1#su2#kcond2.ent9#att40"/>
       </Link>
     </CreateUnit>
-    <ConnectUnit gr:x="1480" gr:y="190" id="sv2#cnu1" name="LigarFotoToAlbum" relationship="rel20#role40">
+    <ConnectUnit gr:x="1480" gr:y="200" id="sv2#cnu1" name="LigarFotoToAlbum" relationship="rel20#role40">
       <SourceSelector id="sv2#cnu1#su2" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#cnu1#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </SourceSelector>
@@ -63,58 +63,59 @@
       <OKLink id="sv2#dlu4#oln10" name="OKLink10" to="sv2#area3#page8#inu4" automaticCoupling="true" gr:bendpoints="-126,-133,98,146"/>
       <KOLink id="sv2#dlu4#kln6" name="KOLink6" to="sv2#area3#page8#inu4" automaticCoupling="true" gr:bendpoints="-102,-151,122,128"/>
     </DeleteUnit>
-    <CreateUnit gr:x="120" gr:y="910" id="sv2#cru5" name="Novo Or&#231;amento" entity="ent1">
-      <OKLink id="sv2#cru5#oln11" name="OKLink11" to="sv2#area4#page15#inu5" automaticCoupling="true"/>
+    <CreateUnit gr:x="59" gr:y="861" id="sv2#cru5" name="Novo Or&#231;amento" entity="ent1">
+      <OKLink id="sv2#cru5#oln11" name="OKLink11" to="sv2#area4#page16" automaticCoupling="true"/>
       <KOLink id="sv2#cru5#kln7" name="KOLink7" to="sv2#area4#page17#enu7" automaticCoupling="true" gr:bendpoints="-22,-57,-9,55"/>
     </CreateUnit>
-    <CreateUnit gr:x="150" gr:y="1170" id="sv2#cru6" name="Nova Linha Or&#231;amento" entity="ent10">
-      <OKLink id="sv2#cru6#oln12" name="OKLink12" to="sv2#area4#page17" automaticCoupling="true"/>
-      <KOLink id="sv2#cru6#kln8" name="KOLink8" to="sv2#area4#page17#meu1" automaticCoupling="true" gr:bendpoints="40,-52,-1,55"/>
+    <CreateUnit gr:x="49" gr:y="1081" id="sv2#cru6" name="Nova Linha Or&#231;amento" entity="ent10" linkOrder="sv2#cru6#ln41">
+      <OKLink id="sv2#cru6#oln12" name="OKLink12" to="sv2#area4#page16" automaticCoupling="true"/>
+      <KOLink id="sv2#cru6#kln17" name="KOLink8" to="sv2#area4#page25#meu2" automaticCoupling="true" gr:bendpoints="-112,22,89,27"/>
+      <Link id="sv2#cru6#ln41" name="Link41" to="sv2#area4#cnu2" automaticCoupling="true" type="transport" validate="true"/>
     </CreateUnit>
-    <DeleteUnit gr:x="280" gr:y="910" id="sv2#dlu5" name="Eliminar Pedido" entity="ent1">
+    <DeleteUnit gr:x="199" gr:y="721" id="sv2#dlu5" name="Eliminar Pedido" entity="ent1">
       <Selector id="sv2#dlu5#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu5#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#dlu5#oln14" name="OKLink14" to="sv2#area4#page15#inu5" automaticCoupling="true" gr:bendpoints="-199,-185,173,201"/>
       <KOLink id="sv2#dlu5#kln9" name="KOLink9" to="sv2#area4#page15#inu5" automaticCoupling="true" gr:bendpoints="-177,-205,195,181"/>
     </DeleteUnit>
-    <ModifyUnit gr:x="620" gr:y="1050" id="sv2#mfu1" name="Editar Linha" entity="ent10">
+    <ModifyUnit gr:x="589" gr:y="571" id="sv2#mfu1" name="Editar Linha" entity="ent10">
       <Selector id="sv2#mfu1#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu1#su18#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#mfu1#oln15" name="OKLink15" to="sv2#area4#page18#dau7" automaticCoupling="true" gr:bendpoints="37,77,-61,-59"/>
       <KOLink id="sv2#mfu1#kln10" name="KOLink10" to="sv2#area4#page18#enu8" automaticCoupling="true" gr:bendpoints="-67,24,67,43"/>
     </ModifyUnit>
-    <ModifyUnit gr:x="360" gr:y="750" id="sv2#mfu2" name="Alterar Estado" entity="ent1">
+    <ModifyUnit gr:x="249" gr:y="581" id="sv2#mfu2" name="Alterar Estado" entity="ent1">
       <Selector id="sv2#mfu2#su17" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu2#su17#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#mfu2#oln13" name="OKLink13" to="sv2#area4#page15#inu5" automaticCoupling="true"/>
       <KOLink id="sv2#mfu2#kln11" name="KOLink11" to="sv2#area4#page19#enu6" automaticCoupling="true" gr:bendpoints="-106,-21,94,48"/>
     </ModifyUnit>
-    <DeleteUnit gr:x="1042" gr:y="909" id="sv2#dlu6" name="Eliminar Pedido" entity="ent3">
+    <DeleteUnit gr:x="872" gr:y="599" id="sv2#dlu6" name="Eliminar Pedido" entity="ent3">
       <Selector id="sv2#dlu6#su19" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#dlu6#su19#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#dlu6#oln16" name="OKLink16" to="sv2#area5#page20#inu7" automaticCoupling="true" gr:bendpoints="115,15,-137,13"/>
       <KOLink id="sv2#dlu6#kln12" name="KOLink12" to="sv2#area5#page20#inu7" automaticCoupling="true" gr:bendpoints="115,-15,-137,-17"/>
     </DeleteUnit>
-    <ModifyUnit gr:x="2020" gr:y="1000" id="sv2#mfu4" name="Alterar Estado" entity="ent3">
+    <ModifyUnit gr:x="1850" gr:y="690" id="sv2#mfu4" name="Alterar Estado" entity="ent3">
       <Selector id="sv2#mfu4#su22" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu4#su22#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#mfu4#oln17" name="OKLink17" to="sv2#area5#page20#inu7" automaticCoupling="true"/>
       <KOLink id="sv2#mfu4#kln13" name="KOLink13" to="sv2#area5#page22#enu10" automaticCoupling="true" gr:bendpoints="-96,-16,84,43"/>
     </ModifyUnit>
-    <CreateUnit gr:x="1280" gr:y="1320" id="sv2#cru7" name="Nova Encomenda" entity="ent3">
+    <CreateUnit gr:x="1110" gr:y="1010" id="sv2#cru7" name="Nova Encomenda" entity="ent3">
       <OKLink id="sv2#cru7#oln18" name="OKLink18" to="sv2#area5#page20#inu7" automaticCoupling="true"/>
       <KOLink id="sv2#cru7#kln14" name="KOLink14" to="sv2#area5#page23#enu11" automaticCoupling="true" gr:bendpoints="31,-63,-3,66"/>
     </CreateUnit>
-    <CreateUnit gr:x="1479" gr:y="1343" id="sv2#cru8" name="Nova Linha Encomenda" entity="ent5">
+    <CreateUnit gr:x="1309" gr:y="1033" id="sv2#cru8" name="Nova Linha Encomenda" entity="ent5">
       <OKLink id="sv2#cru8#oln19" name="OKLink19" to="sv2#area5#page23" automaticCoupling="true"/>
       <KOLink id="sv2#cru8#kln15" name="KOLink15" to="sv2#area5#page23" automaticCoupling="true" gr:bendpoints="-65,-60,58,100"/>
     </CreateUnit>
-    <ModifyUnit gr:x="1813" gr:y="1390" id="sv2#mfu5" name="Editar Linha" entity="ent5">
+    <ModifyUnit gr:x="1643" gr:y="1080" id="sv2#mfu5" name="Editar Linha" entity="ent5">
       <Selector id="sv2#mfu5#su24" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#mfu5#su24#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
       </Selector>

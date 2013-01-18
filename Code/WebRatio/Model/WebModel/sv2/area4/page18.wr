@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="354" gr:y="254" id="sv2#area4#page18" name="Modificar Linha">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="531" gr:y="110" id="sv2#area4#page18" name="Modificar Linha">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv2#area4#page18#enu8" name="Editar Linha" fieldOrder="sv2#area4#page18#enu8#fld41 sv2#area4#page18#enu8#fld43" linkOrder="sv2#area4#page18#enu8#ln35">
+    <EntryUnit gr:x="5" gr:y="0" id="sv2#area4#page18#enu8" name="Editar Linha" fieldOrder="sv2#area4#page18#enu8#fld41 sv2#area4#page18#enu8#fld43" linkOrder="sv2#area4#page18#enu8#ln35">
       <Field id="sv2#area4#page18#enu8#fld43" name="Produto" type="integer" modifiable="true"/>
       <Field id="sv2#area4#page18#enu8#fld41" name="Descri&#231;&#227;o" type="string" modifiable="true"/>
       <Link id="sv2#area4#page18#enu8#ln35" name="Guardar" to="sv2#mfu1" type="normal" validate="true">
@@ -8,7 +8,7 @@
         <LinkParameter id="sv2#area4#page18#enu8#ln35#par29" name="Produto_Produto.oid(Or&#231;amento LinhaToProduto)" source="sv2#area4#page18#enu8#fld43" target="sv2#mfu1.rel18#role36.ent2#att8"/>
       </Link>
     </EntryUnit>
-    <DataUnit gr:x="116" gr:y="116" id="sv2#area4#page18#dau7" name="Or&#231;amentoLinha" entity="ent10" displayAttributes="rel18#role36.ent2#att8">
+    <DataUnit gr:x="0" gr:y="116" id="sv2#area4#page18#dau7" name="Or&#231;amentoLinha" entity="ent10" displayAttributes="rel18#role36.ent2#att8">
       <Selector id="sv2#area4#page18#dau7#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area4#page18#dau7#su15#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
