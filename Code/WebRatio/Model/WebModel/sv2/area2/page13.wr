@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="332" gr:y="246" id="sv2#area2#page13" name="Nova foto">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="180" gr:y="230" id="sv2#area2#page13" name="Nova foto">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="6" id="sv2#area2#page13#enu4" name="Adicionar foto" linkOrder="sv2#area2#page13#enu4#ln6" fieldOrder="sv2#area2#page13#enu4#fld4 sv2#area2#page13#enu4#fld17">
+    <EntryUnit gr:x="74" gr:y="4" id="sv2#area2#page13#enu4" name="Adicionar foto" linkOrder="sv2#area2#page13#enu4#ln6" fieldOrder="sv2#area2#page13#enu4#fld4 sv2#area2#page13#enu4#fld17">
       <Link id="sv2#area2#page13#enu4#ln6" name="Link6" to="sv2#cru3" type="normal" validate="true">
         <LinkParameter id="sv2#area2#page13#enu4#ln6#par23" name="id_oid" source="sv2#area2#page13#enu4#fld4" target="sv2#cru3.ent9#att40"/>
         <LinkParameter id="sv2#area2#page13#enu4#ln6#par13" name="Album_Album.oid(FotografiaToAlbum)" source="sv2#area2#page13#enu4#fld17" target="sv2#cru3.rel20#role40.ent8#att39"/>
@@ -8,7 +8,7 @@
       <Field id="sv2#area2#page13#enu4#fld4" name="id" type="string" modifiable="true"/>
       <Field id="sv2#area2#page13#enu4#fld17" name="Album" type="string" modifiable="true"/>
     </EntryUnit>
-    <MultiDataUnit gr:x="114" gr:y="0" id="sv2#area2#page13#mdu2" name="Albuns" entity="ent8" displayAttributes="ent8#att39 ent8#att41 ent8#att42"/>
+    <MultiDataUnit gr:x="0" gr:y="0" id="sv2#area2#page13#mdu2" name="Albuns" entity="ent8" displayAttributes="ent8#att39 ent8#att41 ent8#att42"/>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>

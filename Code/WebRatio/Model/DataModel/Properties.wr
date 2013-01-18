@@ -105,7 +105,8 @@
   <Entity gr:x="780" gr:y="400" id="ent9" name="Fotografia" duration="persistent" db:database="db4" db:table="fotografia">
     <Attribute id="ent9#att40" key="true" name="oid" type="integer" db:column="oid"/>
   </Entity>
-  <db:Database id="db4" name="VidriluzDB" type="MySQL" url="jdbc:mysql://localhost:3306/VidriluzDB" username="EngWeb" password="MTIzNA==" cryptedPassword="true"/>
+  <db:Database id="db4" name="VidriluzDB" type="MySQL" url="jdbc:mysql://localhost:3306/VidriluzDB" username="EngWeb" password="MTIzNA==" cryptedPassword="true">
+  </db:Database>
   <Entity gr:x="340" gr:y="240" id="ent10" name="Or&#231;amento Linha" duration="persistent" attributeOrder="ent10#att43 ent10#att44 ent10#att45" db:database="db4" db:table="orcamento_linha">
     <Attribute id="ent10#att43" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent10#att44" name="Descri&#231;&#227;o" type="string" db:column="descricao"/>

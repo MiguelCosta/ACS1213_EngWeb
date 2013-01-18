@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="254" id="sv2#area4#page17" name="Novo Pedido">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="4" gr:y="274" id="sv2#area4#page17" name="Novo Pedido">
   <ContentUnits>
-    <MultiEntryUnit gr:x="134" gr:y="4" id="sv2#area4#page17#meu1" name="Nova Linha" minLength="1" fieldOrder="sv2#area4#page17#meu1#fld38 sv2#area4#page17#meu1#fld39 sv2#area4#page17#meu1#fld40" linkOrder="sv2#area4#page17#meu1#ln30">
+    <MultiEntryUnit gr:x="100" gr:y="0" id="sv2#area4#page17#meu1" name="Nova Linha" minLength="1" fieldOrder="sv2#area4#page17#meu1#fld38 sv2#area4#page17#meu1#fld39 sv2#area4#page17#meu1#fld40" linkOrder="sv2#area4#page17#meu1#ln30">
       <Field id="sv2#area4#page17#meu1#fld40" name="Produto" type="string" modifiable="true"/>
       <Field id="sv2#area4#page17#meu1#fld39" name="Valor" type="float" modifiable="true"/>
       <Field id="sv2#area4#page17#meu1#fld38" name="Descri&#231;&#227;o" type="string" modifiable="true"/>
@@ -25,14 +25,6 @@
   <layout:Grid>
     <layout:Row>
       <layout:Cell>
-        <layout:Unit unitId="sv2#area4#page17#meu1">
-          <layout:Field field="sv2#area4#page17#meu1#fld38"/>
-          <layout:Field field="sv2#area4#page17#meu1#fld39"/>
-          <layout:Field field="sv2#area4#page17#meu1#fld40"/>
-          <layout:Link link="sv2#area4#page17#meu1#ln30"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell>
         <layout:Unit unitId="sv2#area4#page17#enu7">
           <layout:Field field="sv2#area4#page17#enu7#fld35"/>
           <layout:Field field="sv2#area4#page17#enu7#fld34"/>
@@ -44,6 +36,14 @@
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page17#meu1">
+          <layout:Field field="sv2#area4#page17#meu1#fld38"/>
+          <layout:Field field="sv2#area4#page17#meu1#fld39"/>
+          <layout:Field field="sv2#area4#page17#meu1#fld40"/>
+          <layout:Link link="sv2#area4#page17#meu1#ln30"/>
+        </layout:Unit>
+      </layout:Cell>
     </layout:Row>
     <layout:Row>
       <layout:Cell/>

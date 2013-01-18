@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="532" gr:y="170" id="sv2#area1#page5" name="Modificar Produto">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="330" gr:y="160" id="sv2#area1#page5" name="Modificar Produto">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="120" id="sv2#area1#page5#enu3" name="Modificar" linkOrder="sv2#area1#page5#enu3#ln20" fieldOrder="sv2#area1#page5#enu3#fld26 sv2#area1#page5#enu3#fld25 sv2#area1#page5#enu3#fld27 sv2#area1#page5#enu3#fld28 sv2#area1#page5#enu3#fld29 sv2#area1#page5#enu3#fld30 sv2#area1#page5#enu3#fld31 sv2#area1#page5#enu3#fld32">
+    <EntryUnit gr:x="0" gr:y="94" id="sv2#area1#page5#enu3" name="Modificar" linkOrder="sv2#area1#page5#enu3#ln20" fieldOrder="sv2#area1#page5#enu3#fld26 sv2#area1#page5#enu3#fld25 sv2#area1#page5#enu3#fld27 sv2#area1#page5#enu3#fld28 sv2#area1#page5#enu3#fld29 sv2#area1#page5#enu3#fld30 sv2#area1#page5#enu3#fld31 sv2#area1#page5#enu3#fld32">
       <Field id="sv2#area1#page5#enu3#fld25" name="nome" type="string" modifiable="true" slotOrder="sv2#area1#page5#enu3#fld25#slot2">
         <Slot id="sv2#area1#page5#enu3#fld25#slot2" name="Slot2" label="true" output="true"/>
       </Field>
@@ -36,7 +36,7 @@
         <LinkParameter id="sv2#area1#page5#enu3#ln20#par54" name="tipo_tipo" source="sv2#area1#page5#enu3#fld26" target="sv2#mfu3.ent2#att28"/>
       </Link>
     </EntryUnit>
-    <DataUnit gr:x="80" gr:y="0" id="sv2#area1#page5#dau3" name="Detalhes" entity="ent2" customDescriptor="false" displayAttributes="ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19">
+    <DataUnit gr:x="2" gr:y="0" id="sv2#area1#page5#dau3" name="Detalhes" entity="ent2" customDescriptor="false" displayAttributes="ent2#att13 ent2#att28 ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18 ent2#att19">
       <Selector id="sv2#area1#page5#dau3#su6" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area1#page5#dau3#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
       </Selector>
