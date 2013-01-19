@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="104" gr:y="84" id="sv4#page6" name="Home" landmark="true" linkOrder="sv4#page6#ln60">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="250" gr:y="30" id="sv4#page6" name="Home" landmark="true" linkOrder="sv4#page6#ln60">
   <ContentUnits>
     <GetUnit id="sv4#page6#gtu1" name="Get Users" contextParameters="UserCtxParam" gr:x="0" gr:y="0">
       <Link id="sv4#page6#gtu1#ln14" name="Link14" to="sv4#page6#dau12" automaticCoupling="true" type="transport" validate="true"/>
