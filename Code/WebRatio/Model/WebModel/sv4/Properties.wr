@@ -1,3 +1,7 @@
-<SiteView id="sv4" name="BackOffice Administrador">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="BackOffice Administrador" homePage="sv4#page6" landmarks="sv4#page6">
+  <OperationUnits>
+    <LogoutUnit gr:x="370" gr:y="110" id="sv4#lou1" name="LogoutUnit1" siteView="sv3">
+      <KOLink id="sv4#lou1#kln19" name="KOLink19" to="sv4#page6" automaticCoupling="true" gr:bendpoints="-74,16,134,13"/>
+    </LogoutUnit>
+  </OperationUnits>
 </SiteView>
