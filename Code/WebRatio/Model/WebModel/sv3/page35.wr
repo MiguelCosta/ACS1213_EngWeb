@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="210" id="sv3#page35" name="Home" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="50" gr:y="310" id="sv3#page35" name="Home" landmark="true">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv3#page35#inu15" name="Promo&#231;&#245;es" entity="ent4"/>
   </ContentUnits>

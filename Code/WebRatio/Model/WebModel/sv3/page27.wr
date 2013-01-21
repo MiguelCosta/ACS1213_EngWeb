@@ -1,12 +1,40 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page27" name="Login" landmark="true" gr:x="70" gr:y="60">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page27" name="Login" landmark="true" gr:x="69" gr:y="60">
   <ContentUnits>
-    <EntryUnit id="sv3#page27#enu14" name="Please Login" gr:x="-1" gr:y="0" linkOrder="sv3#page27#enu14#ln59">
+    <EntryUnit id="sv3#page27#enu14" name="Please Login" gr:x="0" gr:y="0" linkOrder="sv3#page27#enu14#ln59">
       <Field id="sv3#page27#enu14#fld40" name="Username" type="string" modifiable="true"/>
       <Field id="sv3#page27#enu14#fld52" name="Password" type="string" modifiable="true"/>
       <Link id="sv3#page27#enu14#ln59" name="Link59" to="sv3#lgu2" type="normal" validate="true">
         <LinkParameter id="sv3#page27#enu14#ln59#par56" name="Username_Username" source="sv3#page27#enu14#fld40" target="sv3#lgu2.username"/>
         <LinkParameter id="sv3#page27#enu14#ln59#par57" name="Password_Password" source="sv3#page27#enu14#fld52" target="sv3#lgu2.password"/>
       </Link>
+    </EntryUnit>
+    <EntryUnit id="sv3#page27#enu17" name="Registar" linkOrder="sv3#page27#enu17#ln70" gr:x="5" gr:y="74">
+      <Field id="sv3#page27#enu17#fld57" name="Username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page27#enu17#fld57#mnd1" name="Required"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page27#enu17#fld58" name="Password" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page27#enu17#fld58#mnd2" name="Required"/>
+          <CompareValidationRule id="sv3#page27#enu17#fld58#cmp1" name="Comparar" predicate="eq" valueField="sv3#page27#enu17#fld59"/>
+        </VRules>
+      </Field>
+      <VRules>
+        <FormNotEmptyValidationRule id="sv3#page27#enu17#fnevr1" name="Form Not Empty1"/>
+      </VRules>
+      <Field id="sv3#page27#enu17#fld59" name="Confirmar Password" type="string" modifiable="true"/>
+      <Field id="sv3#page27#enu17#fld60" name="Email" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page27#enu17#fld60#mnd3" name="Required"/>
+        </VRules>
+      </Field>
+      <Link id="sv3#page27#enu17#ln70" name="Link61" to="sv3#opg1#cru10" type="normal" validate="true">
+        <LinkParameter id="sv3#page27#enu17#ln70#par58" name="Email_email" source="sv3#page27#enu17#fld60" target="sv3#opg1#cru10.email"/>
+        <LinkParameter id="sv3#page27#enu17#ln70#par59" name="Password_password" source="sv3#page27#enu17#fld58" target="sv3#opg1#cru10.password"/>
+        <LinkParameter id="sv3#page27#enu17#ln70#par60" name="Username_userName" source="sv3#page27#enu17#fld57" target="sv3#opg1#cru10.userName"/>
+      </Link>
+      <Link id="sv3#page27#enu17#ln79" name="Link62" to="sv3#lgu2" type="transport" automaticCoupling="true" validate="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid>
@@ -18,7 +46,15 @@
           <layout:Link link="sv3#page27#enu14#ln59"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#page27#enu17">
+          <layout:Field field="sv3#page27#enu17#fld57"/>
+          <layout:Field field="sv3#page27#enu17#fld58"/>
+          <layout:Field field="sv3#page27#enu17#fld59"/>
+          <layout:Field field="sv3#page27#enu17#fld60"/>
+          <layout:Link link="sv3#page27#enu17#ln70"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
