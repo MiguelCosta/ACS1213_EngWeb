@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Backoffice Gestor" homePage="sv5#page7" landmarks="sv5#page7 sv5#area12 sv5#area13" protected="true">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Backoffice Gestor" homePage="sv5#page7" landmarks="sv5#page7 sv5#area12 sv5#area13 sv5#area6 sv5#area7" protected="true">
   <OperationUnits>
     <LogoutUnit gr:x="380" gr:y="130" id="sv5#lou2" name="Logout" siteView="sv3">
       <KOLink id="sv5#lou2#kln20" name="KOLink20" to="sv5#page7" automaticCoupling="true" gr:bendpoints="-72,12,127,19"/>
@@ -46,5 +46,19 @@
       <OKLink id="sv5#cru14#oln35" name="OKLink9" to="sv5#area13#page60#inu24" automaticCoupling="true"/>
       <KOLink id="sv5#cru14#kln26" name="KOLink5" to="sv5#area13#page61#enu26" automaticCoupling="true" gr:bendpoints="28,-79,2,80"/>
     </CreateUnit>
+    <ModifyUnit id="sv5#mfu8" name="Alterar Estado" gr:x="2450" gr:y="470" entity="ent3">
+      <Selector id="sv5#mfu8#su51" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#mfu8#su51#kcond44" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv5#mfu8#oln47" name="OKLink17" to="sv5#area6#page37#inu16" automaticCoupling="true"/>
+      <KOLink id="sv5#mfu8#kln38" name="KOLink13" to="sv5#area6#page36#enu15" automaticCoupling="true" gr:bendpoints="-96,-16,84,43"/>
+    </ModifyUnit>
+    <ModifyUnit id="sv5#mfu11" name="Alterar Estado" gr:x="1500" gr:y="580" entity="ent1">
+      <Selector id="sv5#mfu11#su54" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#mfu11#su54#kcond55" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv5#mfu11#oln52" name="OKLink13" to="sv5#area7#page43#inu19" automaticCoupling="true"/>
+      <KOLink id="sv5#mfu11#kln43" name="KOLink11" to="sv5#area7#page41#enu22" automaticCoupling="true" gr:bendpoints="-106,-21,94,48"/>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>

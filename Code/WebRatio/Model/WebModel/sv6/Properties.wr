@@ -23,8 +23,8 @@
       <Link id="sv6#cru15#ln119" name="Link41" to="sv6#area14#cnu6" type="transport" automaticCoupling="true" validate="true"/>
     </CreateUnit>
     <CreateUnit id="sv6#cru16" name="Novo Or&#231;amento" gr:x="79" gr:y="601" entity="ent1">
-      <OKLink id="sv6#cru16#oln40" name="OKLink11" to="sv6#area14#page64" automaticCoupling="true"/>
       <KOLink id="sv6#cru16#kln31" name="KOLink7" to="sv6#area14#page67#enu29" automaticCoupling="true" gr:bendpoints="-22,-57,-9,55"/>
+      <OKLink id="sv6#cru16#oln29" name="OKLink29" to="sv6#area14#page64" automaticCoupling="true"/>
     </CreateUnit>
     <CreateUnit id="sv6#cru17" name="Nova Encomenda" gr:x="900" gr:y="530" entity="ent3">
       <OKLink id="sv6#cru17#oln41" name="OKLink18" to="sv6#area15#page70#inu29" automaticCoupling="true"/>

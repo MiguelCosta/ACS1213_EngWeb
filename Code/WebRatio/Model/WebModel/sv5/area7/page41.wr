@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area7#page41" name="Alterar Estado" gr:x="12" gr:y="180">
+  <ContentUnits>
+    <EntryUnit id="sv5#area7#page41#enu22" name="Alterar Estado" linkOrder="sv5#area7#page41#enu22#ln102" gr:x="0" gr:y="0" fieldOrder="sv5#area7#page41#enu22#fld69">
+      <Link id="sv5#area7#page41#enu22#ln102" name="Guardar" to="sv5#mfu11" type="normal" validate="true">
+        <LinkParameter id="sv5#area7#page41#enu22#ln102#par119" name="Estado_estado" source="sv5#area7#page41#enu22#fld69" target="sv5#mfu11.ent1#att36"/>
+      </Link>
+      <Field id="sv5#area7#page41#enu22#fld69" name="Estado" type="string" modifiable="true"/>
+    </EntryUnit>
+    <DataUnit id="sv5#area7#page41#dau19" name="Or&#231;amento" gr:x="14" gr:y="94" entity="ent1">
+      <Selector id="sv5#area7#page41#dau19#su72" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#area7#page41#dau19#su72#kcond65" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#area7#page41#dau19#ln118" name="Link38" to="sv5#area7#page41#enu22" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv5#area7#page41#dau19#ln123" name="Link40" to="sv5#mfu11" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#area7#page41#enu22">
+          <layout:Link link="sv5#area7#page41#enu22#ln102"/>
+          <layout:Field field="sv5#area7#page41#enu22#fld69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

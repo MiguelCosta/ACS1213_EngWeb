@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area6#page28" name="Detalhes do Pedido" gr:x="242" gr:y="12">
+  <ContentUnits>
+    <DataUnit id="sv5#area6#page28#dau15" name="Detalhes do Pedido" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33 ent3#att1">
+      <Selector id="sv5#area6#page28#dau15#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#area6#page28#dau15#su44#kcond38" name="KeyCondition20" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#area6#page28#dau15#ln82" name="Link54" to="sv5#area6#page28#inu12" type="transport" validate="true">
+        <LinkParameter id="sv5#area6#page28#dau15#ln82#par81" name="oid_pedido [oid]" source="data.ent3#att9" target="sv5#area6#page28#inu12#su45#rcond5.ent5#att11"/>
+      </Link>
+    </DataUnit>
+    <IndexUnit id="sv5#area6#page28#inu12" name="Linhas do Pedido" gr:x="14" gr:y="114" entity="ent5" displayAttributes="ent5#att11 ent5#att34">
+      <Selector id="sv5#area6#page28#inu12#su45" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv5#area6#page28#inu12#su45#rcond5" name="pedido" predicate="in" implied="false" role="rel19#role38.rel19#role37"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#area6#page28#dau15">
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att30"/>
+          <layout:Attribute attribute="ent3#att31"/>
+          <layout:Attribute attribute="ent3#att32"/>
+          <layout:Attribute attribute="ent3#att33"/>
+          <layout:Attribute attribute="ent3#att1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#area6#page28#inu12">
+          <layout:Attribute attribute="ent5#att11"/>
+          <layout:Attribute attribute="ent5#att34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

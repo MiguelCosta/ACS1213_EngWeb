@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area7#page43" name="Pedidos or&#231;amento" gr:x="0" gr:y="8">
+  <ContentUnits>
+    <IndexUnit id="sv5#area7#page43#inu19" name="Pedidos Or&#231;amento" linkOrder="sv5#area7#page43#inu19#ln141 sv5#area7#page43#inu19#ln151" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37 ent1#att7">
+      <Link id="sv5#area7#page43#inu19#ln141" name="Detalhes" to="sv5#area7#page42#dau20" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="185,90,-6,-186"/>
+      <Link id="sv5#area7#page43#inu19#ln151" name="Alterar Estado" to="sv5#area7#page41#dau19" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#area7#page43#inu19">
+          <layout:Attribute attribute="ent1#att24"/>
+          <layout:Attribute attribute="ent1#att25"/>
+          <layout:Attribute attribute="ent1#att26"/>
+          <layout:Attribute attribute="ent1#att27"/>
+          <layout:Attribute attribute="ent1#att36"/>
+          <layout:Attribute attribute="ent1#att37"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Link link="sv5#area7#page43#inu19#ln141"/>
+          <layout:Link link="sv5#area7#page43#inu19#ln151"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
