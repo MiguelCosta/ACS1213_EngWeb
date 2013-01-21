@@ -1,0 +1,46 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page67" name="Novo Pedido" gr:x="16" gr:y="147">
+  <ContentUnits>
+    <EntryUnit id="sv6#area14#page67#enu29" name="Novo Pedido" linkOrder="sv6#area14#page67#enu29#ln136" gr:x="0" gr:y="0" fieldOrder="sv6#area14#page67#enu29#fld99 sv6#area14#page67#enu29#fld98 sv6#area14#page67#enu29#fld97 sv6#area14#page67#enu29#fld96 sv6#area14#page67#enu29#fld101 sv6#area14#page67#enu29#fld100">
+      <Field id="sv6#area14#page67#enu29#fld96" name="Anexos" type="string" modifiable="true"/>
+      <Field id="sv6#area14#page67#enu29#fld97" name="Data" type="date" modifiable="true"/>
+      <Field id="sv6#area14#page67#enu29#fld98" name="Numero Serie" type="integer" modifiable="true"/>
+      <Field id="sv6#area14#page67#enu29#fld99" name="Serie" type="string" modifiable="true"/>
+      <Field id="sv6#area14#page67#enu29#fld100" name="Valor Total" type="string" modifiable="true"/>
+      <Field id="sv6#area14#page67#enu29#fld101" name="Estado" type="string" modifiable="true"/>
+      <Link id="sv6#area14#page67#enu29#ln136" name="Criar Or&#231;amento" to="sv6#cru16" type="normal" validate="true" gr:bendpoints="27,57,31,-61">
+        <LinkParameter id="sv6#area14#page67#enu29#ln136#par87" name="Anexos_anexos" source="sv6#area14#page67#enu29#fld96" target="sv6#cru16.ent1#att27"/>
+        <LinkParameter id="sv6#area14#page67#enu29#ln136#par88" name="Data_data" source="sv6#area14#page67#enu29#fld97" target="sv6#cru16.ent1#att26"/>
+        <LinkParameter id="sv6#area14#page67#enu29#ln136#par89" name="Estado_estado" source="sv6#area14#page67#enu29#fld101" target="sv6#cru16.ent1#att36"/>
+        <LinkParameter id="sv6#area14#page67#enu29#ln136#par90" name="Numero Serie_numSerie" source="sv6#area14#page67#enu29#fld98" target="sv6#cru16.ent1#att25"/>
+        <LinkParameter id="sv6#area14#page67#enu29#ln136#par91" name="Serie_serie" source="sv6#area14#page67#enu29#fld99" target="sv6#cru16.ent1#att24"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area14#page67#enu29">
+          <layout:Field field="sv6#area14#page67#enu29#fld99"/>
+          <layout:Field field="sv6#area14#page67#enu29#fld98"/>
+          <layout:Field field="sv6#area14#page67#enu29#fld97"/>
+          <layout:Field field="sv6#area14#page67#enu29#fld96"/>
+          <layout:Field field="sv6#area14#page67#enu29#fld101"/>
+          <layout:Field field="sv6#area14#page67#enu29#fld100"/>
+          <layout:Link link="sv6#area14#page67#enu29#ln136"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

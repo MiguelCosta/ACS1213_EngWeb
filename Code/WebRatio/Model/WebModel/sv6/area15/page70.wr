@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area15#page70" name="Pedidos de Encomenda" linkOrder="sv6#area15#page70#ln145" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv6#area15#page70#inu29" name="Pedidos de Encomenda" linkOrder="sv6#area15#page70#inu29#ln142 sv6#area15#page70#inu29#ln143" gr:x="100" gr:y="0" entity="ent3" displayAttributes="ent3#att30 ent3#att31 ent3#att32 ent3#att33 ent3#att1">
+      <Link id="sv6#area15#page70#inu29#ln142" name="Eliminar" to="sv6#dlu14" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv6#area15#page70#inu29#ln143" name="Ver Detalhes" to="sv6#area15#page68#dau30" type="normal" validate="true">
+        <LinkParameter id="sv6#area15#page70#inu29#ln143#par95" name="oid_KeyCondition20 [oid]" source="data[].ent3#att9" target="sv6#area15#page68#dau30#su78#kcond67.ent3#att9"/>
+      </Link>
+      <Selector id="sv6#area15#page70#inu29#su84" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv6#area15#page70#inu29#su84#rcond14" name="UserToEncomenda" predicate="in" implied="false" role="rel24#role47"/>
+      </Selector>
+    </IndexUnit>
+    <GetUnit gr:x="0" gr:y="0" id="sv6#area15#page70#gtu8" name="GetUser" contextParameters="UserCtxParam">
+      <Link id="sv6#area15#page70#gtu8#ln159" name="Link159" to="sv6#area15#page70#inu29" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area15#page70#inu29">
+          <layout:Link link="sv6#area15#page70#inu29#ln142"/>
+          <layout:Link link="sv6#area15#page70#inu29#ln143"/>
+          <layout:Attribute attribute="ent3#att30"/>
+          <layout:Attribute attribute="ent3#att31"/>
+          <layout:Attribute attribute="ent3#att32"/>
+          <layout:Attribute attribute="ent3#att33"/>
+          <layout:Attribute attribute="ent3#att1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv6#area15#page70#ln145" name="Novo Pedido" to="sv6#area15#page71" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

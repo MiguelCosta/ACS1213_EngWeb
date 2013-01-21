@@ -1,0 +1,58 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area15#page71" name="Novo Pedido" gr:x="56" gr:y="346">
+  <ContentUnits>
+    <EntryUnit id="sv6#area15#page71#enu31" name="Novo Pedido" linkOrder="sv6#area15#page71#enu31#ln146" gr:x="0" gr:y="0" fieldOrder="sv6#area15#page71#enu31#fld106 sv6#area15#page71#enu31#fld105 sv6#area15#page71#enu31#fld104 sv6#area15#page71#enu31#fld103 sv6#area15#page71#enu31#fld107">
+      <Field id="sv6#area15#page71#enu31#fld103" name="Anexos" type="string" modifiable="true"/>
+      <Field id="sv6#area15#page71#enu31#fld104" name="Data" type="date" modifiable="true"/>
+      <Field id="sv6#area15#page71#enu31#fld105" name="Numero Serie" type="integer" modifiable="true"/>
+      <Field id="sv6#area15#page71#enu31#fld106" name="Serie" type="integer" modifiable="true"/>
+      <Field id="sv6#area15#page71#enu31#fld107" name="Estado" type="string" modifiable="true"/>
+      <Link id="sv6#area15#page71#enu31#ln146" name="Guardar" to="sv6#cru17" type="normal" validate="true">
+        <LinkParameter id="sv6#area15#page71#enu31#ln146#par96" name="Anexos_anexos" source="sv6#area15#page71#enu31#fld103" target="sv6#cru17.ent3#att33"/>
+        <LinkParameter id="sv6#area15#page71#enu31#ln146#par97" name="Data_data" source="sv6#area15#page71#enu31#fld104" target="sv6#cru17.ent3#att32"/>
+        <LinkParameter id="sv6#area15#page71#enu31#ln146#par98" name="Estado_estado" source="sv6#area15#page71#enu31#fld107" target="sv6#cru17.ent3#att1"/>
+        <LinkParameter id="sv6#area15#page71#enu31#ln146#par99" name="Numero Serie_numSerie" source="sv6#area15#page71#enu31#fld105" target="sv6#cru17.ent3#att31"/>
+        <LinkParameter id="sv6#area15#page71#enu31#ln146#par100" name="Serie_serie" source="sv6#area15#page71#enu31#fld106" target="sv6#cru17.ent3#att30"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit id="sv6#area15#page71#enu32" name="Nova Linha" linkOrder="sv6#area15#page71#enu32#ln147" gr:x="124" gr:y="4" fieldOrder="sv6#area15#page71#enu32#fld109 sv6#area15#page71#enu32#fld108">
+      <Field id="sv6#area15#page71#enu32#fld108" name="Produto" type="string" modifiable="true"/>
+      <Field id="sv6#area15#page71#enu32#fld109" name="Descri&#231;&#227;o" type="string" modifiable="true"/>
+      <Link id="sv6#area15#page71#enu32#ln147" name="Guardar" to="sv6#cru18" type="normal" validate="true">
+        <LinkParameter id="sv6#area15#page71#enu32#ln147#par101" name="Descri&#231;&#227;o_descricao" source="sv6#area15#page71#enu32#fld109" target="sv6#cru18.ent5#att34"/>
+        <LinkParameter id="sv6#area15#page71#enu32#ln147#par102" name="Produto_Produto.oid(Encomenda LinhaToProduto)" source="sv6#area15#page71#enu32#fld108" target="sv6#cru18.rel21#role42.ent2#att8"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area15#page71#enu31">
+          <layout:Field field="sv6#area15#page71#enu31#fld106"/>
+          <layout:Field field="sv6#area15#page71#enu31#fld105"/>
+          <layout:Field field="sv6#area15#page71#enu31#fld104"/>
+          <layout:Field field="sv6#area15#page71#enu31#fld103"/>
+          <layout:Field field="sv6#area15#page71#enu31#fld107"/>
+          <layout:Link link="sv6#area15#page71#enu31#ln146"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area15#page71#enu32">
+          <layout:Field field="sv6#area15#page71#enu32#fld109"/>
+          <layout:Field field="sv6#area15#page71#enu32#fld108"/>
+          <layout:Link link="sv6#area15#page71#enu32#ln147"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

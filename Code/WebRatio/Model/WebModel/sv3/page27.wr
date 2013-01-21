@@ -1,9 +1,9 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page27" name="Login" landmark="true" gr:x="69" gr:y="60">
   <ContentUnits>
-    <EntryUnit id="sv3#page27#enu14" name="Please Login" gr:x="0" gr:y="0" linkOrder="sv3#page27#enu14#ln59">
+    <EntryUnit id="sv3#page27#enu14" name="Please Login" gr:x="0" gr:y="0" linkOrder="sv3#page27#enu14#ln59" fieldOrder="sv3#page27#enu14#fld40 sv3#page27#enu14#fld52">
       <Field id="sv3#page27#enu14#fld40" name="Username" type="string" modifiable="true"/>
-      <Field id="sv3#page27#enu14#fld52" name="Password" type="string" modifiable="true"/>
-      <Link id="sv3#page27#enu14#ln59" name="Link59" to="sv3#lgu2" type="normal" validate="true">
+      <Field id="sv3#page27#enu14#fld52" name="Password" type="password" modifiable="true"/>
+      <Link id="sv3#page27#enu14#ln59" name="Entrar" to="sv3#lgu2" type="normal" validate="true">
         <LinkParameter id="sv3#page27#enu14#ln59#par56" name="Username_Username" source="sv3#page27#enu14#fld40" target="sv3#lgu2.username"/>
         <LinkParameter id="sv3#page27#enu14#ln59#par57" name="Password_Password" source="sv3#page27#enu14#fld52" target="sv3#lgu2.password"/>
       </Link>
@@ -29,12 +29,11 @@
           <MandatoryValidationRule id="sv3#page27#enu17#fld60#mnd3" name="Required"/>
         </VRules>
       </Field>
-      <Link id="sv3#page27#enu17#ln70" name="Link61" to="sv3#opg1#cru10" type="normal" validate="true">
+      <Link id="sv3#page27#enu17#ln70" name="Registar" to="sv3#opg1#cru10" type="normal" validate="true">
         <LinkParameter id="sv3#page27#enu17#ln70#par58" name="Email_email" source="sv3#page27#enu17#fld60" target="sv3#opg1#cru10.email"/>
         <LinkParameter id="sv3#page27#enu17#ln70#par59" name="Password_password" source="sv3#page27#enu17#fld58" target="sv3#opg1#cru10.password"/>
         <LinkParameter id="sv3#page27#enu17#ln70#par60" name="Username_userName" source="sv3#page27#enu17#fld57" target="sv3#opg1#cru10.userName"/>
       </Link>
-      <Link id="sv3#page27#enu17#ln79" name="Link62" to="sv3#lgu2" type="transport" automaticCoupling="true" validate="true"/>
     </EntryUnit>
   </ContentUnits>
   <layout:Grid>

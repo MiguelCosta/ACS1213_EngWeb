@@ -1,11 +1,16 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="50" gr:y="310" id="sv3#page35" name="Home" landmark="true">
   <ContentUnits>
-    <IndexUnit gr:x="0" gr:y="0" id="sv3#page35#inu15" name="Promo&#231;&#245;es" entity="ent4"/>
+    <IndexUnit gr:x="0" gr:y="0" id="sv3#page35#inu15" name="Promo&#231;&#245;es" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att22 ent4#att23"/>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
       <layout:Cell>
-        <layout:Unit unitId="sv3#page35#inu15"/>
+        <layout:Unit unitId="sv3#page35#inu15">
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
+          <layout:Attribute attribute="ent4#att22"/>
+          <layout:Attribute attribute="ent4#att23"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

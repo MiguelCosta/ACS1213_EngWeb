@@ -1,0 +1,47 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area13#page59" name="Promo&#231;&#227;o" gr:x="334" gr:y="0">
+  <ContentUnits>
+    <DataUnit id="sv5#area13#page59#dau25" name="Promo&#231;&#227;o" gr:x="0" gr:y="0" entity="ent4" displayAttributes="rel29#role58.ent2#att13 rel29#role58.ent2#att28 rel29#role58.ent2#att14 rel29#role58.ent2#att15 rel29#role58.ent2#att16 rel29#role58.ent2#att17 rel29#role58.ent2#att18 rel29#role58.ent2#att19 ent4#att20 ent4#att21 ent4#att22 ent4#att23">
+      <Selector id="sv5#area13#page59#dau25#su62" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#area13#page59#dau25#su62#kcond53" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#area13#page59#dau25#ln113" name="Link27" to="sv5#area13#page59#dau26" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <DataUnit id="sv5#area13#page59#dau26" name="Produto" gr:x="4" gr:y="104" entity="ent2">
+      <Selector id="sv5#area13#page59#dau26#su63" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#area13#page59#dau26#su63#kcond54" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#area13#page59#dau25">
+          <layout:Attribute attribute="rel29#role58.ent2#att13"/>
+          <layout:Attribute attribute="rel29#role58.ent2#att28"/>
+          <layout:Attribute attribute="rel29#role58.ent2#att14"/>
+          <layout:Attribute attribute="rel29#role58.ent2#att15"/>
+          <layout:Attribute attribute="rel29#role58.ent2#att16"/>
+          <layout:Attribute attribute="rel29#role58.ent2#att17"/>
+          <layout:Attribute attribute="rel29#role58.ent2#att18"/>
+          <layout:Attribute attribute="rel29#role58.ent2#att19"/>
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
+          <layout:Attribute attribute="ent4#att22"/>
+          <layout:Attribute attribute="ent4#att23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

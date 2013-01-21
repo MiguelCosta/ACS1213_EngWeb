@@ -1,0 +1,65 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page64" name="Detalhes do Pedido" gr:x="199" gr:y="248" linkOrder="sv6#area14#page64#ln130">
+  <ContentUnits>
+    <DataUnit id="sv6#area14#page64#dau29" name="Detalhes de Pedido" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att7 ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37">
+      <Selector id="sv6#area14#page64#dau29#su73" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#area14#page64#dau29#su73#kcond64" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv6#area14#page64#dau29#ln126" name="Link36" to="sv6#area14#page64#inu25" type="transport" validate="true">
+        <LinkParameter id="sv6#area14#page64#dau29#ln126#par82" name="oid_pedidoOr [oid]" source="data.ent1#att7" target="sv6#area14#page64#inu25#su74#rcond1.ent10#att43"/>
+      </Link>
+      <Link id="sv6#area14#page64#dau29#ln127" name="Link63" to="sv6#area14#page64#inu26" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv6#area14#page64#dau29#ln128" name="Link56" to="sv6#area14#cnu6" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <IndexUnit id="sv6#area14#page64#inu25" name="Linhas do Pedido" linkOrder="sv6#area14#page64#inu25#ln129" gr:x="161" gr:y="1" entity="ent10" displayAttributes="ent10#att43 ent10#att44">
+      <Link id="sv6#area14#page64#inu25#ln129" name="Editar Linha" to="sv6#area14#page62" type="normal" validate="true"/>
+      <Selector id="sv6#area14#page64#inu25#su74" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv6#area14#page64#inu25#su74#rcond10" name="RoleCondition7" predicate="in" implied="false" role="rel14#role27"/>
+      </Selector>
+    </IndexUnit>
+    <IndexUnit id="sv6#area14#page64#inu26" name="Listar Linhas" gr:x="76" gr:y="94" entity="ent10" displayAttributes="ent10#att43 ent10#att44 ent10#att45">
+      <Selector id="sv6#area14#page64#inu26#su75" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv6#area14#page64#inu26#su75#rcond11" name="RoleCondition8" predicate="in" implied="false" role="rel14#role27"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area14#page64#dau29">
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att24"/>
+          <layout:Attribute attribute="ent1#att25"/>
+          <layout:Attribute attribute="ent1#att26"/>
+          <layout:Attribute attribute="ent1#att27"/>
+          <layout:Attribute attribute="ent1#att36"/>
+          <layout:Attribute attribute="ent1#att37"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area14#page64#inu25">
+          <layout:Link link="sv6#area14#page64#inu25#ln129"/>
+          <layout:Attribute attribute="ent10#att43"/>
+          <layout:Attribute attribute="ent10#att44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area14#page64#inu26">
+          <layout:Attribute attribute="ent10#att43"/>
+          <layout:Attribute attribute="ent10#att44"/>
+          <layout:Attribute attribute="ent10#att45"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv6#area14#page64#ln130" name="Inserir Linha" to="sv6#area14#page66" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

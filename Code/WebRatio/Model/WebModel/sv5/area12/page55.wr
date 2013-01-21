@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area12#page55" name="Album" linkOrder="sv5#area12#page55#ln107" gr:x="340" gr:y="10">
+  <ContentUnits>
+    <DataUnit id="sv5#area12#page55#dau24" name="Album" gr:x="110" gr:y="0" entity="ent8">
+      <Selector id="sv5#area12#page55#dau24#su59" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#area12#page55#dau24#su59#kcond51" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#area12#page55#dau24#ln104" name="Link10" to="sv5#cnu5" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv5#area12#page55#dau24#ln105" name="Link53" to="sv5#area12#page55#inu22" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <IndexUnit id="sv5#area12#page55#inu22" name="Fotografias" linkOrder="sv5#area12#page55#inu22#ln106" gr:x="0" gr:y="0" entity="ent9" displayAttributes="ent9#att40">
+      <Selector id="sv5#area12#page55#inu22#su60" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv5#area12#page55#inu22#su60#rcond9" name="RoleCondition4" role="rel20#role39" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#area12#page55#inu22#ln106" name="Apagar Fotografia" to="sv5#dlu10" type="normal" validate="true">
+        <LinkParameter id="sv5#area12#page55#inu22#ln106#par67" name="oid_KeyCondition9 [oid]" source="data[].ent9#att40" target="sv5#dlu10#su57#kcond49.ent9#att40"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#area12#page55#dau24"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#area12#page55#inu22">
+          <layout:Attribute attribute="ent9#att40"/>
+          <layout:Link link="sv5#area12#page55#inu22#ln106"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv5#area12#page55#ln107" name="Adicionar foto" to="sv5#area12#page56" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-72,122,88,-95"/>
+</Page>

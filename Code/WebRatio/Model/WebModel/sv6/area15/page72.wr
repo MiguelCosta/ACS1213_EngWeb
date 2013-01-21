@@ -1,0 +1,42 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area15#page72" name="Modificar Linha" gr:x="461" gr:y="305">
+  <ContentUnits>
+    <DataUnit id="sv6#area15#page72#dau32" name="Encomenda Linha" gr:x="0" gr:y="0" entity="ent5">
+      <Selector id="sv6#area15#page72#dau32#su81" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#area15#page72#dau32#su81#kcond69" name="KeyCondition23" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv6#area15#page72#dau32#ln148" name="Link50" to="sv6#area15#page72#enu33" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv6#area15#page72#dau32#ln149" name="Link51" to="sv6#mfu9" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <EntryUnit id="sv6#area15#page72#enu33" name="Editar Linha" linkOrder="sv6#area15#page72#enu33#ln150" gr:x="139" gr:y="5" fieldOrder="sv6#area15#page72#enu33#fld111 sv6#area15#page72#enu33#fld110">
+      <Link id="sv6#area15#page72#enu33#ln150" name="Guardar" to="sv6#mfu9" type="normal" validate="true">
+        <LinkParameter id="sv6#area15#page72#enu33#ln150#par103" name="Descri&#231;&#227;o_descricao" source="sv6#area15#page72#enu33#fld111" target="sv6#mfu9.ent5#att34"/>
+        <LinkParameter id="sv6#area15#page72#enu33#ln150#par104" name="Produto_Produto.oid(Encomenda LinhaToProduto)" source="sv6#area15#page72#enu33#fld110" target="sv6#mfu9.rel21#role42.ent2#att8"/>
+      </Link>
+      <Field id="sv6#area15#page72#enu33#fld110" name="Produto" type="string" modifiable="true"/>
+      <Field id="sv6#area15#page72#enu33#fld111" name="Descri&#231;&#227;o" type="string" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv6#area15#page72#enu33">
+          <layout:Link link="sv6#area15#page72#enu33#ln150"/>
+          <layout:Field field="sv6#area15#page72#enu33#fld111"/>
+          <layout:Field field="sv6#area15#page72#enu33#fld110"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
