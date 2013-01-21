@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="780" gr:y="320" id="sv3#page34" name="&#193;lbum">
+  <ContentUnits>
+    <IndexUnit gr:x="104" gr:y="4" id="sv3#page34#inu14" name="Lista de Fotografia" entity="ent9" displayAttributes="ent9#att40">
+      <Selector id="sv3#page34#inu14#su41" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page34#inu14#su41#rcond3" name="RoleCondition3" role="rel20#role39" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page34#dau14" name="&#193;lbum" entity="ent8">
+      <Selector id="sv3#page34#dau14#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page34#dau14#su40#kcond34" name="KeyCondition34" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page34#dau14#ln69" name="Link69" to="sv3#page34#inu14" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#page34#inu14">
+          <layout:Attribute attribute="ent9#att40"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#page34#dau14"/>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
