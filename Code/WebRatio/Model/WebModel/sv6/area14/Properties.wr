@@ -1,12 +1,22 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#area14" name="Or&#231;amentos" defaultPage="sv6#area14#page65" landmark="true" gr:x="40" gr:y="266">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#area14" name="Or&#231;amentos" landmark="true" gr:x="15" gr:y="261" defaultPage="sv6#area14#page65">
   <OperationUnits>
-    <ConnectUnit id="sv6#area14#cnu6" name="Ligar LinhaToOr&#231;amento" gr:x="0" gr:y="398" relationship="rel14#role28">
+    <ConnectUnit id="sv6#area14#cnu6" name="Ligar LinhaToOr&#231;amento" gr:x="7" gr:y="371" relationship="rel14#role27">
       <SourceSelector id="sv6#area14#cnu6#su69" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv6#area14#cnu6#su69#kcond60" name="KeyCondition20" predicate="in" implied="false"/>
       </SourceSelector>
       <TargetSelector id="sv6#area14#cnu6#su70" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv6#area14#cnu6#su70#kcond61" name="KeyCondition26" predicate="in" implied="false"/>
       </TargetSelector>
+      <OKLink id="sv6#area14#cnu6#oln28" name="OKLink28" to="sv6#area14#page64" automaticCoupling="true"/>
+    </ConnectUnit>
+    <ConnectUnit gr:x="7" gr:y="271" id="sv6#area14#cnu8" name="Ligar Or&#231;amentoToUser" relationship="rel25#role49">
+      <SourceSelector id="sv6#area14#cnu8#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#area14#cnu8#su47#kcond40" name="KeyCondition40" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv6#area14#cnu8#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv6#area14#cnu8#su49#kcond41" name="KeyCondition41" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv6#area14#cnu8#oln38" name="OKLink38" to="sv6#area14#page64" automaticCoupling="true" gr:bendpoints="80,85,-190,-59"/>
     </ConnectUnit>
   </OperationUnits>
 </Area>

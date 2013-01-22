@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="488" gr:y="24" id="sv5#page52" name="Clientes">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="4" id="sv5#page52#inu23" name="Lista de Clientes" entity="ent7" linkOrder="sv5#page52#inu23#ln154">
+      <Link id="sv5#page52#inu23#ln154" name="Link154" to="sv5#page52#dau26" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+    <DataUnit gr:x="156" gr:y="0" id="sv5#page52#dau26" name="Cliente" entity="ent7">
+      <Selector id="sv5#page52#dau26#su88" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#page52#dau26#su88#kcond74" name="KeyCondition74" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#page52#inu23">
+          <layout:Link link="sv5#page52#inu23#ln154"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv5#page52#dau26"/>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

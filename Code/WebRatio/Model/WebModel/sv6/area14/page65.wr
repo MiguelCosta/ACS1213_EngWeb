@@ -1,14 +1,17 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page65" name="Pedidos or&#231;amento" linkOrder="sv6#area14#page65#ln134" gr:x="22" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page65" name="Pedidos or&#231;amento" linkOrder="sv6#area14#page65#ln134" gr:x="0" gr:y="0">
   <ContentUnits>
-    <IndexUnit id="sv6#area14#page65#inu27" name="Pedidos Or&#231;amento" linkOrder="sv6#area14#page65#inu27#ln131 sv6#area14#page65#inu27#ln132" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37">
-      <Link id="sv6#area14#page65#inu27#ln131" name="Detalhes" to="sv6#area14#page64#dau29" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="185,90,-6,-186"/>
+    <IndexUnit id="sv6#area14#page65#inu27" name="Pedidos Or&#231;amento" linkOrder="sv6#area14#page65#inu27#ln131 sv6#area14#page65#inu27#ln132" gr:x="151" gr:y="0" entity="ent1" displayAttributes="ent1#att24 ent1#att25 ent1#att26 ent1#att27 ent1#att36 ent1#att37">
+      <Link id="sv6#area14#page65#inu27#ln131" name="Detalhes" to="sv6#area14#page64#dau29" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="92,66,58,-215;92,192,58,-89"/>
       <Link id="sv6#area14#page65#inu27#ln132" name="Eliminar Pedido" to="sv6#dlu13" type="normal" automaticCoupling="true" validate="true"/>
       <Selector id="sv6#area14#page65#inu27#su83" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv6#area14#page65#inu27#su83#rcond13" name="UserToOr&#231;amento" predicate="in" implied="false" role="rel25#role49"/>
       </Selector>
     </IndexUnit>
-    <GetUnit gr:x="144" gr:y="0" id="sv6#area14#page65#gtu7" name="GetUser" contextParameters="UserCtxParam">
+    <GetUnit gr:x="0" gr:y="5" id="sv6#area14#page65#gtu7" name="GetUser" contextParameters="UserCtxParam">
       <Link id="sv6#area14#page65#gtu7#ln158" name="Link158" to="sv6#area14#page65#inu27" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv6#area14#page65#gtu7#ln95" name="Link83" to="sv6#area14#cnu8" type="transport" validate="true" gr:bendpoints="-23,105,-55,-152;-20,169,-52,-88">
+        <LinkParameter id="sv6#area14#page65#gtu7#ln95#par85" name="UserCtxParam.oid_KeyCondition41 [oid] [User] [Target]" source="data.userOID" target="sv6#area14#cnu8#su49#kcond41.userOID"/>
+      </Link>
     </GetUnit>
   </ContentUnits>
   <layout:Grid>

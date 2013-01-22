@@ -1,0 +1,41 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area12#page56" name="Alterar estado" gr:x="0" gr:y="186">
+  <ContentUnits>
+    <DataUnit id="sv4#area12#page56#dau33" name="Encomenda" gr:x="90" gr:y="80" entity="ent3">
+      <Selector id="sv4#area12#page56#dau33#su93" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area12#page56#dau33#su93#kcond78" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area12#page56#dau33#ln161" name="Link43" to="sv4#area12#page56#enu23" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv4#area12#page56#dau33#ln162" name="Link44" to="sv4#mfu7" type="transport" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <EntryUnit id="sv4#area12#page56#enu23" name="Alterar Estado" linkOrder="sv4#area12#page56#enu23#ln163" gr:x="0" gr:y="0" fieldOrder="sv4#area12#page56#enu23#fld73">
+      <Field id="sv4#area12#page56#enu23#fld73" name="Estado" type="string" modifiable="true"/>
+      <Link id="sv4#area12#page56#enu23#ln163" name="Guardar" to="sv4#mfu7" type="normal" validate="true">
+        <LinkParameter id="sv4#area12#page56#enu23#ln163#par128" name="Estado_estado" source="sv4#area12#page56#enu23#fld73" target="sv4#mfu7.ent3#att1"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area12#page56#dau33"/>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area12#page56#enu23">
+          <layout:Field field="sv4#area12#page56#enu23#fld73"/>
+          <layout:Link link="sv4#area12#page56#enu23#ln163"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

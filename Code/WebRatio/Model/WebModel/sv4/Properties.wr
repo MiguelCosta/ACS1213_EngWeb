@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="BackOffice Administrador" homePage="sv4#page6" landmarks="sv4#page6" protected="true" linkVisibilityPolicy="hide">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="BackOffice Administrador" homePage="sv4#page6" landmarks="sv4#page6 sv4#area9 sv4#area10 sv4#area12 sv4#area13" protected="true" linkVisibilityPolicy="hide">
   <OperationUnits>
     <LogoutUnit gr:x="516" gr:y="56" id="sv4#lou1" name="LogoutUnit1" siteView="sv3">
       <KOLink id="sv4#lou1#kln19" name="KOLink19" to="sv4#page6" automaticCoupling="true" gr:bendpoints="-74,16,134,13"/>
@@ -13,5 +13,60 @@
       </Selector>
       <OKLink id="sv4#dlu7#oln25" name="OKLink25" to="sv4#mpage1" automaticCoupling="true"/>
     </DeleteUnit>
+    <DeleteUnit id="sv4#dlu9" name="Eliminar Promo&#231;&#227;o" gr:x="1074" gr:y="270" entity="ent4">
+      <Selector id="sv4#dlu9#su61" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#dlu9#su61#kcond52" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#dlu9#oln49" name="OKLink10" to="sv4#area9#page45#inu20" automaticCoupling="true" gr:bendpoints="-126,-133,98,146"/>
+      <KOLink id="sv4#dlu9#kln29" name="KOLink6" to="sv4#area9#page45#inu20" automaticCoupling="true" gr:bendpoints="-102,-151,122,128"/>
+    </DeleteUnit>
+    <CreateUnit id="sv4#cru14" name="Adicionar Promo&#231;&#227;o" gr:x="1064" gr:y="370" entity="ent4">
+      <OKLink id="sv4#cru14#oln50" name="OKLink9" to="sv4#area9#page45#inu20" automaticCoupling="true"/>
+      <KOLink id="sv4#cru14#kln31" name="KOLink5" to="sv4#area9#page44#enu19" automaticCoupling="true" gr:bendpoints="28,-79,2,80"/>
+    </CreateUnit>
+    <CreateUnit id="sv4#cru19" name="Adicionar nova foto" gr:x="460" gr:y="930" entity="ent9">
+      <KOLink id="sv4#cru19#kln33" name="KOLink3" to="sv4#area10#page51#enu21" automaticCoupling="true" gr:bendpoints="-86,36,81,33"/>
+      <OKLink id="sv4#cru19#oln51" name="OKLink40" to="sv4#cnu9" automaticCoupling="true"/>
+    </CreateUnit>
+    <DeleteUnit id="sv4#dlu10" name="Apagar foto" gr:x="300" gr:y="780" entity="ent9">
+      <Selector id="sv4#dlu10#su64" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#dlu10#su64#kcond56" name="KeyCondition9" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv4#dlu10#su64#rcond17" name="AlbumToFotografia" role="rel20#role39" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#dlu10#oln53" name="OKLink8" to="sv4#area10#page48" automaticCoupling="true" gr:bendpoints="-36,-139,5,138"/>
+    </DeleteUnit>
+    <DeleteUnit id="sv4#dlu11" name="Apagar album" gr:x="240" gr:y="660" entity="ent8">
+      <Selector id="sv4#dlu11#su75" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#dlu11#su75#kcond63" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#dlu11#oln54" name="OKLink7" to="sv4#area10#page49" automaticCoupling="true" gr:bendpoints="-87,25,96,14"/>
+    </DeleteUnit>
+    <ConnectUnit id="sv4#cnu9" name="LigarFotoToAlbum" gr:x="470" gr:y="810" relationship="rel20#role40">
+      <SourceSelector id="sv4#cnu9#su85" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#cnu9#su85#kcond71" name="KeyCondition2" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="sv4#cnu9#su86" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#cnu9#su86#kcond72" name="KeyCondition4" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="sv4#cnu9#oln55" name="OKLink42" to="sv4#area10#page48" automaticCoupling="true"/>
+    </ConnectUnit>
+    <CreateUnit id="sv4#cru20" name="Adicionar novo album" gr:x="30" gr:y="950" entity="ent8">
+      <OKLink id="sv4#cru20#oln56" name="OKLink1" to="sv4#area10#page49" automaticCoupling="true"/>
+      <KOLink id="sv4#cru20#kln37" name="KOLink1" to="sv4#area10#page50#enu20" automaticCoupling="true" gr:bendpoints="-33,-68,1,70"/>
+    </CreateUnit>
+    <ModifyUnit id="sv4#mfu7" name="Alterar Estado" gr:x="1680" gr:y="984" entity="ent3">
+      <Selector id="sv4#mfu7#su90" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mfu7#su90#kcond76" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#mfu7#oln57" name="OKLink17" to="sv4#area12#page54#inu26" automaticCoupling="true"/>
+      <KOLink id="sv4#mfu7#kln39" name="KOLink13" to="sv4#area12#page56#enu23" automaticCoupling="true" gr:bendpoints="-96,-16,84,43"/>
+    </ModifyUnit>
+    <ModifyUnit id="sv4#mfu10" name="Alterar Estado" gr:x="1230" gr:y="974" entity="ent1">
+      <Selector id="sv4#mfu10#su94" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mfu10#su94#kcond79" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#mfu10#oln58" name="OKLink13" to="sv4#area13#page57#inu31" automaticCoupling="true"/>
+      <KOLink id="sv4#mfu10#kln40" name="KOLink11" to="sv4#area13#page58#enu24" automaticCoupling="true" gr:bendpoints="-106,-21,94,48"/>
+    </ModifyUnit>
   </OperationUnits>
 </SiteView>

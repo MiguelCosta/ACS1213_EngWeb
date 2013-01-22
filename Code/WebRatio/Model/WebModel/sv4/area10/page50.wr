@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area10#page50" name="Novo album" gr:x="92" gr:y="152">
+  <ContentUnits>
+    <EntryUnit id="sv4#area10#page50#enu20" name="Adicionar album" linkOrder="sv4#area10#page50#enu20#ln144" gr:x="0" gr:y="0" fieldOrder="sv4#area10#page50#enu20#fld70 sv4#area10#page50#enu20#fld68">
+      <Link id="sv4#area10#page50#enu20#ln144" name="Adicionar" to="sv4#cru20" type="normal" validate="true">
+        <LinkParameter id="sv4#area10#page50#enu20#ln144#par122" name="data_data" source="sv4#area10#page50#enu20#fld68" target="sv4#cru20.ent8#att42"/>
+        <LinkParameter id="sv4#area10#page50#enu20#ln144#par123" name="nome_nome" source="sv4#area10#page50#enu20#fld70" target="sv4#cru20.ent8#att41"/>
+      </Link>
+      <Field id="sv4#area10#page50#enu20#fld68" name="data" type="date" modifiable="true"/>
+      <Field id="sv4#area10#page50#enu20#fld70" name="nome" type="string" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area10#page50#enu20">
+          <layout:Link link="sv4#area10#page50#enu20#ln144"/>
+          <layout:Field field="sv4#area10#page50#enu20#fld70"/>
+          <layout:Field field="sv4#area10#page50#enu20#fld68"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

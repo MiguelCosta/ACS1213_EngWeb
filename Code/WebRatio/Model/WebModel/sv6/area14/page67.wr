@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page67" name="Novo Pedido" gr:x="16" gr:y="147">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page67" name="Novo Pedido" gr:x="175" gr:y="151">
   <ContentUnits>
     <EntryUnit id="sv6#area14#page67#enu29" name="Novo Pedido" linkOrder="sv6#area14#page67#enu29#ln136" gr:x="0" gr:y="0" fieldOrder="sv6#area14#page67#enu29#fld99 sv6#area14#page67#enu29#fld98 sv6#area14#page67#enu29#fld97 sv6#area14#page67#enu29#fld96 sv6#area14#page67#enu29#fld101 sv6#area14#page67#enu29#fld100">
       <Field id="sv6#area14#page67#enu29#fld96" name="Anexos" type="string" modifiable="true"/>

@@ -1,0 +1,41 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area10#page49" name="Lista de Albuns" linkOrder="sv4#area10#page49#ln140" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv4#area10#page49#inu22" name="Lista de Albuns" linkOrder="sv4#area10#page49#inu22#ln127 sv4#area10#page49#inu22#ln133" gr:x="0" gr:y="0" entity="ent8" displayAttributes="ent8#att41 ent8#att39 ent8#att42">
+      <Link id="sv4#area10#page49#inu22#ln127" name="Ver Album" to="sv4#area10#page48#dau24" type="normal" validate="true" gr:bendpoints="102,-69,-457,-72;513,-75,-46,-78">
+        <LinkParameter id="sv4#area10#page49#inu22#ln127#par118" name="oid_KeyCondition1 [oid]" source="data[].ent8#att39" target="sv4#area10#page48#dau24#su65#kcond59.ent8#att39"/>
+      </Link>
+      <Link id="sv4#area10#page49#inu22#ln133" name="Apagar Album" to="sv4#dlu11" type="normal" validate="true">
+        <LinkParameter id="sv4#area10#page49#inu22#ln133#par120" name="oid_KeyCondition8 [oid]" source="data[].ent8#att39" target="sv4#dlu11#su75#kcond63.ent8#att39"/>
+      </Link>
+      <Link id="sv4#area10#page49#inu22#ln139" name="Link19" to="sv4#dlu10" type="transport" validate="true">
+        <LinkParameter id="sv4#area10#page49#inu22#ln139#par121" name="oid_AlbumToFotografia [oid]" source="data[].ent8#att39" target="sv4#dlu10#su64#rcond17.ent8#att39"/>
+      </Link>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area10#page49#inu22">
+          <layout:Link link="sv4#area10#page49#inu22#ln127"/>
+          <layout:Link link="sv4#area10#page49#inu22#ln133"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att39"/>
+          <layout:Attribute attribute="ent8#att42"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#area10#page49#ln140" name="Novo Album" to="sv4#area10#page50" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

@@ -1,19 +1,16 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page66" name="Nova Linha" gr:x="220" gr:y="508">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv6#area14#page66" name="Nova Linha" gr:x="247" gr:y="431">
   <ContentUnits>
-    <MultiEntryUnit id="sv6#area14#page66#meu1" name="Nova Linha" linkOrder="sv6#area14#page66#meu1#ln135" gr:x="0" gr:y="4" minLength="1" fieldOrder="sv6#area14#page66#meu1#fld94 sv6#area14#page66#meu1#fld93 sv6#area14#page66#meu1#fld92 sv6#area14#page66#meu1#fld95">
+    <MultiEntryUnit id="sv6#area14#page66#meu1" name="Nova Linha" linkOrder="sv6#area14#page66#meu1#ln135" gr:x="0" gr:y="2" minLength="1" fieldOrder="sv6#area14#page66#meu1#fld94 sv6#area14#page66#meu1#fld93 sv6#area14#page66#meu1#fld92">
       <Field id="sv6#area14#page66#meu1#fld92" name="Produto" type="string" modifiable="true"/>
       <Field id="sv6#area14#page66#meu1#fld93" name="Valor" type="float" modifiable="true"/>
       <Field id="sv6#area14#page66#meu1#fld94" name="Descri&#231;&#227;o" type="string" modifiable="true"/>
       <Link id="sv6#area14#page66#meu1#ln135" name="Adicionar Linha" to="sv6#cru15" type="normal" validate="true">
         <LinkParameter id="sv6#area14#page66#meu1#ln135#par83" name="Descri&#231;&#227;o_Descri&#231;&#227;o" source="sv6#area14#page66#meu1#fld94" target="sv6#cru15.ent10#att44"/>
         <LinkParameter id="sv6#area14#page66#meu1#ln135#par84" name="Produto_Produto.oid(Or&#231;amento LinhaToProduto)" source="sv6#area14#page66#meu1#fld92" target="sv6#cru15.rel18#role36.ent2#att8"/>
-        <LinkParameter id="sv6#area14#page66#meu1#ln135#par85" name="ID Or&#231;amento_Or&#231;amento.oid(Or&#231;amento LinhaToOr&#231;amento)" source="sv6#area14#page66#meu1#fld95" target="sv6#cru15.rel14#role28.ent1#att7"/>
         <LinkParameter id="sv6#area14#page66#meu1#ln135#par86" name="Valor_Valor" source="sv6#area14#page66#meu1#fld93" target="sv6#cru15.ent10#att45"/>
       </Link>
-      <Field id="sv6#area14#page66#meu1#fld95" name="ID Or&#231;amento" type="string" modifiable="true"/>
     </MultiEntryUnit>
-    <MultiDataUnit id="sv6#area14#page66#mdu12" name="Or&#231;amentos" gr:x="175" gr:y="0" entity="ent1" displayAttributes="ent1#att7 ent1#att26"/>
-    <MultiDataUnit id="sv6#area14#page66#mdu13" name="Produtos" gr:x="95" gr:y="0" entity="ent2" displayAttributes="ent2#att8 ent2#att13"/>
+    <MultiDataUnit id="sv6#area14#page66#mdu13" name="Produtos" gr:x="94" gr:y="0" entity="ent2" displayAttributes="ent2#att8 ent2#att13"/>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -23,15 +20,9 @@
           <layout:Field field="sv6#area14#page66#meu1#fld94"/>
           <layout:Field field="sv6#area14#page66#meu1#fld93"/>
           <layout:Field field="sv6#area14#page66#meu1#fld92"/>
-          <layout:Field field="sv6#area14#page66#meu1#fld95"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell>
-        <layout:Unit unitId="sv6#area14#page66#mdu12">
-          <layout:Attribute attribute="ent1#att7"/>
-          <layout:Attribute attribute="ent1#att26"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>

@@ -1,59 +1,16 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Backoffice Gestor" homePage="sv5#page7" landmarks="sv5#page7 sv5#area12 sv5#area13 sv5#area6 sv5#area7" protected="true">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Backoffice Gestor" homePage="sv5#page7" landmarks="sv5#page7 sv5#area6 sv5#area7" protected="true">
   <OperationUnits>
-    <LogoutUnit gr:x="380" gr:y="130" id="sv5#lou2" name="Logout" siteView="sv3">
+    <LogoutUnit gr:x="275" gr:y="56" id="sv5#lou2" name="Logout" siteView="sv3">
       <KOLink id="sv5#lou2#kln20" name="KOLink20" to="sv5#page7" automaticCoupling="true" gr:bendpoints="-72,12,127,19"/>
     </LogoutUnit>
-    <ConnectUnit id="sv5#cnu5" name="LigarFotoToAlbum" gr:x="1070" gr:y="480" relationship="rel20#role40">
-      <SourceSelector id="sv5#cnu5#su55" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv5#cnu5#su55#kcond47" name="KeyCondition2" predicate="in" implied="false"/>
-      </SourceSelector>
-      <TargetSelector id="sv5#cnu5#su56" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv5#cnu5#su56#kcond48" name="KeyCondition4" predicate="in" implied="false"/>
-      </TargetSelector>
-    </ConnectUnit>
-    <DeleteUnit id="sv5#dlu10" name="Apagar foto" gr:x="910" gr:y="460" entity="ent9">
-      <Selector id="sv5#dlu10#su57" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv5#dlu10#su57#kcond49" name="KeyCondition9" predicate="in" implied="false"/>
-        <RelationshipRoleCondition id="sv5#dlu10#su57#rcond15" name="AlbumToFotografia" role="rel20#role39" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="sv5#dlu10#oln30" name="OKLink8" to="sv5#area12#page55" automaticCoupling="true" gr:bendpoints="-36,-139,5,138"/>
-    </DeleteUnit>
-    <DeleteUnit id="sv5#dlu11" name="Apagar album" gr:x="850" gr:y="340" entity="ent8">
-      <Selector id="sv5#dlu11#su58" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv5#dlu11#su58#kcond50" name="KeyCondition8" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="sv5#dlu11#oln31" name="OKLink7" to="sv5#area12#page57" automaticCoupling="true" gr:bendpoints="-87,25,96,14"/>
-    </DeleteUnit>
-    <CreateUnit id="sv5#cru12" name="Adicionar nova foto" gr:x="1070" gr:y="590" entity="ent9">
-      <KOLink id="sv5#cru12#kln23" name="KOLink3" to="sv5#area12#page56#enu24" automaticCoupling="true" gr:bendpoints="-86,36,81,33"/>
-      <OKLink id="sv5#cru12#oln32" name="OKLink5" to="sv5#area12#page55" automaticCoupling="true" gr:bendpoints="-70,-51,-40,197;-75,-136,-45,112"/>
-      <Link id="sv5#cru12#ln103" name="Link8" to="sv5#cnu5" type="transport" validate="true">
-        <LinkParameter id="sv5#cru12#ln103#par66" name="oid_KeyCondition2 [oid] [Fotografia] [Source]" source="ent9#att40Array" target="sv5#cnu5#su55#kcond47.ent9#att40"/>
-      </Link>
-    </CreateUnit>
-    <CreateUnit id="sv5#cru13" name="Adicionar novo album" gr:x="740" gr:y="450" entity="ent8">
-      <OKLink id="sv5#cru13#oln33" name="OKLink1" to="sv5#area12#page57" automaticCoupling="true"/>
-      <KOLink id="sv5#cru13#kln24" name="KOLink1" to="sv5#area12#page58#enu25" automaticCoupling="true" gr:bendpoints="-33,-68,1,70"/>
-    </CreateUnit>
-    <DeleteUnit id="sv5#dlu12" name="Eliminar Promo&#231;&#227;o" gr:x="224" gr:y="360" entity="ent4">
-      <Selector id="sv5#dlu12#su61" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv5#dlu12#su61#kcond52" name="KeyCondition11" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="sv5#dlu12#oln34" name="OKLink10" to="sv5#area13#page60#inu24" automaticCoupling="true" gr:bendpoints="-126,-133,98,146"/>
-      <KOLink id="sv5#dlu12#kln25" name="KOLink6" to="sv5#area13#page60#inu24" automaticCoupling="true" gr:bendpoints="-102,-151,122,128"/>
-    </DeleteUnit>
-    <CreateUnit id="sv5#cru14" name="Adicionar Promo&#231;&#227;o" gr:x="214" gr:y="460" entity="ent4">
-      <OKLink id="sv5#cru14#oln35" name="OKLink9" to="sv5#area13#page60#inu24" automaticCoupling="true"/>
-      <KOLink id="sv5#cru14#kln26" name="KOLink5" to="sv5#area13#page61#enu26" automaticCoupling="true" gr:bendpoints="28,-79,2,80"/>
-    </CreateUnit>
-    <ModifyUnit id="sv5#mfu8" name="Alterar Estado" gr:x="2450" gr:y="470" entity="ent3">
+    <ModifyUnit id="sv5#mfu8" name="Alterar Estado" gr:x="728" gr:y="488" entity="ent3">
       <Selector id="sv5#mfu8#su51" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv5#mfu8#su51#kcond44" name="KeyCondition22" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv5#mfu8#oln47" name="OKLink17" to="sv5#area6#page37#inu16" automaticCoupling="true"/>
       <KOLink id="sv5#mfu8#kln38" name="KOLink13" to="sv5#area6#page36#enu15" automaticCoupling="true" gr:bendpoints="-96,-16,84,43"/>
     </ModifyUnit>
-    <ModifyUnit id="sv5#mfu11" name="Alterar Estado" gr:x="1500" gr:y="580" entity="ent1">
+    <ModifyUnit id="sv5#mfu11" name="Alterar Estado" gr:x="278" gr:y="478" entity="ent1">
       <Selector id="sv5#mfu11#su54" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv5#mfu11#su54#kcond55" name="KeyCondition17" predicate="in" implied="false"/>
       </Selector>

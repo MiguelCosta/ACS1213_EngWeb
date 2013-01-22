@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area9#page45" name="Lista de Promo&#231;&#245;es" linkOrder="sv4#area9#page45#ln114" gr:x="6" gr:y="2">
+  <ContentUnits>
+    <IndexUnit id="sv4#area9#page45#inu20" name="Lista de Promo&#231;&#245;es" linkOrder="sv4#area9#page45#inu20#ln103 sv4#area9#page45#inu20#ln113" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att22 ent4#att23">
+      <Link id="sv4#area9#page45#inu20#ln103" name="Ver Promo&#231;&#227;o" to="sv4#area9#page47#dau22" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="99,-53,-204,-54;163,-54,-140,-55;224,-55,-79,-56"/>
+      <Link id="sv4#area9#page45#inu20#ln113" name="Eliminar Promo&#231;&#227;o" to="sv4#dlu9" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area9#page45#inu20">
+          <layout:Link link="sv4#area9#page45#inu20#ln103"/>
+          <layout:Link link="sv4#area9#page45#inu20#ln113"/>
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
+          <layout:Attribute attribute="ent4#att22"/>
+          <layout:Attribute attribute="ent4#att23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#area9#page45#ln114" name="Adicionar Promo&#231;&#227;o" to="sv4#area9#page44#enu19" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

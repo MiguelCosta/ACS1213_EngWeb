@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area12#page54" name="Pedidos de Encomenda" gr:x="14" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv4#area12#page54#inu26" name="Pedidos de Encomenda" linkOrder="sv4#area12#page54#inu26#ln156 sv4#area12#page54#inu26#ln157" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33 ent3#att1 rel24#role48.userName">
+      <Link id="sv4#area12#page54#inu26#ln156" name="Ver Detalhes" to="sv4#area12#page55#dau31" type="normal" validate="true">
+        <LinkParameter id="sv4#area12#page54#inu26#ln156#par126" name="oid_KeyCondition20 [oid]" source="data[].ent3#att9" target="sv4#area12#page55#dau31#su91#kcond77.ent3#att9"/>
+      </Link>
+      <Link id="sv4#area12#page54#inu26#ln157" name="Alterar Estado" to="sv4#area12#page56#dau33" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area12#page54#inu26">
+          <layout:Link link="sv4#area12#page54#inu26#ln156"/>
+          <layout:Link link="sv4#area12#page54#inu26#ln157"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att30"/>
+          <layout:Attribute attribute="ent3#att31"/>
+          <layout:Attribute attribute="ent3#att32"/>
+          <layout:Attribute attribute="ent3#att33"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="rel24#role48.userName"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area6#page28" name="Detalhes do Pedido" gr:x="242" gr:y="12">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area6#page28" name="Detalhes do Pedido" gr:x="256" gr:y="12">
   <ContentUnits>
     <DataUnit id="sv5#area6#page28#dau15" name="Detalhes do Pedido" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent3#att9 ent3#att30 ent3#att31 ent3#att32 ent3#att33 ent3#att1">
       <Selector id="sv5#area6#page28#dau15#su44" defaultPolicy="fill" booleanOperator="and">
@@ -10,7 +10,7 @@
     </DataUnit>
     <IndexUnit id="sv5#area6#page28#inu12" name="Linhas do Pedido" gr:x="14" gr:y="114" entity="ent5" displayAttributes="ent5#att11 ent5#att34">
       <Selector id="sv5#area6#page28#inu12#su45" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv5#area6#page28#inu12#su45#rcond5" name="pedido" predicate="in" implied="false" role="rel19#role38.rel19#role37"/>
+        <RelationshipRoleCondition id="sv5#area6#page28#inu12#su45#rcond5" name="pedido" predicate="in" implied="false" role="rel19#role37"/>
       </Selector>
     </IndexUnit>
   </ContentUnits>

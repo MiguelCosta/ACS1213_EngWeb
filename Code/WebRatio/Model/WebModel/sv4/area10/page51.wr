@@ -1,0 +1,42 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area10#page51" name="Nova foto" gr:x="182" gr:y="272">
+  <ContentUnits>
+    <EntryUnit id="sv4#area10#page51#enu21" name="Adicionar foto" linkOrder="sv4#area10#page51#enu21#ln152" gr:x="74" gr:y="4" fieldOrder="sv4#area10#page51#enu21#fld71 sv4#area10#page51#enu21#fld72">
+      <Link id="sv4#area10#page51#enu21#ln152" name="Link6" to="sv4#cru19" type="normal" validate="true">
+        <LinkParameter id="sv4#area10#page51#enu21#ln152#par124" name="id_oid" source="sv4#area10#page51#enu21#fld71" target="sv4#cru19.ent9#att40"/>
+        <LinkParameter id="sv4#area10#page51#enu21#ln152#par125" name="Album_Album.oid(FotografiaToAlbum)" source="sv4#area10#page51#enu21#fld72" target="sv4#cru19.rel20#role40.ent8#att39"/>
+      </Link>
+      <Field id="sv4#area10#page51#enu21#fld71" name="id" type="string" modifiable="true"/>
+      <Field id="sv4#area10#page51#enu21#fld72" name="Album" type="string" modifiable="true"/>
+    </EntryUnit>
+    <MultiDataUnit id="sv4#area10#page51#mdu7" name="Albuns" gr:x="0" gr:y="0" entity="ent8" displayAttributes="ent8#att39 ent8#att41 ent8#att42"/>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area10#page51#enu21">
+          <layout:Link link="sv4#area10#page51#enu21#ln152"/>
+          <layout:Field field="sv4#area10#page51#enu21#fld71"/>
+          <layout:Field field="sv4#area10#page51#enu21#fld72"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area10#page51#mdu7">
+          <layout:Attribute attribute="ent8#att39"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att42"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,13 +1,13 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area6#page36" name="Alterar estado" gr:x="482" gr:y="12">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#area6#page36" name="Alterar estado" gr:x="0" gr:y="186">
   <ContentUnits>
-    <DataUnit id="sv5#area6#page36#dau16" name="Encomenda" gr:x="0" gr:y="0" entity="ent3">
+    <DataUnit id="sv5#area6#page36#dau16" name="Encomenda" gr:x="90" gr:y="80" entity="ent3">
       <Selector id="sv5#area6#page36#dau16#su46" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv5#area6#page36#dau16#su46#kcond39" name="KeyCondition21" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv5#area6#page36#dau16#ln84" name="Link43" to="sv5#area6#page36#enu15" type="transport" automaticCoupling="true" validate="true"/>
       <Link id="sv5#area6#page36#dau16#ln85" name="Link44" to="sv5#mfu8" type="transport" automaticCoupling="true" validate="true"/>
     </DataUnit>
-    <EntryUnit id="sv5#area6#page36#enu15" name="Alterar Estado" linkOrder="sv5#area6#page36#enu15#ln86" gr:x="104" gr:y="4" fieldOrder="sv5#area6#page36#enu15#fld53">
+    <EntryUnit id="sv5#area6#page36#enu15" name="Alterar Estado" linkOrder="sv5#area6#page36#enu15#ln86" gr:x="0" gr:y="0" fieldOrder="sv5#area6#page36#enu15#fld53">
       <Field id="sv5#area6#page36#enu15#fld53" name="Estado" type="string" modifiable="true"/>
       <Link id="sv5#area6#page36#enu15#ln86" name="Guardar" to="sv5#mfu8" type="normal" validate="true">
         <LinkParameter id="sv5#area6#page36#enu15#ln86#par105" name="Estado_estado" source="sv5#area6#page36#enu15#fld53" target="sv5#mfu8.ent3#att1"/>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page30" name="Sobre N&#243;s" landmark="true" gr:x="210" gr:y="10">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page30" name="Sobre N&#243;s" landmark="true" gr:x="200" gr:y="50">
   <ContentUnits/>
   <layout:Grid>
     <layout:Row>

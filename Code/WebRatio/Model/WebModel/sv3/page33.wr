@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="760" gr:y="180" id="sv3#page33" name="Galeria" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="530" gr:y="190" id="sv3#page33" name="Galeria" landmark="true">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="0" id="sv3#page33#inu13" name="Lista de &#193;lbuns" entity="ent8" linkOrder="sv3#page33#inu13#ln68" displayAttributes="ent8#att39 ent8#att41 ent8#att42">
       <Link id="sv3#page33#inu13#ln68" name="Visualizar Fotografias" to="sv3#page34#dau14" automaticCoupling="true" type="normal" validate="true"/>
