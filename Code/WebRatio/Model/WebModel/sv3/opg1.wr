@@ -1,6 +1,6 @@
 <OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="320" gr:y="50" id="sv3#opg1" name="User Transaction" transaction="true">
   <OperationUnits>
-    <CreateUnit gr:x="22" gr:y="211" id="sv3#opg1#cru10" name="Criar Utilizador" entity="User">
+    <CreateUnit gr:x="32" gr:y="201" id="sv3#opg1#cru10" name="Criar Utilizador" entity="User">
       <OKLink id="sv3#opg1#cru10#oln22" name="OKLink22" to="sv3#opg1#cnu3" automaticCoupling="true"/>
     </CreateUnit>
     <ConnectUnit gr:x="10" gr:y="100" id="sv3#opg1#cnu3" name="Ligar User ao Grupo" relationship="User2DefaultGroup">

@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area1#page2" name="Clientes" landmark="false" gr:x="8" gr:y="0">
+  <ContentUnits>
+    <IndexUnit id="sv4#area1#page2#inu1" name="Lista de Clientes" linkOrder="sv4#area1#page2#inu1#ln1" gr:x="0" gr:y="4" entity="ent7">
+      <Link id="sv4#area1#page2#inu1#ln1" name="Link154" to="sv4#area1#page2#dau1" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <DataUnit id="sv4#area1#page2#dau1" name="Cliente" gr:x="156" gr:y="0" entity="ent7" linkOrder="sv4#area1#page2#dau1#ln2">
+      <Selector id="sv4#area1#page2#dau1#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area1#page2#dau1#su3#kcond3" name="KeyCondition74" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area1#page2#dau1#ln2" name="Alterar" to="sv4#area1#page3#enu1" automaticCoupling="true" type="normal" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area1#page2#inu1">
+          <layout:Link link="sv4#area1#page2#inu1#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area1#page2#dau1">
+          <layout:Link link="sv4#area1#page2#dau1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

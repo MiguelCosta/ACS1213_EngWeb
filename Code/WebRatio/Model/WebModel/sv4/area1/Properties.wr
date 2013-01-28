@@ -1,0 +1,11 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="10" gr:y="190" id="sv4#area1" name="Clientes" landmark="true">
+  <OperationUnits>
+    <ModifyUnit gr:x="170" gr:y="182" id="sv4#area1#mfu3" name="Modificar Clientes" entity="ent7">
+      <Selector id="sv4#area1#mfu3#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area1#mfu3#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#area1#mfu3#oln2" name="OKLink2" to="sv4#area1#page2#dau1" automaticCoupling="true"/>
+      <KOLink id="sv4#area1#mfu3#kln2" name="KOLink2" to="sv4#area1#page3#enu1" automaticCoupling="true" gr:bendpoints="-19,-70,-12,63"/>
+    </ModifyUnit>
+  </OperationUnits>
+</Area>

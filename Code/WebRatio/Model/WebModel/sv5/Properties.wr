@@ -3,7 +3,7 @@
     <LogoutUnit gr:x="275" gr:y="56" id="sv5#lou2" name="Logout" siteView="sv3">
       <KOLink id="sv5#lou2#kln20" name="KOLink20" to="sv5#page7" automaticCoupling="true" gr:bendpoints="-72,12,127,19"/>
     </LogoutUnit>
-    <ModifyUnit id="sv5#mfu8" name="Alterar Estado" gr:x="728" gr:y="488" entity="ent3">
+    <ModifyUnit id="sv5#mfu8" name="Alterar Estado" gr:x="264" gr:y="970" entity="ent3">
       <Selector id="sv5#mfu8#su51" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv5#mfu8#su51#kcond44" name="KeyCondition22" predicate="in" implied="false"/>
       </Selector>

@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#area14" name="Or&#231;amentos" landmark="true" gr:x="15" gr:y="261" defaultPage="sv6#area14#page65">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv6#area14" name="Or&#231;amentos" landmark="true" gr:x="40" gr:y="260" defaultPage="sv6#area14#page65">
   <OperationUnits>
     <ConnectUnit id="sv6#area14#cnu6" name="Ligar LinhaToOr&#231;amento" gr:x="7" gr:y="371" relationship="rel14#role27">
       <SourceSelector id="sv6#area14#cnu6#su69" defaultPolicy="fill" booleanOperator="and">

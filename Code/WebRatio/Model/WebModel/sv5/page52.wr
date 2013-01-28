@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="488" gr:y="24" id="sv5#page52" name="Clientes">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="100" gr:y="1120" id="sv5#page52" name="Clientes">
   <ContentUnits>
     <IndexUnit gr:x="0" gr:y="4" id="sv5#page52#inu23" name="Lista de Clientes" entity="ent7" linkOrder="sv5#page52#inu23#ln154">
       <Link id="sv5#page52#inu23#ln154" name="Link154" to="sv5#page52#dau26" automaticCoupling="true" type="normal" validate="true"/>

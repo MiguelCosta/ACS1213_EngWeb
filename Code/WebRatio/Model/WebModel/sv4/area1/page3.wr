@@ -1,0 +1,43 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="162" id="sv4#area1#page3" name="Modificar Clientes">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv4#area1#page3#enu1" name="Modificar Cliente" linkOrder="sv4#area1#page3#enu1#ln3">
+      <Link id="sv4#area1#page3#enu1#ln3" name="Link3" to="sv4#area1#mfu3" type="normal" validate="true">
+        <LinkParameter id="sv4#area1#page3#enu1#ln3#par1" name="Nome_nomeCompleto" source="sv4#area1#page3#enu1#fld1" target="sv4#area1#mfu3.ent7#att2"/>
+        <LinkParameter id="sv4#area1#page3#enu1#ln3#par2" name="Email_email" source="sv4#area1#page3#enu1#fld2" target="sv4#area1#mfu3.email"/>
+        <LinkParameter id="sv4#area1#page3#enu1#ln3#par3" name="Contacto_contacto" source="sv4#area1#page3#enu1#fld3" target="sv4#area1#mfu3.ent7#att35"/>
+        <LinkParameter id="sv4#area1#page3#enu1#ln3#par4" name="Empresa_empresa" source="sv4#area1#page3#enu1#fld4" target="sv4#area1#mfu3.ent7#att6"/>
+      </Link>
+      <Field id="sv4#area1#page3#enu1#fld1" name="Nome" type="string" modifiable="true"/>
+      <Field id="sv4#area1#page3#enu1#fld2" name="Email" type="string" modifiable="true"/>
+      <Field id="sv4#area1#page3#enu1#fld3" name="Contacto" type="string" modifiable="true"/>
+      <Field id="sv4#area1#page3#enu1#fld4" name="Empresa" type="string" modifiable="true"/>
+      <SelectionField id="sv4#area1#page3#enu1#sfld1" name="Empresa" type="string" preselectValue="Particular" splitOutput="false"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv4#area1#page3#enu1">
+          <layout:Link link="sv4#area1#page3#enu1#ln3"/>
+          <layout:Field field="sv4#area1#page3#enu1#fld1"/>
+          <layout:Field field="sv4#area1#page3#enu1#fld2"/>
+          <layout:Field field="sv4#area1#page3#enu1#fld3"/>
+          <layout:Field field="sv4#area1#page3#enu1#fld4"/>
+          <layout:Field field="sv4#area1#page3#enu1#sfld1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

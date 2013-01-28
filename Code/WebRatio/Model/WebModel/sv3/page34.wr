@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="530" gr:y="320" id="sv3#page34" name="&#193;lbum">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="40" gr:y="460" id="sv3#page34" name="&#193;lbum">
   <ContentUnits>
     <IndexUnit gr:x="104" gr:y="4" id="sv3#page34#inu14" name="Lista de Fotografia" entity="ent9" displayAttributes="ent9#att40">
       <Selector id="sv3#page34#inu14#su41" defaultPolicy="fill" booleanOperator="and">
