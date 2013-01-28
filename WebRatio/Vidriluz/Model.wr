@@ -1,0 +1,2113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?webml version="4.0.3"?>
+<WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" xmlns:temp="http://www.webratio.com/2006/WebML/Temp" xmlns:bpm="http://www.webratio.com/2009/WebML/BPM" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" jobGroupName="WEBRATIO" enableBrowserIntegration="true" adminArea="true" adminPath="administration.do" cryptedPassword="true" adminUser="admin" adminPassword="YWRtaW4=" control="amRiYzpteXNxbDovL2xvY2FsaG9zdDozMzA2L1ZpZHJpbHV6REJIb21lQmFja09mZmljZSBBZG1pbmlzdHJhZG9yQmFja29mZmljZSBHZXN0b3JCYWNrb2ZmaWNlIENsaWVudGU=">  
+  <ServiceDataProviders/>  
+  <DataModel> 
+    <Entity id="User" name="User" duration="persistent" gr:x="310" gr:y="40" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db4" db:table="user"> 
+      <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>  
+      <Attribute name="userName" id="userName" type="string" db:column="username"/>  
+      <Attribute name="password" id="password" type="password" db:column="password"/>  
+      <Attribute name="email" id="email" type="string" db:column="email"/> 
+    </Entity>  
+    <Entity id="Group" name="Group" duration="persistent" gr:x="580" gr:y="30" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db4" db:table="group"> 
+      <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>  
+      <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/> 
+    </Entity>  
+    <Entity id="Module" name="Module" duration="persistent" gr:x="800" gr:y="50" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db4" db:table="module"> 
+      <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>  
+      <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>  
+      <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/> 
+    </Entity>  
+    <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db4" db:table="user_group"> 
+      <RelationshipRole1 id="User2Group" name="groups" maxCard="N"> 
+        <db:JoinColumn attribute="userOID" name="user_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="Group2User" name="users" maxCard="N"> 
+        <db:JoinColumn attribute="groupOID" name="group_oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db4" db:table="user"> 
+      <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1"> 
+        <db:JoinColumn attribute="userOID" name="oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N"> 
+        <db:JoinColumn attribute="groupOID" name="group_oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db4" db:table="group"> 
+      <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1"> 
+        <db:JoinColumn attribute="groupOID" name="oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N"> 
+        <db:JoinColumn attribute="moduleOID" name="module_oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db4" db:table="group_module"> 
+      <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"> 
+        <db:JoinColumn attribute="groupOID" name="group_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"> 
+        <db:JoinColumn attribute="moduleOID" name="module_oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Entity gr:x="570" gr:y="200" id="ent1" name="Or&#231;amento" duration="persistent" attributeOrder="att7 att24 att25 att26 att27 att36 att37" db:database="db4" db:table="orcamento"> 
+      <Attribute id="att7" key="true" name="oid" type="integer" db:column="oid"/>  
+      <Attribute id="att24" name="serie" type="integer" db:column="serie"/>  
+      <Attribute id="att25" name="numSerie" type="integer" db:column="numserie"/>  
+      <Attribute id="att26" name="data" type="date" db:column="data"/>  
+      <Attribute id="att27" name="anexos" type="string" db:column="anexos"/>  
+      <Attribute id="att36" name="estado" type="string" db:column="estado"/>  
+      <Attribute id="att37" name="valorTotal" type="float" db:column="valortotal"/> 
+    </Entity>  
+    <Entity gr:x="340" gr:y="410" id="ent2" name="Produto" duration="persistent" attributeOrder="att8 att13 att28 att14 att15 att16 att17 att18 att19" db:database="db4" db:table="produto"> 
+      <Attribute id="att8" key="true" name="oid" type="integer" db:column="oid"/>  
+      <Attribute id="att13" name="nome" type="string" db:column="nome"/>  
+      <Attribute id="att14" name="cor" type="string" db:column="cor"/>  
+      <Attribute id="att15" name="padrao" type="string" db:column="padrao"/>  
+      <Attribute id="att16" name="espessura" type="float" db:column="espessura"/>  
+      <Attribute id="att17" name="dimensaoMAX" type="float" db:column="dimensaomax"/>  
+      <Attribute id="att18" name="manufacturas" type="string" db:column="manufacturas"/>  
+      <Attribute id="att19" name="caixa" type="string" db:column="caixa"/>  
+      <Attribute id="att28" name="tipo" type="string" db:column="tipo"/> 
+    </Entity>  
+    <Entity gr:x="110" gr:y="300" id="ent3" name="Encomenda" duration="persistent" attributeOrder="att9 att30 att31 att32 att33 att1" db:database="db4" db:table="encomenda"> 
+      <Attribute id="att9" key="true" name="oid" type="integer" db:column="oid"/>  
+      <Attribute id="att30" name="serie" type="integer" db:column="serie"/>  
+      <Attribute id="att31" name="numSerie" type="integer" db:column="numserie"/>  
+      <Attribute id="att32" name="data" type="date" db:column="data"/>  
+      <Attribute id="att33" name="anexos" type="string" db:column="anexos"/>  
+      <Attribute id="att1" name="estado" type="string" db:column="estado"/> 
+    </Entity>  
+    <Entity gr:x="570" gr:y="430" id="ent4" name="Promo&#231;&#227;o" duration="persistent" attributeOrder="att10 att20 att21 att22 att23 att12" db:database="db4" db:table="promocao"> 
+      <Attribute id="att10" key="true" name="oid" type="integer" db:column="oid"/>  
+      <Attribute id="att20" name="nome" type="string" db:column="nome"/>  
+      <Attribute id="att21" name="descricao" type="string" db:column="descricao"/>  
+      <Attribute id="att22" name="dataInicial" type="date" db:column="datainicial"/>  
+      <Attribute id="att23" name="dataFinal" type="date" db:column="datafinal"/>  
+      <Attribute id="att12" name="asdas" type="integer" derivationQuery="simpleImported::Self.role58.att8"/> 
+    </Entity>  
+    <Entity gr:x="110" gr:y="530" id="ent5" name="Encomenda Linha" duration="persistent" attributeOrder="att11 att34" db:database="db4" db:table="encomenda_linha"> 
+      <Attribute id="att11" key="true" name="oid" type="integer" db:column="oid"/>  
+      <Attribute id="att34" name="descricao" type="string" db:column="descricao"/> 
+    </Entity>  
+    <Entity gr:x="40" gr:y="40" id="ent7" name="Cliente" duration="persistent" attributeOrder="att2 att3 att4 att5 att6 att35" db:database="db4" db:table="cliente"> 
+      <Attribute id="att2" name="nomeCompleto" type="string" db:column="nomecompleto"/>  
+      <Attribute id="att3" name="telefone" type="string" db:column="telefone"/>  
+      <Attribute id="att4" name="dataNascimento" type="date" db:column="datanascimento"/>  
+      <Attribute id="att5" name="particular" type="boolean" db:column="particular"/>  
+      <Attribute id="att6" name="empresa" type="string" db:column="empresa"/>  
+      <Attribute id="att35" name="contacto" type="string" db:column="contacto"/>  
+      <Generalization superEntity="User"> 
+        <db:JoinColumn attribute="userOID" name="user_oid"/> 
+      </Generalization> 
+    </Entity>  
+    <Entity gr:x="770" gr:y="240" id="ent8" name="Album" duration="persistent" attributeOrder="att39 att41 att42" db:database="db4" db:table="album"> 
+      <Attribute id="att39" key="true" name="oid" type="integer" db:column="oid"/>  
+      <Attribute id="att41" name="nome" type="string" db:column="nome"/>  
+      <Attribute id="att42" name="data" type="date" db:column="data"/> 
+    </Entity>  
+    <Entity gr:x="780" gr:y="400" id="ent9" name="Fotografia" duration="persistent" db:database="db4" db:table="fotografia"> 
+      <Attribute id="att40" key="true" name="oid" type="integer" db:column="oid"/> 
+    </Entity>  
+    <db:Database id="db4" name="VidriluzDB" type="MySQL" url="jdbc:mysql://localhost:3306/VidriluzDB" username="EngWeb" password="MTIzNA==" cryptedPassword="true"/>  
+    <Entity gr:x="340" gr:y="240" id="ent10" name="Or&#231;amento Linha" duration="persistent" attributeOrder="att43 att44 att45" db:database="db4" db:table="orcamento_linha"> 
+      <Attribute id="att43" key="true" name="oid" type="integer" db:column="oid"/>  
+      <Attribute id="att44" name="Descri&#231;&#227;o" type="string" db:column="descricao"/>  
+      <Attribute id="att45" name="Valor" type="float" db:column="valor"/> 
+    </Entity>  
+    <Relationship id="rel14" name="Or&#231;amento_Or&#231;amento Linha" sourceEntity="ent1" targetEntity="ent10" db:database="db4" db:table="orcamento_linha"> 
+      <RelationshipRole1 id="role27" name="Or&#231;amentoToOr&#231;amento Linha" maxCard="1"> 
+        <db:JoinColumn attribute="att7" name="orcamento_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role28" name="Or&#231;amento LinhaToOr&#231;amento" maxCard="1"> 
+        <db:JoinColumn attribute="att43" name="orcamento_linha_oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="rel18" name="Produto_Or&#231;amento Linha" sourceEntity="ent2" targetEntity="ent10" db:database="db4" db:table="orcamento_linha"> 
+      <RelationshipRole1 id="role35" name="ProdutoToOr&#231;amento Linha" maxCard="1"> 
+        <db:JoinColumn attribute="att8" name="produto_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role36" name="Or&#231;amento LinhaToProduto" maxCard="1"> 
+        <db:JoinColumn attribute="att43" name="oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="rel19" name="Encomenda_Encomenda Linha" sourceEntity="ent3" targetEntity="ent5" db:database="db4" db:table="encomenda_linha"> 
+      <RelationshipRole1 id="role37" name="EncomendaToEncomenda Linha" maxCard="1"> 
+        <db:JoinColumn attribute="att9" name="encomenda_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role38" name="Encomenda LinhaToEncomenda" maxCard="1"> 
+        <db:JoinColumn attribute="att11" name="oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="rel20" name="Album_Fotografia" sourceEntity="ent8" targetEntity="ent9" db:database="db4" db:table="fotografia"> 
+      <RelationshipRole1 id="role39" name="AlbumToFotografia" maxCard="N"> 
+        <db:JoinColumn attribute="att39" name="album_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role40" name="FotografiaToAlbum" maxCard="1"> 
+        <db:JoinColumn attribute="att40" name="oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="rel21" name="Produto_Encomenda Linha" sourceEntity="ent2" targetEntity="ent5" db:database="db4" db:table="encomenda_linha"> 
+      <RelationshipRole1 id="role41" name="ProdutoToEncomenda Linha" maxCard="1"> 
+        <db:JoinColumn attribute="att8" name="produto_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role42" name="Encomenda LinhaToProduto" maxCard="1"> 
+        <db:JoinColumn attribute="att11" name="oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="rel24" name="User_Encomenda" sourceEntity="User" targetEntity="ent3" db:database="db4" db:table="encomenda"> 
+      <RelationshipRole1 id="role47" name="UserToEncomenda" maxCard="N"> 
+        <db:JoinColumn attribute="userOID" name="user_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role48" name="EncomendaToUser" maxCard="1"> 
+        <db:JoinColumn attribute="att9" name="oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="rel25" name="User_Or&#231;amento" sourceEntity="User" targetEntity="ent1" db:database="db4" db:table="orcamento"> 
+      <RelationshipRole1 id="role49" name="UserToOr&#231;amento" maxCard="N"> 
+        <db:JoinColumn attribute="userOID" name="user_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role50" name="Or&#231;amentoToUser" maxCard="1"> 
+        <db:JoinColumn attribute="att7" name="oid"/> 
+      </RelationshipRole2> 
+    </Relationship>  
+    <Relationship id="rel29" name="Produto_Promo&#231;&#227;o" sourceEntity="ent2" targetEntity="ent4" db:database="db4" db:table="promocao"> 
+      <RelationshipRole1 id="role57" name="ProdutoToPromo&#231;&#227;o" maxCard="1"> 
+        <db:JoinColumn attribute="att8" name="produto_oid"/> 
+      </RelationshipRole1>  
+      <RelationshipRole2 id="role58" name="Promo&#231;&#227;oToProduto" maxCard="1"> 
+        <db:JoinColumn attribute="att10" name="oid"/> 
+      </RelationshipRole2> 
+    </Relationship> 
+  </DataModel>  
+  <WebModel defaultLocale="lcl1" layout:style="WRDefault" homeSiteView="sv3"> 
+    <Locale id="lcl1" country="US" language="en"> 
+      <PatternConfiguration type="boolean" pattern="yes|no"/>  
+      <PatternConfiguration type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>  
+      <PatternConfiguration type="date" pattern="M/d/yy"/>  
+      <PatternConfiguration type="float" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>  
+      <PatternConfiguration type="integer" useNumberPattern="false" minInteger="1" useThousandSeparator="true"/>  
+      <PatternConfiguration type="time" pattern="h:mm:ss a"/>  
+      <PatternConfiguration type="timestamp" pattern="M/d/yy h:mm:ss a"/> 
+    </Locale>  
+    <ContextParameter id="UserCtxParam" name="UserCtxParam" entity="User" type="entity"/>  
+    <ContextParameter id="GroupCtxParam" name="GroupCtxParam" entity="Group" type="entity"/>  
+    <ContextParameter id="LanguageISOCtxParam" name="LanguageISOCtxParam" type="string"/>  
+    <ContextParameter id="CountryISOCtxParam" name="CountryISOCtxParam" type="string"/>  
+    <SiteView id="sv3" name="Home" protected="false" landmarks="page27 page29 page30 page32 page33 page35 page61" homePage="page35"> 
+      <OperationUnits> 
+        <LoginUnit id="lgu2" name="Login" secure="false" gr:x="210" gr:y="180"> 
+          <KOLink id="kln18" name="KOLink18" to="enu14" gr:bendpoints="-91,-27,105,-21"/> 
+        </LoginUnit> 
+      </OperationUnits>  
+      <OperationGroup gr:x="320" gr:y="50" id="opg1" name="User Transaction" transaction="true"> 
+        <OperationUnits> 
+          <CreateUnit gr:x="32" gr:y="201" id="cru10" name="Criar Utilizador" entity="User"> 
+            <OKLink id="oln22" name="OKLink22" to="cnu3" automaticCoupling="true"/> 
+          </CreateUnit>  
+          <ConnectUnit gr:x="10" gr:y="100" id="cnu3" name="Ligar User ao Grupo" relationship="User2DefaultGroup"> 
+            <SourceSelector id="su27" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond27" name="KeyCondition27" predicate="in" implied="false"/> 
+            </SourceSelector>  
+            <TargetSelector id="su32" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond28" name="KeyCondition28" predicate="in" implied="false"/> 
+            </TargetSelector>  
+            <OKLink id="oln23" name="OKLink23" to="cnu4" automaticCoupling="true"/> 
+          </ConnectUnit>  
+          <ConnectUnit gr:x="0" gr:y="0" id="cnu4" name="Ligar Utilizador ao grupo" relationship="User2Group"> 
+            <SourceSelector id="su33" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond29" name="KeyCondition29" predicate="in" implied="false"/> 
+            </SourceSelector>  
+            <TargetSelector id="su34" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond30" name="KeyCondition30" predicate="in" implied="false"/> 
+            </TargetSelector>  
+            <OKLink id="oln24" name="OKLink24" to="lgu2" automaticCoupling="true"/> 
+          </ConnectUnit> 
+        </OperationUnits> 
+      </OperationGroup>  
+      <Page id="page30" name="Sobre N&#243;s" landmark="true" gr:x="200" gr:y="50"> 
+        <ContentUnits/>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Page gr:x="40" gr:y="460" id="page34" name="&#193;lbum"> 
+        <ContentUnits> 
+          <IndexUnit gr:x="104" gr:y="4" id="inu14" name="Lista de Fotografia" entity="ent9" displayAttributes="att40"> 
+            <Selector id="su41" defaultPolicy="fill" booleanOperator="and"> 
+              <RelationshipRoleCondition id="rcond3" name="RoleCondition3" role="role39" predicate="in" implied="false"/> 
+            </Selector> 
+          </IndexUnit>  
+          <DataUnit gr:x="0" gr:y="0" id="dau14" name="&#193;lbum" entity="ent8"> 
+            <Selector id="su40" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond34" name="KeyCondition34" predicate="in" implied="false"/> 
+            </Selector>  
+            <Link id="ln69" name="Link69" to="inu14" automaticCoupling="true" type="transport" validate="true"/> 
+          </DataUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="inu14"> 
+                <layout:Attribute attribute="att40"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell> 
+              <layout:Unit unitId="dau14"/> 
+            </layout:Cell>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Page gr:x="40" gr:y="200" id="page61" name="Registar" landmark="true"> 
+        <ContentUnits> 
+          <EntryUnit gr:x="0" gr:y="0" id="enu38" name="Registar" linkOrder="ln181"> 
+            <Link id="ln181" name="Link181" to="cru10" type="normal" validate="true"> 
+              <LinkParameter id="par152" name="Password_password" source="fld124" target="cru10.password"/>  
+              <LinkParameter id="par153" name="Username_userName" source="fld125" target="cru10.userName"/> 
+            </Link>  
+            <Field id="fld125" name="User" type="string" modifiable="true"/> 
+          </EntryUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="enu38"> 
+                <layout:Link link="ln181"/>  
+                <layout:Field field="fld125"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Page gr:x="170" gr:y="330" id="page33" name="Galeria" landmark="true"> 
+        <ContentUnits> 
+          <IndexUnit gr:x="0" gr:y="0" id="inu13" name="Lista de &#193;lbuns" entity="ent8" linkOrder="ln68" displayAttributes="att39 att41 att42"> 
+            <Link id="ln68" name="Visualizar Fotografias" to="dau14" automaticCoupling="true" type="normal" validate="true"/> 
+          </IndexUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="inu13"> 
+                <layout:Link link="ln68"/>  
+                <layout:Attribute attribute="att39"/>  
+                <layout:Attribute attribute="att41"/>  
+                <layout:Attribute attribute="att42"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Page id="page29" name="Contactos" landmark="true" gr:x="200" gr:y="110"> 
+        <ContentUnits/>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Page gr:x="330" gr:y="380" id="page32" name="Produtos" landmark="true"> 
+        <ContentUnits> 
+          <IndexUnit gr:x="0" gr:y="0" id="inu3" name="Lista de Produtos" entity="ent2" displayAttributes="att8 att13" linkOrder="ln153"> 
+            <Link id="ln153" name="Link153" to="dau25" automaticCoupling="true" type="normal" validate="true"/> 
+          </IndexUnit>  
+          <DataUnit gr:x="24" gr:y="84" id="dau25" name="Produto" entity="ent2"> 
+            <Selector id="su87" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond73" name="KeyCondition73" predicate="in" implied="false"/> 
+            </Selector> 
+          </DataUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="inu3"> 
+                <layout:Attribute attribute="att8"/>  
+                <layout:Attribute attribute="att13"/>  
+                <layout:Link link="ln153"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell> 
+              <layout:Unit unitId="dau25"/> 
+            </layout:Cell>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Page gr:x="40" gr:y="330" id="page35" name="Home" landmark="true"> 
+        <ContentUnits> 
+          <IndexUnit gr:x="0" gr:y="0" id="inu15" name="Promo&#231;&#245;es" entity="ent4" displayAttributes="att20 att21 att22 att23"/> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="inu15"> 
+                <layout:Attribute attribute="att20"/>  
+                <layout:Attribute attribute="att21"/>  
+                <layout:Attribute attribute="att22"/>  
+                <layout:Attribute attribute="att23"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Page id="page27" name="Login" landmark="true" gr:x="40" gr:y="50"> 
+        <ContentUnits> 
+          <EntryUnit id="enu14" name="Please Login" gr:x="0" gr:y="0" linkOrder="ln59" fieldOrder="fld40 fld52"> 
+            <Field id="fld40" name="Username" type="string" modifiable="true"/>  
+            <Field id="fld52" name="Password" type="password" modifiable="true"/>  
+            <Link id="ln59" name="Entrar" to="lgu2" type="normal" validate="true"> 
+              <LinkParameter id="par56" name="Username_Username" source="fld40" target="lgu2.username"/>  
+              <LinkParameter id="par57" name="Password_Password" source="fld52" target="lgu2.password"/> 
+            </Link> 
+          </EntryUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="enu14"> 
+                <layout:Field field="fld40"/>  
+                <layout:Field field="fld52"/>  
+                <layout:Link link="ln59"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page> 
+    </SiteView>  
+    <SiteView id="sv4" name="BackOffice Administrador" homePage="page6" landmarks="page6 area9 area10 area12 area13 area1" protected="true" linkVisibilityPolicy="hide"> 
+      <OperationUnits> 
+        <LogoutUnit gr:x="40" gr:y="880" id="lou1" name="LogoutUnit1" siteView="sv3"> 
+          <KOLink id="kln19" name="KOLink19" to="page6" automaticCoupling="true" gr:bendpoints="-74,16,134,13"/> 
+        </LogoutUnit>  
+        <DeleteUnit id="dlu9" name="Eliminar Promo&#231;&#227;o" gr:x="560" gr:y="220" entity="ent4"> 
+          <Selector id="su61" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond52" name="KeyCondition11" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln49" name="OKLink10" to="inu20" automaticCoupling="true" gr:bendpoints="-126,-133,98,146"/>  
+          <KOLink id="kln29" name="KOLink6" to="inu20" automaticCoupling="true" gr:bendpoints="-102,-151,122,128"/> 
+        </DeleteUnit>  
+        <CreateUnit id="cru14" name="Adicionar Promo&#231;&#227;o" gr:x="530" gr:y="320" entity="ent4"> 
+          <OKLink id="oln50" name="OKLink9" to="inu20" automaticCoupling="true"/>  
+          <KOLink id="kln31" name="KOLink5" to="enu19" automaticCoupling="true" gr:bendpoints="28,-79,2,80"/> 
+        </CreateUnit>  
+        <CreateUnit id="cru19" name="Adicionar nova foto" gr:x="630" gr:y="890" entity="ent9"> 
+          <KOLink id="kln33" name="KOLink3" to="enu21" automaticCoupling="true" gr:bendpoints="-86,36,81,33"/>  
+          <OKLink id="oln51" name="OKLink40" to="cnu9" automaticCoupling="true"/> 
+        </CreateUnit>  
+        <DeleteUnit id="dlu10" name="Apagar foto" gr:x="470" gr:y="740" entity="ent9"> 
+          <Selector id="su64" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond56" name="KeyCondition9" predicate="in" implied="false"/>  
+            <RelationshipRoleCondition id="rcond17" name="AlbumToFotografia" role="role39" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln53" name="OKLink8" to="page48" automaticCoupling="true" gr:bendpoints="-36,-139,5,138"/> 
+        </DeleteUnit>  
+        <DeleteUnit id="dlu11" name="Apagar album" gr:x="410" gr:y="620" entity="ent8"> 
+          <Selector id="su75" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond63" name="KeyCondition8" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln54" name="OKLink7" to="page49" automaticCoupling="true" gr:bendpoints="-87,25,96,14"/> 
+        </DeleteUnit>  
+        <ConnectUnit id="cnu9" name="LigarFotoToAlbum" gr:x="640" gr:y="770" relationship="role40"> 
+          <SourceSelector id="su85" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond71" name="KeyCondition2" predicate="in" implied="false"/> 
+          </SourceSelector>  
+          <TargetSelector id="su86" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond72" name="KeyCondition4" predicate="in" implied="false"/> 
+          </TargetSelector>  
+          <OKLink id="oln55" name="OKLink42" to="page48" automaticCoupling="true"/> 
+        </ConnectUnit>  
+        <CreateUnit id="cru20" name="Adicionar novo album" gr:x="200" gr:y="910" entity="ent8"> 
+          <OKLink id="oln56" name="OKLink1" to="page49" automaticCoupling="true"/>  
+          <KOLink id="kln37" name="KOLink1" to="enu20" automaticCoupling="true" gr:bendpoints="-33,-68,1,70"/> 
+        </CreateUnit>  
+        <ModifyUnit id="mfu7" name="Alterar Estado" gr:x="748" gr:y="1338" entity="ent3"> 
+          <Selector id="su90" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond76" name="KeyCondition22" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln57" name="OKLink17" to="inu26" automaticCoupling="true"/>  
+          <KOLink id="kln39" name="KOLink13" to="enu23" automaticCoupling="true" gr:bendpoints="-96,-16,84,43"/> 
+        </ModifyUnit>  
+        <ModifyUnit id="mfu10" name="Alterar Estado" gr:x="298" gr:y="1328" entity="ent1"> 
+          <Selector id="su94" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond79" name="KeyCondition17" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln58" name="OKLink13" to="inu31" automaticCoupling="true"/>  
+          <KOLink id="kln40" name="KOLink11" to="enu24" automaticCoupling="true" gr:bendpoints="-106,-21,94,48"/> 
+        </ModifyUnit> 
+      </OperationUnits>  
+      <Page gr:x="30" gr:y="570" id="page6" name="Home" landmark="true" linkOrder="ln60"> 
+        <ContentUnits> 
+          <GetUnit id="gtu1" name="Get Users" contextParameters="UserCtxParam" gr:x="0" gr:y="0"> 
+            <Link id="ln14" name="Link14" to="dau12" automaticCoupling="true" type="transport" validate="true"/> 
+          </GetUnit>  
+          <DataUnit gr:x="4" gr:y="94" id="dau12" name="User" entity="User"> 
+            <Selector id="su35" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond31" name="KeyCondition31" predicate="in" implied="false"/> 
+            </Selector> 
+          </DataUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="dau12"/> 
+            </layout:Cell>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid>  
+        <Link id="ln60" name="Sair" to="lou1" automaticCoupling="true" type="normal" validate="true"/> 
+      </Page>  
+      <Area gr:x="10" gr:y="190" id="area1" name="Clientes" landmark="true"> 
+        <OperationUnits> 
+          <ModifyUnit gr:x="170" gr:y="182" id="mfu3" name="Modificar Clientes" entity="ent7"> 
+            <Selector id="su4" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond4" name="KeyCondition4" predicate="in" implied="false"/> 
+            </Selector>  
+            <OKLink id="oln2" name="OKLink2" to="dau1" automaticCoupling="true"/>  
+            <KOLink id="kln2" name="KOLink2" to="enu1" automaticCoupling="true" gr:bendpoints="-19,-70,-12,63"/> 
+          </ModifyUnit> 
+        </OperationUnits>  
+        <Page gr:x="0" gr:y="162" id="page3" name="Modificar Clientes"> 
+          <ContentUnits> 
+            <EntryUnit gr:x="0" gr:y="0" id="enu1" name="Modificar Cliente" linkOrder="ln3"> 
+              <Link id="ln3" name="Link3" to="mfu3" type="normal" validate="true"> 
+                <LinkParameter id="par1" name="Nome_nomeCompleto" source="fld1" target="mfu3.att2"/>  
+                <LinkParameter id="par2" name="Email_email" source="fld2" target="mfu3.email"/>  
+                <LinkParameter id="par3" name="Contacto_contacto" source="fld3" target="mfu3.att35"/>  
+                <LinkParameter id="par4" name="Empresa_empresa" source="fld4" target="mfu3.att6"/> 
+              </Link>  
+              <Field id="fld1" name="Nome" type="string" modifiable="true"/>  
+              <Field id="fld2" name="Email" type="string" modifiable="true"/>  
+              <Field id="fld3" name="Contacto" type="string" modifiable="true"/>  
+              <Field id="fld4" name="Empresa" type="string" modifiable="true"/>  
+              <SelectionField id="sfld1" name="Empresa" type="string" preselectValue="Particular" splitOutput="false"/> 
+            </EntryUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu1"> 
+                  <layout:Link link="ln3"/>  
+                  <layout:Field field="fld1"/>  
+                  <layout:Field field="fld2"/>  
+                  <layout:Field field="fld3"/>  
+                  <layout:Field field="fld4"/>  
+                  <layout:Field field="sfld1"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page2" name="Clientes" landmark="false" gr:x="8" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu1" name="Lista de Clientes" linkOrder="ln1" gr:x="0" gr:y="4" entity="ent7"> 
+              <Link id="ln1" name="Link154" to="dau1" type="normal" automaticCoupling="true" validate="true"/> 
+            </IndexUnit>  
+            <DataUnit id="dau1" name="Cliente" gr:x="156" gr:y="0" entity="ent7" linkOrder="ln2"> 
+              <Selector id="su3" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond3" name="KeyCondition74" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln2" name="Alterar" to="enu1" automaticCoupling="true" type="normal" validate="true"/> 
+            </DataUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu1"> 
+                  <layout:Link link="ln1"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="dau1"> 
+                  <layout:Link link="ln2"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area>  
+      <Area id="area10" name="Galeria" defaultPage="page49" landmark="true" gr:x="190" gr:y="560"> 
+        <OperationUnits/>  
+        <Page id="page50" name="Novo album" gr:x="92" gr:y="152"> 
+          <ContentUnits> 
+            <EntryUnit id="enu20" name="Adicionar album" linkOrder="ln144" gr:x="0" gr:y="0" fieldOrder="fld70 fld68"> 
+              <Link id="ln144" name="Adicionar" to="cru20" type="normal" validate="true"> 
+                <LinkParameter id="par122" name="data_data" source="fld68" target="cru20.att42"/>  
+                <LinkParameter id="par123" name="nome_nome" source="fld70" target="cru20.att41"/> 
+              </Link>  
+              <Field id="fld68" name="data" type="date" modifiable="true"/>  
+              <Field id="fld70" name="nome" type="string" modifiable="true"/> 
+            </EntryUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu20"> 
+                  <layout:Link link="ln144"/>  
+                  <layout:Field field="fld70"/>  
+                  <layout:Field field="fld68"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page48" name="Album" linkOrder="ln125" gr:x="340" gr:y="10"> 
+          <ContentUnits> 
+            <DataUnit id="dau24" name="Album" gr:x="110" gr:y="0" entity="ent8"> 
+              <Selector id="su65" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond59" name="KeyCondition1" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln116" name="Link10" to="cnu9" type="transport" automaticCoupling="true" validate="true"/>  
+              <Link id="ln117" name="Link53" to="inu21" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit>  
+            <IndexUnit id="inu21" name="Fotografias" linkOrder="ln119" gr:x="0" gr:y="0" entity="ent9" displayAttributes="att40"> 
+              <Selector id="su68" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond18" name="RoleCondition4" role="role39" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln119" name="Apagar Fotografia" to="dlu10" type="normal" validate="true"> 
+                <LinkParameter id="par117" name="oid_KeyCondition9 [oid]" source="data[].att40" target="kcond56.att40"/> 
+              </Link> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau24"/> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell> 
+                <layout:Unit unitId="inu21"> 
+                  <layout:Attribute attribute="att40"/>  
+                  <layout:Link link="ln119"/> 
+                </layout:Unit> 
+              </layout:Cell> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid>  
+          <Link id="ln125" name="Adicionar foto" to="page51" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-70,170,88,-89"/> 
+        </Page>  
+        <Page id="page51" name="Nova foto" gr:x="182" gr:y="272"> 
+          <ContentUnits> 
+            <EntryUnit id="enu21" name="Adicionar foto" linkOrder="ln152" gr:x="74" gr:y="4" fieldOrder="fld71 fld72"> 
+              <Link id="ln152" name="Link6" to="cru19" type="normal" validate="true"> 
+                <LinkParameter id="par124" name="id_oid" source="fld71" target="cru19.att40"/>  
+                <LinkParameter id="par125" name="Album_Album.oid(FotografiaToAlbum)" source="fld72" target="cru19.role40.att39"/> 
+              </Link>  
+              <Field id="fld71" name="id" type="string" modifiable="true"/>  
+              <Field id="fld72" name="Album" type="string" modifiable="true"/> 
+            </EntryUnit>  
+            <MultiDataUnit id="mdu7" name="Albuns" gr:x="0" gr:y="0" entity="ent8" displayAttributes="att39 att41 att42"/> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu21"> 
+                  <layout:Link link="ln152"/>  
+                  <layout:Field field="fld71"/>  
+                  <layout:Field field="fld72"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="mdu7"> 
+                  <layout:Attribute attribute="att39"/>  
+                  <layout:Attribute attribute="att41"/>  
+                  <layout:Attribute attribute="att42"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page49" name="Lista de Albuns" linkOrder="ln140" gr:x="0" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu22" name="Lista de Albuns" linkOrder="ln127 ln133" gr:x="0" gr:y="0" entity="ent8" displayAttributes="att41 att39 att42"> 
+              <Link id="ln127" name="Ver Album" to="dau24" type="normal" validate="true" gr:bendpoints="102,-69,-457,-72;513,-75,-46,-78"> 
+                <LinkParameter id="par118" name="oid_KeyCondition1 [oid]" source="data[].att39" target="kcond59.att39"/> 
+              </Link>  
+              <Link id="ln133" name="Apagar Album" to="dlu11" type="normal" validate="true"> 
+                <LinkParameter id="par120" name="oid_KeyCondition8 [oid]" source="data[].att39" target="kcond63.att39"/> 
+              </Link>  
+              <Link id="ln139" name="Link19" to="dlu10" type="transport" validate="true"> 
+                <LinkParameter id="par121" name="oid_AlbumToFotografia [oid]" source="data[].att39" target="rcond17.att39"/> 
+              </Link> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu22"> 
+                  <layout:Link link="ln127"/>  
+                  <layout:Link link="ln133"/>  
+                  <layout:Attribute attribute="att41"/>  
+                  <layout:Attribute attribute="att39"/>  
+                  <layout:Attribute attribute="att42"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid>  
+          <Link id="ln140" name="Novo Album" to="page50" type="normal" automaticCoupling="true" validate="true"/> 
+        </Page> 
+      </Area>  
+      <Area id="area12" name="Encomendas" defaultPage="page54" landmark="true" gr:x="484" gr:y="1018"> 
+        <OperationUnits/>  
+        <Page id="page54" name="Pedidos de Encomenda" gr:x="14" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu26" name="Pedidos de Encomenda" linkOrder="ln156 ln157" gr:x="0" gr:y="0" entity="ent3" displayAttributes="att9 att30 att31 att32 att33 att1 role48.userName"> 
+              <Link id="ln156" name="Ver Detalhes" to="dau31" type="normal" validate="true"> 
+                <LinkParameter id="par126" name="oid_KeyCondition20 [oid]" source="data[].att9" target="kcond77.att9"/> 
+              </Link>  
+              <Link id="ln157" name="Alterar Estado" to="dau33" type="normal" automaticCoupling="true" validate="true"/> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu26"> 
+                  <layout:Link link="ln156"/>  
+                  <layout:Link link="ln157"/>  
+                  <layout:Attribute attribute="att9"/>  
+                  <layout:Attribute attribute="att30"/>  
+                  <layout:Attribute attribute="att31"/>  
+                  <layout:Attribute attribute="att32"/>  
+                  <layout:Attribute attribute="att33"/>  
+                  <layout:Attribute attribute="att1"/>  
+                  <layout:Attribute attribute="role48.userName"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page56" name="Alterar estado" gr:x="0" gr:y="186"> 
+          <ContentUnits> 
+            <DataUnit id="dau33" name="Encomenda" gr:x="90" gr:y="80" entity="ent3"> 
+              <Selector id="su93" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond78" name="KeyCondition21" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln161" name="Link43" to="enu23" type="transport" automaticCoupling="true" validate="true"/>  
+              <Link id="ln162" name="Link44" to="mfu7" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit>  
+            <EntryUnit id="enu23" name="Alterar Estado" linkOrder="ln163" gr:x="0" gr:y="0" fieldOrder="fld73"> 
+              <Field id="fld73" name="Estado" type="string" modifiable="true"/>  
+              <Link id="ln163" name="Guardar" to="mfu7" type="normal" validate="true"> 
+                <LinkParameter id="par128" name="Estado_estado" source="fld73" target="mfu7.att1"/> 
+              </Link> 
+            </EntryUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau33"/> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="enu23"> 
+                  <layout:Field field="fld73"/>  
+                  <layout:Link link="ln163"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page55" name="Detalhes do Pedido" gr:x="256" gr:y="12"> 
+          <ContentUnits> 
+            <DataUnit id="dau31" name="Detalhes do Pedido" gr:x="0" gr:y="0" entity="ent3" displayAttributes="att9 att30 att31 att32 att33 att1"> 
+              <Selector id="su91" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond77" name="KeyCondition20" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln160" name="Link54" to="inu30" type="transport" validate="true"> 
+                <LinkParameter id="par127" name="oid_pedido [oid]" source="data.att9" target="rcond20.att11"/> 
+              </Link> 
+            </DataUnit>  
+            <IndexUnit id="inu30" name="Linhas do Pedido" gr:x="14" gr:y="114" entity="ent5" displayAttributes="att11 att34"> 
+              <Selector id="su92" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond20" name="pedido" predicate="in" implied="false" role="role37"/> 
+              </Selector> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau31"> 
+                  <layout:Attribute attribute="att9"/>  
+                  <layout:Attribute attribute="att30"/>  
+                  <layout:Attribute attribute="att31"/>  
+                  <layout:Attribute attribute="att32"/>  
+                  <layout:Attribute attribute="att33"/>  
+                  <layout:Attribute attribute="att1"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="inu30"> 
+                  <layout:Attribute attribute="att11"/>  
+                  <layout:Attribute attribute="att34"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area>  
+      <Area id="area13" name="Or&#231;amentos" defaultPage="page57" landmark="true" gr:x="30" gr:y="1020"> 
+        <OperationUnits/>  
+        <Page id="page59" name="Detalhes do Pedido" gr:x="234" gr:y="10"> 
+          <ContentUnits> 
+            <DataUnit id="dau35" name="Detalhes de Pedido" gr:x="6" gr:y="0" entity="ent1" displayAttributes="att7 att24 att25 att26 att27 att36 att37"> 
+              <Selector id="su96" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond81" name="KeyCondition13" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln169" name="Link36" to="inu32" type="transport" validate="true"> 
+                <LinkParameter id="par130" name="oid_Or&#231;amentoLinhaToOr&#231;amento [oid]" source="data.att7" target="rcond21.att43"/> 
+              </Link> 
+            </DataUnit>  
+            <IndexUnit id="inu32" name="Linhas do Pedido" gr:x="0" gr:y="104" entity="ent10" displayAttributes="att43 att44 att45"> 
+              <Selector id="su97" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond21" name="Or&#231;amentoLinhaToOr&#231;amento" predicate="in" implied="false" role="role27"/> 
+              </Selector> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau35"> 
+                  <layout:Attribute attribute="att7"/>  
+                  <layout:Attribute attribute="att24"/>  
+                  <layout:Attribute attribute="att25"/>  
+                  <layout:Attribute attribute="att26"/>  
+                  <layout:Attribute attribute="att27"/>  
+                  <layout:Attribute attribute="att36"/>  
+                  <layout:Attribute attribute="att37"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="inu32"> 
+                  <layout:Attribute attribute="att43"/>  
+                  <layout:Attribute attribute="att44"/>  
+                  <layout:Attribute attribute="att45"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page57" name="Pedidos or&#231;amento" gr:x="0" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu31" name="Pedidos Or&#231;amento" linkOrder="ln164 ln165" gr:x="0" gr:y="0" entity="ent1" displayAttributes="att24 att25 att26 att27 att36 att37 att7"> 
+              <Link id="ln164" name="Detalhes" to="dau35" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="185,90,-6,-186"/>  
+              <Link id="ln165" name="Alterar Estado" to="dau34" type="normal" automaticCoupling="true" validate="true"/> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu31"> 
+                  <layout:Attribute attribute="att24"/>  
+                  <layout:Attribute attribute="att25"/>  
+                  <layout:Attribute attribute="att26"/>  
+                  <layout:Attribute attribute="att27"/>  
+                  <layout:Attribute attribute="att36"/>  
+                  <layout:Attribute attribute="att37"/>  
+                  <layout:Attribute attribute="att7"/>  
+                  <layout:Link link="ln164"/>  
+                  <layout:Link link="ln165"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page58" name="Alterar Estado" gr:x="20" gr:y="180"> 
+          <ContentUnits> 
+            <EntryUnit id="enu24" name="Alterar Estado" linkOrder="ln166" gr:x="0" gr:y="0" fieldOrder="fld74"> 
+              <Link id="ln166" name="Guardar" to="mfu10" type="normal" validate="true"> 
+                <LinkParameter id="par129" name="Estado_estado" source="fld74" target="mfu10.att36"/> 
+              </Link>  
+              <Field id="fld74" name="Estado" type="string" modifiable="true"/> 
+            </EntryUnit>  
+            <DataUnit id="dau34" name="Or&#231;amento" gr:x="14" gr:y="94" entity="ent1"> 
+              <Selector id="su95" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond80" name="KeyCondition16" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln167" name="Link38" to="enu24" type="transport" automaticCoupling="true" validate="true"/>  
+              <Link id="ln168" name="Link40" to="mfu10" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu24"> 
+                  <layout:Link link="ln166"/>  
+                  <layout:Field field="fld74"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area>  
+      <Area id="area9" name="Promo&#231;&#245;es" defaultPage="page45" landmark="true" gr:x="360" gr:y="150"> 
+        <OperationUnits/>  
+        <Page id="page45" name="Lista de Promo&#231;&#245;es" linkOrder="ln114" gr:x="6" gr:y="2"> 
+          <ContentUnits> 
+            <IndexUnit id="inu20" name="Lista de Promo&#231;&#245;es" linkOrder="ln103 ln113" gr:x="0" gr:y="0" entity="ent4" displayAttributes="att20 att21 att22 att23"> 
+              <Link id="ln103" name="Ver Promo&#231;&#227;o" to="dau22" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="99,-53,-204,-54;163,-54,-140,-55;224,-55,-79,-56"/>  
+              <Link id="ln113" name="Eliminar Promo&#231;&#227;o" to="dlu9" type="normal" automaticCoupling="true" validate="true"/> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu20"> 
+                  <layout:Link link="ln103"/>  
+                  <layout:Link link="ln113"/>  
+                  <layout:Attribute attribute="att20"/>  
+                  <layout:Attribute attribute="att21"/>  
+                  <layout:Attribute attribute="att22"/>  
+                  <layout:Attribute attribute="att23"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid>  
+          <Link id="ln114" name="Adicionar Promo&#231;&#227;o" to="enu19" type="normal" automaticCoupling="true" validate="true"/> 
+        </Page>  
+        <Page id="page44" name="Nova Promo&#231;&#227;o" gr:x="0" gr:y="216"> 
+          <ContentUnits> 
+            <EntryUnit id="enu19" name="Adicionar Promo&#231;&#227;o" linkOrder="ln101" gr:x="0" gr:y="10" fieldOrder="fld66 fld65 fld64 fld63 fld67"> 
+              <Link id="ln101" name="Adicionar" to="cru14" type="normal" validate="true"> 
+                <LinkParameter id="par112" name="dataFinal_dataFinal" source="fld64" target="cru14.att23"/>  
+                <LinkParameter id="par113" name="dataInicial_dataInicial" source="fld63" target="cru14.att22"/>  
+                <LinkParameter id="par114" name="descri&#231;&#227;o_descricao" source="fld65" target="cru14.att21"/>  
+                <LinkParameter id="par115" name="nome_nome" source="fld66" target="cru14.att20"/>  
+                <LinkParameter id="par116" name="produto_Produto.oid(Promo&#231;&#227;oToProduto)" source="fld67" target="cru14.role58.att8"/> 
+              </Link>  
+              <Field id="fld63" name="dataInicial" type="date" modifiable="true"/>  
+              <Field id="fld64" name="dataFinal" type="date" modifiable="true"/>  
+              <Field id="fld65" name="descri&#231;&#227;o" type="string" modifiable="true"/>  
+              <Field id="fld66" name="nome" type="string" modifiable="true"/>  
+              <Field id="fld67" name="produto" type="string" modifiable="true"/> 
+            </EntryUnit>  
+            <MultiDataUnit id="mdu6" name="Produtos existentes" gr:x="150" gr:y="0" entity="ent2" displayAttributes="att8 att13 att28 att14 att15 att16 att17 att18 att19"/> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu19"> 
+                  <layout:Link link="ln101"/>  
+                  <layout:Field field="fld66"/>  
+                  <layout:Field field="fld65"/>  
+                  <layout:Field field="fld64"/>  
+                  <layout:Field field="fld63"/>  
+                  <layout:Field field="fld67"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="mdu6"> 
+                  <layout:Attribute attribute="att8"/>  
+                  <layout:Attribute attribute="att13"/>  
+                  <layout:Attribute attribute="att28"/>  
+                  <layout:Attribute attribute="att14"/>  
+                  <layout:Attribute attribute="att15"/>  
+                  <layout:Attribute attribute="att16"/>  
+                  <layout:Attribute attribute="att17"/>  
+                  <layout:Attribute attribute="att18"/>  
+                  <layout:Attribute attribute="att19"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page47" name="Promo&#231;&#227;o" gr:x="334" gr:y="0"> 
+          <ContentUnits> 
+            <DataUnit id="dau22" name="Promo&#231;&#227;o" gr:x="0" gr:y="0" entity="ent4" displayAttributes="role58.att13 role58.att28 role58.att14 role58.att15 role58.att16 role58.att17 role58.att18 role58.att19 att20 att21 att22 att23"> 
+              <Selector id="su62" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond53" name="KeyCondition10" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln115" name="Link27" to="dau23" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit>  
+            <DataUnit id="dau23" name="Produto" gr:x="4" gr:y="104" entity="ent2"> 
+              <Selector id="su63" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond54" name="KeyCondition12" predicate="in" implied="false"/> 
+              </Selector> 
+            </DataUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau22"> 
+                  <layout:Attribute attribute="role58.att13"/>  
+                  <layout:Attribute attribute="role58.att28"/>  
+                  <layout:Attribute attribute="role58.att14"/>  
+                  <layout:Attribute attribute="role58.att15"/>  
+                  <layout:Attribute attribute="role58.att16"/>  
+                  <layout:Attribute attribute="role58.att17"/>  
+                  <layout:Attribute attribute="role58.att18"/>  
+                  <layout:Attribute attribute="role58.att19"/>  
+                  <layout:Attribute attribute="att20"/>  
+                  <layout:Attribute attribute="att21"/>  
+                  <layout:Attribute attribute="att22"/>  
+                  <layout:Attribute attribute="att23"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area> 
+    </SiteView>  
+    <SiteView id="sv5" name="Backoffice Gestor" homePage="page7" landmarks="page7 area6 area7" protected="true"> 
+      <OperationUnits> 
+        <LogoutUnit gr:x="275" gr:y="56" id="lou2" name="Logout" siteView="sv3"> 
+          <KOLink id="kln20" name="KOLink20" to="page7" automaticCoupling="true" gr:bendpoints="-72,12,127,19"/> 
+        </LogoutUnit>  
+        <ModifyUnit id="mfu8" name="Alterar Estado" gr:x="264" gr:y="970" entity="ent3"> 
+          <Selector id="su51" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond44" name="KeyCondition22" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln47" name="OKLink17" to="inu16" automaticCoupling="true"/>  
+          <KOLink id="kln38" name="KOLink13" to="enu15" automaticCoupling="true" gr:bendpoints="-96,-16,84,43"/> 
+        </ModifyUnit>  
+        <ModifyUnit id="mfu11" name="Alterar Estado" gr:x="278" gr:y="478" entity="ent1"> 
+          <Selector id="su54" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond55" name="KeyCondition17" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln52" name="OKLink13" to="inu19" automaticCoupling="true"/>  
+          <KOLink id="kln43" name="KOLink11" to="enu22" automaticCoupling="true" gr:bendpoints="-106,-21,94,48"/> 
+        </ModifyUnit> 
+      </OperationUnits>  
+      <Page gr:x="20" gr:y="20" id="page7" name="Home" landmark="true" linkOrder="ln66"> 
+        <ContentUnits> 
+          <GetUnit id="gtu2" name="GetUser" contextParameters="UserCtxParam" gr:x="0" gr:y="1"> 
+            <Link id="ln65" name="Link65" to="dau13" automaticCoupling="true" type="transport" validate="true"/> 
+          </GetUnit>  
+          <DataUnit gr:x="89" gr:y="0" id="dau13" name="User" entity="User"> 
+            <Selector id="su36" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond32" name="KeyCondition32" predicate="in" implied="false"/> 
+            </Selector> 
+          </DataUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="dau13"/> 
+            </layout:Cell>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid>  
+        <Link id="ln66" name="Sair" to="lou2" automaticCoupling="true" type="normal" validate="true"/> 
+      </Page>  
+      <Page gr:x="100" gr:y="1120" id="page52" name="Clientes"> 
+        <ContentUnits> 
+          <IndexUnit gr:x="0" gr:y="4" id="inu23" name="Lista de Clientes" entity="ent7" linkOrder="ln154"> 
+            <Link id="ln154" name="Link154" to="dau26" automaticCoupling="true" type="normal" validate="true"/> 
+          </IndexUnit>  
+          <DataUnit gr:x="156" gr:y="0" id="dau26" name="Cliente" entity="ent7"> 
+            <Selector id="su88" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond74" name="KeyCondition74" predicate="in" implied="false"/> 
+            </Selector> 
+          </DataUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="inu23"> 
+                <layout:Link link="ln154"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell> 
+              <layout:Unit unitId="dau26"/> 
+            </layout:Cell>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid> 
+      </Page>  
+      <Area id="area6" name="Encomendas" defaultPage="page37" landmark="true" gr:x="0" gr:y="650"> 
+        <OperationUnits/>  
+        <Page id="page37" name="Pedidos de Encomenda" gr:x="14" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu16" name="Pedidos de Encomenda" linkOrder="ln90 ln91" gr:x="0" gr:y="0" entity="ent3" displayAttributes="att9 att30 att31 att32 att33 att1 role48.userName"> 
+              <Link id="ln90" name="Ver Detalhes" to="dau15" type="normal" validate="true"> 
+                <LinkParameter id="par106" name="oid_KeyCondition20 [oid]" source="data[].att9" target="kcond38.att9"/> 
+              </Link>  
+              <Link id="ln91" name="Alterar Estado" to="dau16" type="normal" automaticCoupling="true" validate="true"/> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu16"> 
+                  <layout:Link link="ln90"/>  
+                  <layout:Link link="ln91"/>  
+                  <layout:Attribute attribute="att9"/>  
+                  <layout:Attribute attribute="att30"/>  
+                  <layout:Attribute attribute="att31"/>  
+                  <layout:Attribute attribute="att32"/>  
+                  <layout:Attribute attribute="att33"/>  
+                  <layout:Attribute attribute="att1"/>  
+                  <layout:Attribute attribute="role48.userName"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page28" name="Detalhes do Pedido" gr:x="256" gr:y="12"> 
+          <ContentUnits> 
+            <DataUnit id="dau15" name="Detalhes do Pedido" gr:x="0" gr:y="0" entity="ent3" displayAttributes="att9 att30 att31 att32 att33 att1"> 
+              <Selector id="su44" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond38" name="KeyCondition20" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln82" name="Link54" to="inu12" type="transport" validate="true"> 
+                <LinkParameter id="par81" name="oid_pedido [oid]" source="data.att9" target="rcond5.att11"/> 
+              </Link> 
+            </DataUnit>  
+            <IndexUnit id="inu12" name="Linhas do Pedido" gr:x="14" gr:y="114" entity="ent5" displayAttributes="att11 att34"> 
+              <Selector id="su45" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond5" name="pedido" predicate="in" implied="false" role="role37"/> 
+              </Selector> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau15"> 
+                  <layout:Attribute attribute="att9"/>  
+                  <layout:Attribute attribute="att30"/>  
+                  <layout:Attribute attribute="att31"/>  
+                  <layout:Attribute attribute="att32"/>  
+                  <layout:Attribute attribute="att33"/>  
+                  <layout:Attribute attribute="att1"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="inu12"> 
+                  <layout:Attribute attribute="att11"/>  
+                  <layout:Attribute attribute="att34"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page36" name="Alterar estado" gr:x="0" gr:y="186"> 
+          <ContentUnits> 
+            <DataUnit id="dau16" name="Encomenda" gr:x="90" gr:y="80" entity="ent3"> 
+              <Selector id="su46" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond39" name="KeyCondition21" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln84" name="Link43" to="enu15" type="transport" automaticCoupling="true" validate="true"/>  
+              <Link id="ln85" name="Link44" to="mfu8" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit>  
+            <EntryUnit id="enu15" name="Alterar Estado" linkOrder="ln86" gr:x="0" gr:y="0" fieldOrder="fld53"> 
+              <Field id="fld53" name="Estado" type="string" modifiable="true"/>  
+              <Link id="ln86" name="Guardar" to="mfu8" type="normal" validate="true"> 
+                <LinkParameter id="par105" name="Estado_estado" source="fld53" target="mfu8.att1"/> 
+              </Link> 
+            </EntryUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau16"/> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="enu15"> 
+                  <layout:Field field="fld53"/>  
+                  <layout:Link link="ln86"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area>  
+      <Area id="area7" name="Or&#231;amentos" defaultPage="page43" landmark="true" gr:x="10" gr:y="170"> 
+        <OperationUnits/>  
+        <Page id="page43" name="Pedidos or&#231;amento" gr:x="0" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu19" name="Pedidos Or&#231;amento" linkOrder="ln141 ln151" gr:x="0" gr:y="0" entity="ent1" displayAttributes="att24 att25 att26 att27 att36 att37 att7"> 
+              <Link id="ln141" name="Detalhes" to="dau20" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="185,90,-6,-186"/>  
+              <Link id="ln151" name="Alterar Estado" to="dau19" type="normal" automaticCoupling="true" validate="true"/> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu19"> 
+                  <layout:Attribute attribute="att24"/>  
+                  <layout:Attribute attribute="att25"/>  
+                  <layout:Attribute attribute="att26"/>  
+                  <layout:Attribute attribute="att27"/>  
+                  <layout:Attribute attribute="att36"/>  
+                  <layout:Attribute attribute="att37"/>  
+                  <layout:Attribute attribute="att7"/>  
+                  <layout:Link link="ln141"/>  
+                  <layout:Link link="ln151"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page41" name="Alterar Estado" gr:x="20" gr:y="180"> 
+          <ContentUnits> 
+            <EntryUnit id="enu22" name="Alterar Estado" linkOrder="ln102" gr:x="0" gr:y="0" fieldOrder="fld69"> 
+              <Link id="ln102" name="Guardar" to="mfu11" type="normal" validate="true"> 
+                <LinkParameter id="par119" name="Estado_estado" source="fld69" target="mfu11.att36"/> 
+              </Link>  
+              <Field id="fld69" name="Estado" type="string" modifiable="true"/> 
+            </EntryUnit>  
+            <DataUnit id="dau19" name="Or&#231;amento" gr:x="14" gr:y="94" entity="ent1"> 
+              <Selector id="su72" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond65" name="KeyCondition16" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln118" name="Link38" to="enu22" type="transport" automaticCoupling="true" validate="true"/>  
+              <Link id="ln123" name="Link40" to="mfu11" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu22"> 
+                  <layout:Link link="ln102"/>  
+                  <layout:Field field="fld69"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page42" name="Detalhes do Pedido" gr:x="234" gr:y="10"> 
+          <ContentUnits> 
+            <DataUnit id="dau20" name="Detalhes de Pedido" gr:x="6" gr:y="0" entity="ent1" displayAttributes="att7 att24 att25 att26 att27 att36 att37"> 
+              <Selector id="su76" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond68" name="KeyCondition13" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln124" name="Link36" to="inu17" type="transport" validate="true"> 
+                <LinkParameter id="par146" name="oid_Or&#231;amentoLinhaToOr&#231;amento [oid]" source="data.att7" target="rcond19.att43"/> 
+              </Link> 
+            </DataUnit>  
+            <IndexUnit id="inu17" name="Linhas do Pedido" gr:x="0" gr:y="104" entity="ent10" displayAttributes="att43 att44 att45"> 
+              <Selector id="su80" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond19" name="Or&#231;amentoLinhaToOr&#231;amento" predicate="in" implied="false" role="role27"/> 
+              </Selector> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau20"> 
+                  <layout:Attribute attribute="att7"/>  
+                  <layout:Attribute attribute="att24"/>  
+                  <layout:Attribute attribute="att25"/>  
+                  <layout:Attribute attribute="att26"/>  
+                  <layout:Attribute attribute="att27"/>  
+                  <layout:Attribute attribute="att36"/>  
+                  <layout:Attribute attribute="att37"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="inu17"> 
+                  <layout:Attribute attribute="att43"/>  
+                  <layout:Attribute attribute="att44"/>  
+                  <layout:Attribute attribute="att45"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area> 
+    </SiteView>  
+    <SiteView id="sv6" name="Backoffice Cliente" protected="true" homePage="page46" landmarks="page46 area14 area15"> 
+      <OperationUnits> 
+        <LogoutUnit gr:x="470" gr:y="147" id="lou3" name="Logout" siteView="sv3"> 
+          <KOLink id="kln21" name="KOLink21" to="page46" automaticCoupling="true" gr:bendpoints="-83,11,137,19"/> 
+        </LogoutUnit>  
+        <DeleteUnit id="dlu13" name="Eliminar Pedido" gr:x="415" gr:y="349" entity="ent1"> 
+          <Selector id="su66" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond57" name="KeyCondition14" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln36" name="OKLink14" to="inu27" automaticCoupling="true" gr:bendpoints="-199,-185,173,201"/>  
+          <KOLink id="kln27" name="KOLink9" to="inu27" automaticCoupling="true" gr:bendpoints="-177,-205,195,181"/> 
+        </DeleteUnit>  
+        <ModifyUnit id="mfu6" name="Editar Linha" gr:x="405" gr:y="459" entity="ent10"> 
+          <Selector id="su67" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond58" name="KeyCondition18" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln37" name="OKLink15" to="dau27" automaticCoupling="true" gr:bendpoints="37,77,-61,-59"/>  
+          <KOLink id="kln28" name="KOLink10" to="enu27" automaticCoupling="true" gr:bendpoints="-67,24,67,43"/> 
+        </ModifyUnit>  
+        <CreateUnit id="cru15" name="Nova Linha Or&#231;amento" gr:x="65" gr:y="769" entity="ent10"> 
+          <OKLink id="oln39" name="OKLink12" to="cnu6" automaticCoupling="true"/>  
+          <KOLink id="kln30" name="KOLink8" to="meu1" automaticCoupling="true" gr:bendpoints="-112,22,89,27"/> 
+        </CreateUnit>  
+        <CreateUnit id="cru16" name="Novo Or&#231;amento" gr:x="95" gr:y="469" entity="ent1"> 
+          <OKLink id="oln29" name="OKLink29" to="cnu8" automaticCoupling="true"/> 
+        </CreateUnit>  
+        <CreateUnit id="cru17" name="Nova Encomenda" gr:x="20" gr:y="1150" entity="ent3"> 
+          <OKLink id="oln41" name="OKLink18" to="inu29" automaticCoupling="true"/>  
+          <KOLink id="kln32" name="KOLink14" to="enu31" automaticCoupling="true" gr:bendpoints="31,-63,-3,66"/> 
+        </CreateUnit>  
+        <DeleteUnit id="dlu14" name="Eliminar Pedido" gr:x="220" gr:y="1110" entity="ent3"> 
+          <Selector id="su77" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond66" name="KeyCondition19" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln43" name="OKLink16" to="inu29" automaticCoupling="true" gr:bendpoints="115,15,-137,13"/>  
+          <KOLink id="kln34" name="KOLink12" to="inu29" automaticCoupling="true" gr:bendpoints="115,-15,-137,-17"/> 
+        </DeleteUnit>  
+        <CreateUnit id="cru18" name="Nova Linha Encomenda" gr:x="310" gr:y="1190" entity="ent5"> 
+          <OKLink id="oln44" name="OKLink19" to="page71" automaticCoupling="true"/>  
+          <KOLink id="kln35" name="KOLink15" to="page71" automaticCoupling="true" gr:bendpoints="-65,-60,58,100"/> 
+        </CreateUnit>  
+        <ModifyUnit id="mfu9" name="Editar Linha" gr:x="640" gr:y="1040" entity="ent5"> 
+          <Selector id="su82" defaultPolicy="fill" booleanOperator="and"> 
+            <KeyCondition id="kcond70" name="KeyCondition24" predicate="in" implied="false"/> 
+          </Selector>  
+          <OKLink id="oln45" name="OKLink20" to="dau30" automaticCoupling="true"/>  
+          <KOLink id="kln36" name="KOLink16" to="dau30" automaticCoupling="true" gr:bendpoints="-32,-72,7,103"/> 
+        </ModifyUnit> 
+      </OperationUnits>  
+      <Page gr:x="200" gr:y="120" id="page46" name="Home" landmark="true" linkOrder="ln89"> 
+        <ContentUnits> 
+          <GetUnit gr:x="0" gr:y="6" id="gtu3" name="GetUser" contextParameters="UserCtxParam"> 
+            <Link id="ln87" name="Link87" to="dau21" automaticCoupling="true" type="transport" validate="true"/> 
+          </GetUnit>  
+          <DataUnit gr:x="94" gr:y="0" id="dau21" name="User" entity="User" displayAttributes="userOID userName password email"> 
+            <Selector id="su48" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond42" name="KeyCondition42" predicate="in" implied="false"/> 
+            </Selector> 
+          </DataUnit> 
+        </ContentUnits>  
+        <layout:Grid> 
+          <layout:Row> 
+            <layout:Cell> 
+              <layout:Unit unitId="dau21"> 
+                <layout:Attribute attribute="userOID"/>  
+                <layout:Attribute attribute="userName"/>  
+                <layout:Attribute attribute="password"/>  
+                <layout:Attribute attribute="email"/> 
+              </layout:Unit> 
+            </layout:Cell>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row>  
+          <layout:Row> 
+            <layout:Cell/>  
+            <layout:Cell/>  
+            <layout:Cell/> 
+          </layout:Row> 
+        </layout:Grid>  
+        <Link id="ln89" name="Sair" to="lou3" type="normal" automaticCoupling="true" validate="true"/> 
+      </Page>  
+      <Area id="area14" name="Or&#231;amentos" landmark="true" gr:x="40" gr:y="260" defaultPage="page65"> 
+        <OperationUnits> 
+          <ConnectUnit id="cnu6" name="Ligar LinhaToOr&#231;amento" gr:x="7" gr:y="371" relationship="role27"> 
+            <SourceSelector id="su69" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond60" name="KeyCondition20" predicate="in" implied="false"/> 
+            </SourceSelector>  
+            <TargetSelector id="su70" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond61" name="KeyCondition26" predicate="in" implied="false"/> 
+            </TargetSelector>  
+            <OKLink id="oln28" name="OKLink28" to="page64" automaticCoupling="true"/> 
+          </ConnectUnit>  
+          <ConnectUnit gr:x="7" gr:y="271" id="cnu8" name="Ligar Or&#231;amentoToUser" relationship="role49"> 
+            <SourceSelector id="su47" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond40" name="KeyCondition40" predicate="in" implied="false"/> 
+            </SourceSelector>  
+            <TargetSelector id="su49" defaultPolicy="fill" booleanOperator="and"> 
+              <KeyCondition id="kcond41" name="KeyCondition41" predicate="in" implied="false"/> 
+            </TargetSelector>  
+            <OKLink id="oln38" name="OKLink38" to="page64" automaticCoupling="true" gr:bendpoints="80,85,-190,-59"/> 
+          </ConnectUnit> 
+        </OperationUnits>  
+        <Page id="page67" name="Novo Pedido" gr:x="175" gr:y="151"> 
+          <ContentUnits> 
+            <EntryUnit id="enu29" name="Novo Pedido" linkOrder="ln136" gr:x="0" gr:y="0" fieldOrder="fld99 fld98 fld97 fld96 fld101 fld100"> 
+              <Field id="fld96" name="Anexos" type="string" modifiable="true"/>  
+              <Field id="fld97" name="Data" type="date" modifiable="true"/>  
+              <Field id="fld98" name="Numero Serie" type="integer" modifiable="true"/>  
+              <Field id="fld99" name="Serie" type="string" modifiable="true"/>  
+              <Field id="fld100" name="Valor Total" type="string" modifiable="true"/>  
+              <Field id="fld101" name="Estado" type="string" modifiable="true"/>  
+              <Link id="ln136" name="Criar Or&#231;amento" to="cru16" type="normal" validate="true" gr:bendpoints="27,57,31,-61"> 
+                <LinkParameter id="par87" name="Anexos_anexos" source="fld96" target="cru16.att27"/>  
+                <LinkParameter id="par88" name="Data_data" source="fld97" target="cru16.att26"/>  
+                <LinkParameter id="par89" name="Estado_estado" source="fld101" target="cru16.att36"/>  
+                <LinkParameter id="par90" name="Numero Serie_numSerie" source="fld98" target="cru16.att25"/>  
+                <LinkParameter id="par91" name="Serie_serie" source="fld99" target="cru16.att24"/> 
+              </Link> 
+            </EntryUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu29"> 
+                  <layout:Field field="fld99"/>  
+                  <layout:Field field="fld98"/>  
+                  <layout:Field field="fld97"/>  
+                  <layout:Field field="fld96"/>  
+                  <layout:Field field="fld101"/>  
+                  <layout:Field field="fld100"/>  
+                  <layout:Link link="ln136"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page65" name="Pedidos or&#231;amento" linkOrder="ln134" gr:x="0" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu27" name="Pedidos Or&#231;amento" linkOrder="ln131 ln132" gr:x="151" gr:y="0" entity="ent1" displayAttributes="att24 att25 att26 att27 att36 att37"> 
+              <Link id="ln131" name="Detalhes" to="dau29" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="92,66,58,-215;92,192,58,-89"/>  
+              <Link id="ln132" name="Eliminar Pedido" to="dlu13" type="normal" automaticCoupling="true" validate="true"/>  
+              <Selector id="su83" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond13" name="UserToOr&#231;amento" predicate="in" implied="false" role="role49"/> 
+              </Selector> 
+            </IndexUnit>  
+            <GetUnit gr:x="0" gr:y="5" id="gtu7" name="GetUser" contextParameters="UserCtxParam"> 
+              <Link id="ln158" name="Link158" to="inu27" automaticCoupling="true" type="transport" validate="true"/>  
+              <Link id="ln95" name="Link83" to="cnu8" type="transport" validate="true" gr:bendpoints="-23,105,-55,-152;-20,169,-52,-88"> 
+                <LinkParameter id="par85" name="UserCtxParam.oid_KeyCondition41 [oid] [User] [Target]" source="data.userOID" target="kcond41.userOID"/> 
+              </Link> 
+            </GetUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu27"> 
+                  <layout:Link link="ln131"/>  
+                  <layout:Link link="ln132"/>  
+                  <layout:Attribute attribute="att24"/>  
+                  <layout:Attribute attribute="att25"/>  
+                  <layout:Attribute attribute="att26"/>  
+                  <layout:Attribute attribute="att27"/>  
+                  <layout:Attribute attribute="att36"/>  
+                  <layout:Attribute attribute="att37"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid>  
+          <Link id="ln134" name="Novo Pedido" to="page67" type="normal" automaticCoupling="true" validate="true"/> 
+        </Page>  
+        <Page id="page64" name="Detalhes do Pedido" gr:x="186" gr:y="281" linkOrder="ln130"> 
+          <ContentUnits> 
+            <DataUnit id="dau29" name="Detalhes de Pedido" gr:x="0" gr:y="0" entity="ent1" displayAttributes="att7 att24 att25 att26 att27 att36 att37"> 
+              <Selector id="su73" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond64" name="KeyCondition13" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln126" name="Link36" to="inu25" type="transport" validate="true"> 
+                <LinkParameter id="par82" name="oid_pedidoOr [oid]" source="data.att7" target="rcond1.att43"/> 
+              </Link>  
+              <Link id="ln128" name="Link56" to="cnu6" type="transport" automaticCoupling="true" validate="true" gr:bendpoints="-110,12,111,-55"/> 
+            </DataUnit>  
+            <IndexUnit id="inu25" name="Linhas do Pedido" linkOrder="ln129" gr:x="161" gr:y="1" entity="ent10" displayAttributes="att43 att44"> 
+              <Link id="ln129" name="Editar Linha" to="page62" type="normal" validate="true"/>  
+              <Selector id="su74" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond10" name="RoleCondition7" predicate="in" implied="false" role="role27"/> 
+              </Selector> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau29"> 
+                  <layout:Attribute attribute="att7"/>  
+                  <layout:Attribute attribute="att24"/>  
+                  <layout:Attribute attribute="att25"/>  
+                  <layout:Attribute attribute="att26"/>  
+                  <layout:Attribute attribute="att27"/>  
+                  <layout:Attribute attribute="att36"/>  
+                  <layout:Attribute attribute="att37"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="inu25"> 
+                  <layout:Link link="ln129"/>  
+                  <layout:Attribute attribute="att43"/>  
+                  <layout:Attribute attribute="att44"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid>  
+          <Link id="ln130" name="Inserir Linha" to="page66" type="normal" automaticCoupling="true" validate="true"/> 
+        </Page>  
+        <Page id="page62" name="Modificar Linha" gr:x="507" gr:y="21"> 
+          <ContentUnits> 
+            <EntryUnit id="enu27" name="Editar Linha" linkOrder="ln120" gr:x="5" gr:y="0" fieldOrder="fld90 fld89"> 
+              <Field id="fld89" name="Produto" type="integer" modifiable="true"/>  
+              <Field id="fld90" name="Descri&#231;&#227;o" type="string" modifiable="true"/>  
+              <Link id="ln120" name="Guardar" to="mfu6" type="normal" validate="true"> 
+                <LinkParameter id="par79" name="Descri&#231;&#227;o_Descri&#231;&#227;o" source="fld90" target="mfu6.att44"/>  
+                <LinkParameter id="par80" name="Produto_Produto.oid(Or&#231;amento LinhaToProduto)" source="fld89" target="mfu6.role36.att8"/> 
+              </Link> 
+            </EntryUnit>  
+            <DataUnit id="dau27" name="Or&#231;amentoLinha" gr:x="0" gr:y="116" entity="ent10" displayAttributes="role36.att8"> 
+              <Selector id="su71" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond62" name="KeyCondition15" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln121" name="Link25" to="enu27" type="transport" validate="true"/>  
+              <Link id="ln122" name="Link28" to="mfu6" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu27"> 
+                  <layout:Link link="ln120"/>  
+                  <layout:Field field="fld90"/>  
+                  <layout:Field field="fld89"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page66" name="Nova Linha" gr:x="247" gr:y="431"> 
+          <ContentUnits> 
+            <MultiEntryUnit id="meu1" name="Nova Linha" linkOrder="ln135" gr:x="0" gr:y="2" minLength="1" fieldOrder="fld94 fld93 fld92"> 
+              <Field id="fld92" name="Produto" type="string" modifiable="true"/>  
+              <Field id="fld93" name="Valor" type="float" modifiable="true"/>  
+              <Field id="fld94" name="Descri&#231;&#227;o" type="string" modifiable="true"/>  
+              <Link id="ln135" name="Adicionar Linha" to="cru15" type="normal" validate="true"> 
+                <LinkParameter id="par83" name="Descri&#231;&#227;o_Descri&#231;&#227;o" source="fld94" target="cru15.att44"/>  
+                <LinkParameter id="par84" name="Produto_Produto.oid(Or&#231;amento LinhaToProduto)" source="fld92" target="cru15.role36.att8"/>  
+                <LinkParameter id="par86" name="Valor_Valor" source="fld93" target="cru15.att45"/> 
+              </Link> 
+            </MultiEntryUnit>  
+            <MultiDataUnit id="mdu13" name="Produtos" gr:x="94" gr:y="0" entity="ent2" displayAttributes="att8 att13"/> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="meu1"> 
+                  <layout:Link link="ln135"/>  
+                  <layout:Field field="fld94"/>  
+                  <layout:Field field="fld93"/>  
+                  <layout:Field field="fld92"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="mdu13"> 
+                  <layout:Attribute attribute="att8"/>  
+                  <layout:Attribute attribute="att13"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area>  
+      <Area id="area15" name="Encomendas" defaultPage="page70" landmark="true" gr:x="0" gr:y="890"> 
+        <OperationUnits/>  
+        <Page id="page70" name="Pedidos de Encomenda" linkOrder="ln145" gr:x="0" gr:y="0"> 
+          <ContentUnits> 
+            <IndexUnit id="inu29" name="Pedidos de Encomenda" linkOrder="ln142 ln143" gr:x="100" gr:y="0" entity="ent3" displayAttributes="att30 att31 att32 att33 att1"> 
+              <Link id="ln142" name="Eliminar" to="dlu14" type="normal" automaticCoupling="true" validate="true"/>  
+              <Link id="ln143" name="Ver Detalhes" to="dau30" type="normal" validate="true"> 
+                <LinkParameter id="par95" name="oid_KeyCondition20 [oid]" source="data[].att9" target="kcond67.att9"/> 
+              </Link>  
+              <Selector id="su84" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond14" name="UserToEncomenda" predicate="in" implied="false" role="role47"/> 
+              </Selector> 
+            </IndexUnit>  
+            <GetUnit gr:x="0" gr:y="0" id="gtu8" name="GetUser" contextParameters="UserCtxParam"> 
+              <Link id="ln159" name="Link159" to="inu29" automaticCoupling="true" type="transport" validate="true"/> 
+            </GetUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="inu29"> 
+                  <layout:Link link="ln142"/>  
+                  <layout:Link link="ln143"/>  
+                  <layout:Attribute attribute="att30"/>  
+                  <layout:Attribute attribute="att31"/>  
+                  <layout:Attribute attribute="att32"/>  
+                  <layout:Attribute attribute="att33"/>  
+                  <layout:Attribute attribute="att1"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid>  
+          <Link id="ln145" name="Novo Pedido" to="page71" type="normal" automaticCoupling="true" validate="true"/> 
+        </Page>  
+        <Page id="page68" name="Detalhes do Pedido" gr:x="366" gr:y="6"> 
+          <ContentUnits> 
+            <DataUnit id="dau30" name="Detalhes do Pedido" gr:x="0" gr:y="0" entity="ent3" displayAttributes="att9 att30 att31 att32 att33 att1"> 
+              <Selector id="su78" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond67" name="KeyCondition20" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln137" name="Link54" to="inu28" type="transport" validate="true"> 
+                <LinkParameter id="par92" name="oid_pedido [oid]" source="data.att9" target="rcond12.att11"/> 
+              </Link> 
+            </DataUnit>  
+            <IndexUnit id="inu28" name="Linhas do Pedido" linkOrder="ln138" gr:x="14" gr:y="114" entity="ent5" displayAttributes="att11 att34"> 
+              <Link id="ln138" name="Modificar Linha" to="dau32" type="normal" validate="true"> 
+                <LinkParameter id="par93" name="oid_KeyCondition23 [oid]" source="data[].att11" target="kcond69.att11"/> 
+              </Link>  
+              <Selector id="su79" defaultPolicy="fill" booleanOperator="and"> 
+                <RelationshipRoleCondition id="rcond12" name="pedido" predicate="in" implied="false" role="role38.role37"/> 
+              </Selector> 
+            </IndexUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="dau30"> 
+                  <layout:Attribute attribute="att9"/>  
+                  <layout:Attribute attribute="att30"/>  
+                  <layout:Attribute attribute="att31"/>  
+                  <layout:Attribute attribute="att32"/>  
+                  <layout:Attribute attribute="att33"/>  
+                  <layout:Attribute attribute="att1"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="inu28"> 
+                  <layout:Link link="ln138"/>  
+                  <layout:Attribute attribute="att11"/>  
+                  <layout:Attribute attribute="att34"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page71" name="Novo Pedido" gr:x="56" gr:y="346"> 
+          <ContentUnits> 
+            <EntryUnit id="enu31" name="Novo Pedido" linkOrder="ln146" gr:x="0" gr:y="0" fieldOrder="fld106 fld105 fld104 fld103 fld107"> 
+              <Field id="fld103" name="Anexos" type="string" modifiable="true"/>  
+              <Field id="fld104" name="Data" type="date" modifiable="true"/>  
+              <Field id="fld105" name="Numero Serie" type="integer" modifiable="true"/>  
+              <Field id="fld106" name="Serie" type="integer" modifiable="true"/>  
+              <Field id="fld107" name="Estado" type="string" modifiable="true"/>  
+              <Link id="ln146" name="Guardar" to="cru17" type="normal" validate="true"> 
+                <LinkParameter id="par96" name="Anexos_anexos" source="fld103" target="cru17.att33"/>  
+                <LinkParameter id="par97" name="Data_data" source="fld104" target="cru17.att32"/>  
+                <LinkParameter id="par98" name="Estado_estado" source="fld107" target="cru17.att1"/>  
+                <LinkParameter id="par99" name="Numero Serie_numSerie" source="fld105" target="cru17.att31"/>  
+                <LinkParameter id="par100" name="Serie_serie" source="fld106" target="cru17.att30"/> 
+              </Link> 
+            </EntryUnit>  
+            <EntryUnit id="enu32" name="Nova Linha" linkOrder="ln147" gr:x="124" gr:y="4" fieldOrder="fld109 fld108"> 
+              <Field id="fld108" name="Produto" type="string" modifiable="true"/>  
+              <Field id="fld109" name="Descri&#231;&#227;o" type="string" modifiable="true"/>  
+              <Link id="ln147" name="Guardar" to="cru18" type="normal" validate="true"> 
+                <LinkParameter id="par101" name="Descri&#231;&#227;o_descricao" source="fld109" target="cru18.att34"/>  
+                <LinkParameter id="par102" name="Produto_Produto.oid(Encomenda LinhaToProduto)" source="fld108" target="cru18.role42.att8"/> 
+              </Link> 
+            </EntryUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu31"> 
+                  <layout:Field field="fld106"/>  
+                  <layout:Field field="fld105"/>  
+                  <layout:Field field="fld104"/>  
+                  <layout:Field field="fld103"/>  
+                  <layout:Field field="fld107"/>  
+                  <layout:Link link="ln146"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell> 
+                <layout:Unit unitId="enu32"> 
+                  <layout:Field field="fld109"/>  
+                  <layout:Field field="fld108"/>  
+                  <layout:Link link="ln147"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page>  
+        <Page id="page72" name="Modificar Linha" gr:x="461" gr:y="305"> 
+          <ContentUnits> 
+            <DataUnit id="dau32" name="Encomenda Linha" gr:x="0" gr:y="0" entity="ent5"> 
+              <Selector id="su81" defaultPolicy="fill" booleanOperator="and"> 
+                <KeyCondition id="kcond69" name="KeyCondition23" predicate="in" implied="false"/> 
+              </Selector>  
+              <Link id="ln148" name="Link50" to="enu33" type="transport" automaticCoupling="true" validate="true"/>  
+              <Link id="ln149" name="Link51" to="mfu9" type="transport" automaticCoupling="true" validate="true"/> 
+            </DataUnit>  
+            <EntryUnit id="enu33" name="Editar Linha" linkOrder="ln150" gr:x="139" gr:y="5" fieldOrder="fld111 fld110"> 
+              <Link id="ln150" name="Guardar" to="mfu9" type="normal" validate="true"> 
+                <LinkParameter id="par103" name="Descri&#231;&#227;o_descricao" source="fld111" target="mfu9.att34"/>  
+                <LinkParameter id="par104" name="Produto_Produto.oid(Encomenda LinhaToProduto)" source="fld110" target="mfu9.role42.att8"/> 
+              </Link>  
+              <Field id="fld110" name="Produto" type="string" modifiable="true"/>  
+              <Field id="fld111" name="Descri&#231;&#227;o" type="string" modifiable="true"/> 
+            </EntryUnit> 
+          </ContentUnits>  
+          <layout:Grid> 
+            <layout:Row> 
+              <layout:Cell> 
+                <layout:Unit unitId="enu33"> 
+                  <layout:Link link="ln150"/>  
+                  <layout:Field field="fld111"/>  
+                  <layout:Field field="fld110"/> 
+                </layout:Unit> 
+              </layout:Cell>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row>  
+            <layout:Row> 
+              <layout:Cell/>  
+              <layout:Cell/>  
+              <layout:Cell/> 
+            </layout:Row> 
+          </layout:Grid> 
+        </Page> 
+      </Area> 
+    </SiteView> 
+  </WebModel>
+</WebProject>
