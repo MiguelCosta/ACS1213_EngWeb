@@ -40,10 +40,11 @@ class Fotografia extends CActiveRecord
 		return array(
 			array('album_id', 'required'),
 			array('album_id, produto_id', 'numerical', 'integerOnly'=>true),
-			array('path, descricao', 'length', 'max'=>1024),
+			array('path, descricao', 'length', 'max'=>1024, 'on'=>'insert,update'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, path, descricao, album_id, produto_id', 'safe', 'on'=>'search'),
+			array('id, descricao, album_id, produto_id', 'safe', 'on'=>'search'),
+			array('path', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'), // this will allow empty field when page is update (remember here i create scenario update)
 		);
 	}
 

@@ -32,7 +32,7 @@ class FotografiaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','createInAlbum'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -62,16 +62,32 @@ class FotografiaController extends Controller
 	 */
 	public function actionCreate()
 	{
+		//http://www.yiiframework.com/wiki/349/how-to-upload-image-photo-and-path-entry-in-database-with-update-functionality/
+		
 		$model=new Fotografia;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
+		$this->performAjaxValidation($model);
 
 		if(isset($_POST['Fotografia']))
 		{
+			$rnd = rand(0,9999);  // generate random number between 0-9999
 			$model->attributes=$_POST['Fotografia'];
-			if($model->save())
+			
+			$uploadedFile=CUploadedFile::getInstance($model,'path');
+			$fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+			$model->path = $fileName;
+			
+			if($model->save()){
+				
+				$fullpath = Yii::app()->params['fotospath'].$fileName;
+				Yii::log("FULL PATH: $fullpath", CLogger::LEVEL_INFO);
+				$uploadedFile->saveAs($fullpath);  // image will uplode to rootDirectory/images/fotos/
+				
+				//$this->redirect(array('admin'));
 				$this->redirect(array('view','id'=>$model->id));
+				
+			}
 		}
 
 		$this->render('create',array(
@@ -93,9 +109,23 @@ class FotografiaController extends Controller
 
 		if(isset($_POST['Fotografia']))
 		{
+			$_POST['Fotografia']['path'] = $model->path;
+			
 			$model->attributes=$_POST['Fotografia'];
-			if($model->save())
+			
+			$uploadedFile=CUploadedFile::getInstance($model,'path');
+			
+			if($model->save()){
+				
+
+				if(!empty($uploadedFile))  // check if uploaded file is set or not
+				{
+					$uploadedFile->saveAs(Yii::app()->params['fotospath'].$model->path);
+				}
 				$this->redirect(array('view','id'=>$model->id));
+				//$this->redirect(array('admin'));
+				
+			}
 		}
 
 		$this->render('update',array(
@@ -141,6 +171,57 @@ class FotografiaController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+	
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionCreateInAlbum()
+	{
+		//http://www.yiiframework.com/wiki/349/how-to-upload-image-photo-and-path-entry-in-database-with-update-functionality/
+	
+		$model=new Fotografia;
+		$albumID = 1;
+		
+		if(isset($_GET['AlbumID']))
+		{
+			$albumID = $_GET['AlbumID'];
+		}
+		
+		// Uncomment the following line if AJAX validation is needed
+		//$this->performAjaxValidation($model);
+	
+		if(isset($_POST['Fotografia']))
+		{
+		
+			$rnd = rand(0,9999);  // generate random number between 0-9999
+			$model->attributes=$_POST['Fotografia'];
+			$model->album_id = $albumID;
+
+			Yii::log("AlbumID: $albumID", CLogger::LEVEL_INFO);
+			
+			$uploadedFile=CUploadedFile::getInstance($model,'path');
+			$fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+			$model->path = $fileName;
+				
+			if($model->save()){
+	
+				$fullpath = Yii::app()->params['fotospath'].$fileName;
+				Yii::log("FULL PATH: $fullpath", CLogger::LEVEL_INFO);
+				$uploadedFile->saveAs($fullpath);  // image will uplode to rootDirectory/images/fotos/
+	
+				//$this->redirect(array('admin'));
+				$this->redirect(array('view','id'=>$model->id));
+	
+			}
+		}
+	
+		$this->render('createInAlbum',array(
+				'model'=>$model,
+				'AlbumID'=> $albumID,
+		));
+		
 	}
 
 	/**

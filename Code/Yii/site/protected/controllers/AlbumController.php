@@ -51,6 +51,10 @@ class AlbumController extends Controller
 	 */
 	public function actionView($id)
 	{
+		//Yii::log('There is some error', CLogger::LEVEL_ERROR, 'app,context');
+		//Yii::log('There is some warning', CLogger::LEVEL_WARNING);
+		Yii::log("AlbumID: $id\n", CLogger::LEVEL_INFO);
+		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));

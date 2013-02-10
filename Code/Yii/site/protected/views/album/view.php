@@ -8,11 +8,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Album', 'url'=>array('index')),
-	array('label'=>'Create Album', 'url'=>array('create')),
-	array('label'=>'Update Album', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Album', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Album', 'url'=>array('admin')),
+	array('label'=>'Todos os albuns', 'url'=>array('index')),
+	array('label'=>'Novo album', 'url'=>array('create')),
+	array('label'=>'Atualizar Album', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar album', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Tem a certeza que pretende eliminar este item?')),
+	array('label'=>'Adicionar fotografia', 'url'=>array('/fotografia/CreateInAlbum/AlbumID/'.$model->id)),
+	array('label'=>'Gerir', 'url'=>array('admin')),
 );
 ?>
 

@@ -96,6 +96,8 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
+			'enableProfiling'=>true,
+			'enableParamLogging'=>true,
 		),
 		
 		'errorHandler'=>array(
@@ -115,6 +117,17 @@ return array(
 					'class'=>'CWebLogRoute',
 				),
 				*/
+				array(
+						'class' => 'ext.phpconsole.PhpConsoleYiiExtension',
+						'handleErrors' => true,
+						'handleExceptions' => true,
+						'basePathToStrip' => dirname($_SERVER['DOCUMENT_ROOT'])
+				),
+				array(
+						'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+						// Access is restricted by default to the localhost
+						//'ipFilters'=>array('127.0.0.1','192.168.1.*', 88.23.23.0/24),
+				),
 			),
 		),
 
@@ -131,5 +144,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'fotospath'=>dirname($_SERVER['DOCUMENT_ROOT']).'/htdocs/ACS1213_EngWeb/Code/Yii/site/images/fotos/',
 	),
 );

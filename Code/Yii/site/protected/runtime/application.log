@@ -734,3 +734,218 @@ Stack trace:
 REQUEST_URI=/Vidriluz/site/index.php/album/index
 HTTP_REFERER=http://localhost/Vidriluz/site/index.php/site/index
 ---
+2013/02/10 02:25:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "search".' in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(270): CController->missingAction('search')
+#1 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(282): CController->run('search')
+#2 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/search')
+#3 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ACS1213_EngWeb/Code/Yii/site/index.php/site/search
+HTTP_REFERER=http://localhost/ACS1213_EngWeb/Code/Yii/site/index.php/orcamento/index
+---
+2013/02/10 02:26:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\modules\user\controllers\RegistrationController.php (30)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 17:53:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\db\CDbConnection.php:381
+Stack trace:
+#0 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Produto))
+#7 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CActiveDataProvider.php(74): CActiveRecord::model('Produto')
+#8 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\ProdutoController.php(125): CActiveDataProvider->__construct('Produto')
+#9 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\actions\CInlineAction.php(49): ProdutoController->actionIndex()
+#10 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('produto/index')
+#20 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/ACS1213_EngWeb/Code/Yii/site/index.php/produto/index
+HTTP_REFERER=http://localhost/ACS1213_EngWeb/Code/Yii/site/
+---
+2013/02/10 18:09:17 [error] [app,context] There is some error
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\AlbumController.php (54)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 18:09:17 [warning] [application] There is some warning
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\AlbumController.php (55)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 18:22:20 [error] [exception.CException] exception 'CException' with message 'Property "Fotografia.image" is not defined.' in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('image')
+#1 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\views\fotografia\_form.php(30): CActiveRecord->__get('image')
+#2 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(47): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(FotografiaController), 'C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\views\fotografia\create.php(18): CController->renderPartial('_form', Array)
+#7 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(47): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CBaseController.php(93): YiiDebugViewRenderer->renderFile(Object(FotografiaController), 'C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#11 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php(79): CController->render('create', Array)
+#13 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\actions\CInlineAction.php(49): FotografiaController->actionCreate()
+#14 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('fotografia/crea...')
+#24 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/ACS1213_EngWeb/Code/Yii/site/index.php/fotografia/create
+HTTP_REFERER=http://localhost/ACS1213_EngWeb/Code/Yii/site/index.php/fotografia
+---
+2013/02/10 18:35:41 [error] [php] move_uploaded_file(C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected/images/fotos/3070-Telemovel 91.png): failed to open stream: No such file or directory (C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\actions\CInlineAction.php(49): FotografiaController->actionCreate()
+#1 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(133): FotografiaController->runAction()
+#3 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CInlineFilter.php(58): FotografiaController->filterAccessControl()
+#6 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(265): FotografiaController->runActionWithFilters()
+#9 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(282): FotografiaController->run()
+#10 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php(13): CWebApplication->run()
+REQUEST_URI=/ACS1213_EngWeb/Code/Yii/site/index.php/fotografia/create
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (80)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 18:37:10 [error] [php] move_uploaded_file(C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected/images/fotos/3783-Telemovel 91.png): failed to open stream: No such file or directory (C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\actions\CInlineAction.php(49): FotografiaController->actionCreate()
+#1 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(133): FotografiaController->runAction()
+#3 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CInlineFilter.php(58): FotografiaController->filterAccessControl()
+#6 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(265): FotografiaController->runActionWithFilters()
+#9 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(282): FotografiaController->run()
+#10 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php(13): CWebApplication->run()
+REQUEST_URI=/ACS1213_EngWeb/Code/Yii/site/index.php/fotografia/create
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (82)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 18:50:51 [error] [php] move_uploaded_file(/ACS1213_EngWeb/Code/Yii/site/images/fotos/2615-Telemovel 91.png): failed to open stream: No such file or directory (C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\actions\CInlineAction.php(49): FotografiaController->actionCreate()
+#1 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(133): FotografiaController->runAction()
+#3 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CInlineFilter.php(58): FotografiaController->filterAccessControl()
+#6 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(265): FotografiaController->runActionWithFilters()
+#9 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(282): FotografiaController->run()
+#10 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php(13): CWebApplication->run()
+REQUEST_URI=/ACS1213_EngWeb/Code/Yii/site/index.php/fotografia/create
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (82)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 18:53:28 [error] [php] move_uploaded_file(Yii::app()-&gt;params['fotospath'].552-Telemovel 91.png): failed to open stream: Invalid argument (C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\actions\CInlineAction.php(49): FotografiaController->actionCreate()
+#1 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(133): FotografiaController->runAction()
+#3 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CInlineFilter.php(58): FotografiaController->filterAccessControl()
+#6 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CController.php(265): FotografiaController->runActionWithFilters()
+#9 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(282): FotografiaController->run()
+#10 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php(13): CWebApplication->run()
+REQUEST_URI=/ACS1213_EngWeb/Code/Yii/site/index.php/fotografia/create
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (84)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 18:54:44 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (113)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 18:59:42 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:00:25 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:01:13 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:07:07 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:17:01 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:17:28 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:17:46 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:19:22 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:21:24 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:21:35 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:22:16 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:23:31 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:23:49 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:25:38 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:26:43 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:27:57 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (112)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:31:08 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:31:43 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:33:34 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/10 19:36:03 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
+in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
