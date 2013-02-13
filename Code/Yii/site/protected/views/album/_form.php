@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'data'); ?>
-		<?php echo $form->textField($model,'data'); ?>
+		<?php echo $form->dateField($model, 'data'); ?>
 		<?php echo $form->error($model,'data'); ?>
 	</div>
 

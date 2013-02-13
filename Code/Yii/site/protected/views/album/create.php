@@ -3,8 +3,8 @@
 /* @var $model Album */
 
 $this->breadcrumbs=array(
-	'Albums'=>array('index'),
-	'Create',
+	'Albuns'=>array('index'),
+	'Criar Album',
 );
 
 $this->menu=array(
