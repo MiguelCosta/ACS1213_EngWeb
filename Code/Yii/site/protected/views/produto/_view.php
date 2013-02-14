@@ -5,12 +5,12 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<b><?php //echo CHtml::encode($data->getAttributeLabel('id')); ?></b>
+	<?php //echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nome')); ?>:</b>
-	<?php echo CHtml::encode($data->nome); ?>
+	<?php echo CHtml::link(CHtml::encode($data->nome), array('view', 'id'=>$data->id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('tipo')); ?>:</b>
@@ -29,7 +29,7 @@
 	<?php echo CHtml::encode($data->espessura); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('dimensaomax')); ?>:</b>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dimensao maxima')); ?>:</b>
 	<?php echo CHtml::encode($data->dimensaomax); ?>
 	<br />
 

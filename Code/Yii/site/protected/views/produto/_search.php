@@ -42,7 +42,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'dimensaomax'); ?>
+		<?php echo $form->label($model,'dimensao maxima'); ?>
 		<?php echo $form->textField($model,'dimensaomax',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
 

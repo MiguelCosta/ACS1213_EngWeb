@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'dimensaomax'); ?>
+		<?php echo $form->labelEx($model,'dimensao maxima'); ?>
 		<?php echo $form->textField($model,'dimensaomax',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'dimensaomax'); ?>
 	</div>

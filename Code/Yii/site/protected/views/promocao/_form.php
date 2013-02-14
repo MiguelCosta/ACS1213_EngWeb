@@ -29,13 +29,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'datainicial'); ?>
-		<?php echo $form->textField($model,'datainicial'); ?>
+		<?php echo $form->dateField($model,'datainicial'); ?>
 		<?php echo $form->error($model,'datainicial'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'datafinal'); ?>
-		<?php echo $form->textField($model,'datafinal'); ?>
+		<?php echo $form->dateField($model,'datafinal'); ?>
 		<?php echo $form->error($model,'datafinal'); ?>
 	</div>
 
