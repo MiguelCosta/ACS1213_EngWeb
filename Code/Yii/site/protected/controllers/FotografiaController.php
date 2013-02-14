@@ -219,7 +219,7 @@ class FotografiaController extends Controller
 	
 		$this->render('createInAlbum',array(
 				'model'=>$model,
-				'AlbumID'=> $albumID,
+				'albumID'=> $albumID,
 		));
 		
 	}

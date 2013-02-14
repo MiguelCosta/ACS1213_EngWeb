@@ -4,12 +4,12 @@
 
 $this->breadcrumbs=array(
 	'Produtos'=>array('index'),
-	'Manage',
+	'Gerir',
 );
 
 $this->menu=array(
-	array('label'=>'List Produto', 'url'=>array('index')),
-	array('label'=>'Create Produto', 'url'=>array('create')),
+	array('label'=>'Ver Produtos', 'url'=>array('index')),
+	array('label'=>'Criar Produto', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Produtos</h1>
+<h1>Gerir Produtos</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

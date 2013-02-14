@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Fotografias'=>array('index'),
-	'Create',
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Fotografia', 'url'=>array('index')),
-	array('label'=>'Manage Fotografia', 'url'=>array('admin')),
+	array('label'=>'Ver Fotografias', 'url'=>array('index')),
+	array('label'=>'Gerir Fotografias', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Fotografia</h1>
+<h1>Criar Fotografia</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

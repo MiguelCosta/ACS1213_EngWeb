@@ -3,16 +3,16 @@
 /* @var $model Promocao */
 
 $this->breadcrumbs=array(
-	'Promocaos'=>array('index'),
-	'Create',
+	'Promocoes'=>array('index'),
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Promocao', 'url'=>array('index')),
-	array('label'=>'Manage Promocao', 'url'=>array('admin')),
+	array('label'=>'Ver Promocoes', 'url'=>array('index')),
+	array('label'=>'Gerir Promocoes', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Promocao</h1>
+<h1>Criar Promocao</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

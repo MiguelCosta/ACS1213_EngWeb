@@ -3,13 +3,13 @@
 /* @var $model Album */
 
 $this->breadcrumbs=array(
-	'Albums'=>array('index'),
-	'Manage',
+	'Albuns'=>array('index'),
+	'Gerir',
 );
 
 $this->menu=array(
-	array('label'=>'List Album', 'url'=>array('index')),
-	array('label'=>'Create Album', 'url'=>array('create')),
+	array('label'=>'Ver Albuns', 'url'=>array('index')),
+	array('label'=>'Criar Album', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Albums</h1>
+<h1>Gerir Albuns</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

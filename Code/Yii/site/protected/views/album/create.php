@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Album', 'url'=>array('index')),
-	array('label'=>'Manage Album', 'url'=>array('admin')),
+	array('label'=>'Ver Albuns', 'url'=>array('index')),
+	array('label'=>'Gerir Albuns', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Album</h1>
+<h1>Criar Album</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Encomendalinhas'=>array('index'),
-	'Create',
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Encomendalinha', 'url'=>array('index')),
-	array('label'=>'Manage Encomendalinha', 'url'=>array('admin')),
+	array('label'=>'Ver Encomendalinhas', 'url'=>array('index')),
+	array('label'=>'Gerir Encomendalinhas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Encomendalinha</h1>
+<h1>Criar Encomendalinha</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

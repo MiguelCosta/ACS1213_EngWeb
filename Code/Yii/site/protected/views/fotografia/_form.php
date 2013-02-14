@@ -36,10 +36,11 @@
 		<?php echo $form->error($model,'descricao'); ?>
 	</div>
 
+	<?php $model->album_id = $albumID;?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'album_id'); ?>
-		<?php echo $form->textField($model,'album_id'); ?>
-		<?php echo $form->error($model,'album_id'); ?>
+		<?php // echo $form->labelEx($model,'album_id'); ?>
+		<?php echo $form->textField($model,'album_id', array('type'=>"hidden")); ?>
+		<?php // echo $form->error($model,'album_id'); ?>
 	</div>
 
 	<div class="row">

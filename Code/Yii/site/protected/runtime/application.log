@@ -949,3 +949,15 @@ in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
 2013/02/10 19:36:03 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
 in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\protected\controllers\FotografiaController.php (114)
 in C:\xampp\htdocs\ACS1213_EngWeb\Code\Yii\site\index.php (13)
+2013/02/13 23:10:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vidriluzyii`.`fotografia`, CONSTRAINT `fk_fotografia_album1` FOREIGN KEY (`album_id`) REFERENCES `album` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `album` WHERE `album`.`id`=1.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/AlbumController.php (117)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/13 23:15:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vidriluzyii`.`fotografia`, CONSTRAINT `fk_fotografia_album1` FOREIGN KEY (`album_id`) REFERENCES `album` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: DELETE FROM `album` WHERE `album`.`id`=1.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/AlbumController.php (117)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/13 23:48:06 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (114)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/13 23:49:49 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (114)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)

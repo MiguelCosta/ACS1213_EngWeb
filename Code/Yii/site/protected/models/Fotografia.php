@@ -38,7 +38,7 @@ class Fotografia extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('album_id', 'required'),
+			array('album_id, path, descricao', 'required'),
 			array('album_id, produto_id', 'numerical', 'integerOnly'=>true),
 			array('path, descricao', 'length', 'max'=>1024, 'on'=>'insert,update'),
 			// The following rule is used by search().

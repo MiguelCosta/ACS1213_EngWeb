@@ -5,17 +5,17 @@
 $this->breadcrumbs=array(
 	'Albums'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Editar',
 );
 
 $this->menu=array(
-	array('label'=>'List Album', 'url'=>array('index')),
-	array('label'=>'Create Album', 'url'=>array('create')),
-	array('label'=>'View Album', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Album', 'url'=>array('admin')),
+	array('label'=>'Ver Albuns', 'url'=>array('index')),
+	array('label'=>'Criar Album', 'url'=>array('create')),
+	array('label'=>'Ver Album', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Gerir Albuns', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Album <?php echo $model->id; ?></h1>
+<h1>Editar Album <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

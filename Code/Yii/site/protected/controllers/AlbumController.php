@@ -53,7 +53,7 @@ class AlbumController extends Controller
 	{
 		//Yii::log('There is some error', CLogger::LEVEL_ERROR, 'app,context');
 		//Yii::log('There is some warning', CLogger::LEVEL_WARNING);
-		Yii::log("AlbumID: $id\n", CLogger::LEVEL_INFO);
+		//Yii::log("AlbumID: $id\n", CLogger::LEVEL_INFO);
 		
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
@@ -118,7 +118,7 @@ class AlbumController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 
 	/**

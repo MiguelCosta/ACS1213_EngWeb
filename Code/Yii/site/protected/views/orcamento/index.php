@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Orcamento', 'url'=>array('create')),
-	array('label'=>'Manage Orcamento', 'url'=>array('admin')),
+	array('label'=>'Criar Orcamento', 'url'=>array('create')),
+	array('label'=>'Gerir Orcamentos', 'url'=>array('admin')),
 );
 ?>
 

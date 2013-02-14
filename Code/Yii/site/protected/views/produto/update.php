@@ -5,17 +5,17 @@
 $this->breadcrumbs=array(
 	'Produtos'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Editar',
 );
 
 $this->menu=array(
-	array('label'=>'List Produto', 'url'=>array('index')),
-	array('label'=>'Create Produto', 'url'=>array('create')),
-	array('label'=>'View Produto', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Produto', 'url'=>array('admin')),
+	array('label'=>'Ver Produtos', 'url'=>array('index')),
+	array('label'=>'Criar Produto', 'url'=>array('create')),
+	array('label'=>'Ver Produto', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Gerir Produtos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Produto <?php echo $model->id; ?></h1>
+<h1>Editar Produto <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

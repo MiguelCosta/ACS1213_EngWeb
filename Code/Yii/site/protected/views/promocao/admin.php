@@ -3,13 +3,13 @@
 /* @var $model Promocao */
 
 $this->breadcrumbs=array(
-	'Promocaos'=>array('index'),
-	'Manage',
+	'Promocoes'=>array('index'),
+	'Gerir',
 );
 
 $this->menu=array(
-	array('label'=>'List Promocao', 'url'=>array('index')),
-	array('label'=>'Create Promocao', 'url'=>array('create')),
+	array('label'=>'Ver Promocoes', 'url'=>array('index')),
+	array('label'=>'Criar Promocao', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Promocaos</h1>
+<h1>Gerir Promocoes</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

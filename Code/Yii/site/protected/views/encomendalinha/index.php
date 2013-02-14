@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Encomendalinha', 'url'=>array('create')),
-	array('label'=>'Manage Encomendalinha', 'url'=>array('admin')),
+	array('label'=>'Criar Encomendalinha', 'url'=>array('create')),
+	array('label'=>'Gerir Encomendalinha', 'url'=>array('admin')),
 );
 ?>
 

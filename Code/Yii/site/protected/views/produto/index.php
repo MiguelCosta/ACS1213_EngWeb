@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Produto', 'url'=>array('create')),
-	array('label'=>'Manage Produto', 'url'=>array('admin')),
+	array('label'=>'Criar Produto', 'url'=>array('create')),
+	array('label'=>'Gerir Produtos', 'url'=>array('admin')),
 );
 ?>
 

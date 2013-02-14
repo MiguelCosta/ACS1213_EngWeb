@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Fotografia', 'url'=>array('create')),
-	array('label'=>'Manage Fotografia', 'url'=>array('admin')),
+	array('label'=>'Criar Fotografia', 'url'=>array('create')),
+	array('label'=>'Gerir Fotografias', 'url'=>array('admin')),
 );
 ?>
 

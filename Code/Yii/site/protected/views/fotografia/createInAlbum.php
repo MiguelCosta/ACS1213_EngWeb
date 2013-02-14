@@ -4,17 +4,17 @@
 
 $this->breadcrumbs=array(
 	'Fotografias'=>array('index'),
-	'Create',
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Fotografia', 'url'=>array('index')),
-	array('label'=>'Manage Fotografia', 'url'=>array('admin')),
+	array('label'=>'Ver Fotografias', 'url'=>array('index')),
+	array('label'=>'Editar Fotografia', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Fotografia</h1>
+<h1>Criar Fotografia</h1>
 
 <?php echo $this->renderPartial('_formInAlbum', 
 		array('model'=>$model,
-				'AlbumID'=>$albumID)); ?>
+				'albumID'=>$albumID)); ?>

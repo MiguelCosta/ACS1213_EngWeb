@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Orcamentos'=>array('index'),
-	'Create',
+	'Criar',
 );
 
 $this->menu=array(
-	array('label'=>'List Orcamento', 'url'=>array('index')),
-	array('label'=>'Manage Orcamento', 'url'=>array('admin')),
+	array('label'=>'Ver Orcamentos', 'url'=>array('index')),
+	array('label'=>'Gerir Orcamentos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Orcamento</h1>
+<h1>Criar Orcamento</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

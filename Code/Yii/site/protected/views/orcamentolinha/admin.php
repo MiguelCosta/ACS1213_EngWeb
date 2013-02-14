@@ -4,12 +4,12 @@
 
 $this->breadcrumbs=array(
 	'Orcamentolinhas'=>array('index'),
-	'Manage',
+	'Gerir',
 );
 
 $this->menu=array(
-	array('label'=>'List Orcamentolinha', 'url'=>array('index')),
-	array('label'=>'Create Orcamentolinha', 'url'=>array('create')),
+	array('label'=>'Ver Orcamentolinhas', 'url'=>array('index')),
+	array('label'=>'Criar Orcamentolinha', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -26,7 +26,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Orcamentolinhas</h1>
+<h1>Gerir Orcamentolinhas</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

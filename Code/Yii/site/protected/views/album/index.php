@@ -3,16 +3,16 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Albums',
+	'Albuns',
 );
 
 $this->menu=array(
-	array('label'=>'Create Album', 'url'=>array('create')),
-	array('label'=>'Manage Album', 'url'=>array('admin')),
+	array('label'=>'Criar Album', 'url'=>array('create')),
+	array('label'=>'Gerir Albuns', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Albums</h1>
+<h1>Albuns</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

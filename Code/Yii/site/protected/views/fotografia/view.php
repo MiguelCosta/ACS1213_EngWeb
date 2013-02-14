@@ -8,15 +8,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Fotografia', 'url'=>array('index')),
-	array('label'=>'Create Fotografia', 'url'=>array('create')),
-	array('label'=>'Update Fotografia', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Fotografia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Fotografia', 'url'=>array('admin')),
+	array('label'=>'Ver Fotografias', 'url'=>array('index')),
+	array('label'=>'Criar Fotografia', 'url'=>array('create')),
+	array('label'=>'Editar Fotografia', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar Fotografia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Gerir Fotografias', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Fotografia #<?php echo $model->id; ?></h1>
+<h1>Fotografia #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
