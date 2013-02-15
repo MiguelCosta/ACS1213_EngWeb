@@ -8,7 +8,10 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Vidriluz',
-
+	
+	'language' => 'pt',
+	
+		
 	// preloading 'log' component
 	'preload'=>array('log'),
 

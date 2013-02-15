@@ -12,7 +12,7 @@ $this->menu=array(
 	array('label'=>'Criar Produto', 'url'=>array('create')),
 	array('label'=>'Editar Produto', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Produto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Gerir Produto', 'url'=>array('admin')),
+	array('label'=>'Gerir Produtos', 'url'=>array('admin')),
 );
 ?>
 

@@ -961,3 +961,6 @@ in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php 
 2013/02/13 23:49:49 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
 in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (114)
 in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/15 00:57:42 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (114)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)

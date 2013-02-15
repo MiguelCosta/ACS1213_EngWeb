@@ -29,9 +29,10 @@
 	<?php echo CHtml::encode($data->estado); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('users_id')); ?>:</b>
-	<?php echo CHtml::encode($data->users_id); ?>
+	<?php /*
+	<b> echo CHtml::encode($data->getAttributeLabel('users_id')); ?>:</b>
+	<?php echo CHtml::encode($data->users_id); 
 	<br />
-
+*/ ?>
 
 </div>

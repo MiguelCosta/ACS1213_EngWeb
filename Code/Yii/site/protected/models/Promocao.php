@@ -39,7 +39,7 @@ class Promocao extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nome, datainicial, datafinal, produto_id', 'required'),
+			array('nome, descricao, datainicial, datafinal, produto_id', 'required'),
 			array('produto_id', 'numerical', 'integerOnly'=>true),
 			array('nome', 'length', 'max'=>255),
 			array('descricao', 'length', 'max'=>1024),

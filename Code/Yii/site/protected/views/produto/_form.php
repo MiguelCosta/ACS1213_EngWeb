@@ -11,7 +11,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos com <span class="required">*</span> sao obrigatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -46,7 +46,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'dimensao maxima'); ?>
+		<?php echo $form->labelEx($model,'dimensaomax'); ?>
 		<?php echo $form->textField($model,'dimensaomax',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'dimensaomax'); ?>
 	</div>
@@ -64,7 +64,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Criar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

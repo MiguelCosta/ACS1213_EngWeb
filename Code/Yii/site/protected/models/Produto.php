@@ -42,7 +42,7 @@ class Produto extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nome', 'required'),
+			array('nome, tipo, cor, padrao, espessura, dimensaomax, manufacturas', 'required'),
 			array('nome', 'length', 'max'=>512),
 			array('tipo, cor, padrao, manufacturas, caixa', 'length', 'max'=>255),
 			array('espessura, dimensaomax', 'length', 'max'=>10),
