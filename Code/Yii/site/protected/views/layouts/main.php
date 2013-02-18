@@ -33,23 +33,22 @@
 							array('label'=>'Produtos', 'url'=>array('/produto/index'), 'items'=>array(
 									array('label'=>'Todos os produtos','url'=>array('/produto/index'), 'visible'=>!Yii::app()->user->isGuest),
 									array('label'=>'Gerir produtos','url'=>array('/produto/admin'), 'visible'=>!Yii::app()->user->isGuest),
-
 							)),
 							array('label'=>'Galeria','url'=>array('/album/index'), 'items'=>array(
 									array('label'=>'Todos os albuns','url'=>array('/album/index'), 'visible'=>!Yii::app()->user->isGuest),
 									array('label'=>'Gerir albuns','url'=>array('/album/admin'), 'visible'=>!Yii::app()->user->isGuest),
 							)),
-							array('label'=>'|'),
+							array('label'=>'|', 'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Orçamentos','url'=>array('/orcamento/index'), 'items'=>array(
 									array('label'=>'Todos os orçamentos','url'=>array('/orcamento/index'), 'visible'=>!Yii::app()->user->isGuest),
 									array('label'=>'Gerir orçamentos','url'=>array('/orcamento/admin'), 'visible'=>!Yii::app()->user->isGuest),
-							)),
+							), 'visible'=>!Yii::app()->user->isGuest),
 							array('label'=>'Encomendas','url'=>array('/encomenda/index'), 'items'=>array(
 									array('label'=>'Todas as encomendas','url'=>array('/encomenda/index'), 'visible'=>!Yii::app()->user->isGuest),
 									array('label'=>'Gerir encomendas','url'=>array('/encomenda/admin'), 'visible'=>!Yii::app()->user->isGuest),
-							)),
-							array('label'=>'Acerca', 'url'=>array('/site/page', 'view'=>'about')),
-							array('label'=>'Contactos', 'url'=>array('/site/contact')),
+							), 'visible'=>!Yii::app()->user->isGuest),
+							array('label'=>'Acerca', 'url'=>array('/site/page', 'view'=>'about'), 'visible'=>Yii::app()->user->isGuest),
+							array('label'=>'Contactos', 'url'=>array('/site/contact'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'|'),
 							array('label'=>'Procurar', 'url'=>array('/site/search')),
 							//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
