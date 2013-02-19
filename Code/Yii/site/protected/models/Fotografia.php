@@ -56,6 +56,7 @@ class Fotografia extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+				'produto' => array(self::BELONGS_TO, 'Produto', 'produto_id'),
 		);
 	}
 
@@ -94,4 +95,6 @@ class Fotografia extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	
 }

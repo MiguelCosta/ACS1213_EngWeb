@@ -52,6 +52,7 @@ class Album extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+				'fotografias' => array(self::HAS_MANY, 'Fotografia', 'album_id'),
 		);
 	}
 
@@ -85,5 +86,5 @@ class Album extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
+	}		
 }
