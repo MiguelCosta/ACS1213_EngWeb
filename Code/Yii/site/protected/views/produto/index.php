@@ -6,10 +6,12 @@ $this->breadcrumbs=array(
 	'Produtos',
 );
 
+if (!Yii::app()->user->isGuest) {
 $this->menu=array(
 	array('label'=>'Criar Produto', 'url'=>array('create')),
 	array('label'=>'Gerir Produtos', 'url'=>array('admin')),
-);
+ 	);
+}
 ?>
 
 <h1>Produtos</h1>

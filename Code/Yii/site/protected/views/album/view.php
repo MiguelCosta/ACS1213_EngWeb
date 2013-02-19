@@ -26,4 +26,11 @@ $this->menu=array(
 		'nome',
 		'data',
 	),
-)); ?>
+));
+ ?>
+<br/>
+<h1>Fotografias</h1>
+
+<?php 
+
+?>

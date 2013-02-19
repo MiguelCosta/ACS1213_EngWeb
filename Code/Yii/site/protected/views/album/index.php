@@ -5,11 +5,12 @@
 $this->breadcrumbs=array(
 	'Albuns',
 );
-
-$this->menu=array(
-	array('label'=>'Criar Album', 'url'=>array('create')),
-	array('label'=>'Gerir Albuns', 'url'=>array('admin')),
-);
+if (!Yii::app()->user->isGuest) {
+	$this->menu=array(
+		array('label'=>'Criar Album', 'url'=>array('create')),
+		array('label'=>'Gerir Albuns', 'url'=>array('admin')),
+	);
+}
 ?>
 
 <h1>Albuns</h1>
