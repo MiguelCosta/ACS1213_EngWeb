@@ -32,7 +32,7 @@ class OrcamentolinhaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','createInOrcamento'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -164,7 +164,7 @@ class OrcamentolinhaController extends Controller
 			$model->attributes=$_POST['Orcamentolinha'];
 			$model->orcamento_id = $orcamentoID;
 
-			Yii::log("OrcamentoID: $OrcamentoID", CLogger::LEVEL_INFO);
+			Yii::log("OrcamentoID: $orcamentoID", CLogger::LEVEL_INFO);
 				
 			if($model->save()){
 		
@@ -174,7 +174,7 @@ class OrcamentolinhaController extends Controller
 			}
 		}
 	
-		$this->render('actionCreateInOrcamento',array(
+		$this->render('createInOrcamento',array(
 				'model'=>$model,
 				'orcamentoID'=> $orcamentoID,
 		));

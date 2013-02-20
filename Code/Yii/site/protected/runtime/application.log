@@ -964,3 +964,9 @@ in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php 
 2013/02/15 00:57:42 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
 in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (114)
 in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/20 22:40:31 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vidriluzyii`.`encomendalinha`, CONSTRAINT `fk_encomendalinha_encomenda1` FOREIGN KEY (`encomenda_id`) REFERENCES `encomenda` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). A declaração SQL executada foi: DELETE FROM `encomenda` WHERE `encomenda`.`id`=2.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/EncomendaController.php (113)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/20 22:42:04 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vidriluzyii`.`encomendalinha`, CONSTRAINT `fk_encomendalinha_encomenda1` FOREIGN KEY (`encomenda_id`) REFERENCES `encomenda` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). A declaração SQL executada foi: DELETE FROM `encomenda` WHERE `encomenda`.`id`=2.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/EncomendaController.php (113)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)

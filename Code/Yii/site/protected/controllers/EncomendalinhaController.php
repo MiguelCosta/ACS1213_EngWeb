@@ -32,7 +32,7 @@ class EncomendalinhaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','createInEncomenda'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -145,6 +145,38 @@ class EncomendalinhaController extends Controller
 
 	public function actionCreateInEncomenda()
 	{
+			$model=new Encomendalinha;
+			$encomendaID = 1;
+		
+			if(isset($_GET['EncomendaID']))
+			{
+				$encomendaID = $_GET['EncomendaID'];
+			}
+		
+			// Uncomment the following line if AJAX validation is needed
+			//$this->performAjaxValidation($model);
+		
+			if(isset($_POST['Encomendalinha']))
+			{
+		
+				$rnd = rand(0,9999);  // generate random number between 0-9999
+				$model->attributes=$_POST['Encomendalinha'];
+				$model->encomenda_id = $encomendaID;
+		
+				Yii::log("EncomendaID: $encomendaID", CLogger::LEVEL_INFO);
+		
+				if($model->save()){
+		
+					//$this->redirect(array('admin'));
+					$this->redirect(array('view','id'=>$model->id));
+		
+				}
+			}
+		
+			$this->render('createInEncomenda',array(
+					'model'=>$model,
+					'encomendaID'=> $encomendaID,
+			));
 	}
 
 
