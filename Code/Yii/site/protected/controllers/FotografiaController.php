@@ -32,7 +32,7 @@ class FotografiaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','createInAlbum'),
+				'actions'=>array('create','update','createInAlbum', 'AdminInAlbum'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -170,6 +170,20 @@ class FotografiaController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+	
+	public function actionAdminInAlbum()
+	{
+		$model=new Fotografia('search');
+		$model->unsetAttributes();  // clear any default values
+	
+		if(isset($_GET['AlbumID']))
+			$model->attributes=$_GET['AlbumID'];
+	
+		$this->render('adminInAlbum',array(
+				'model'=>$model,
+				'albumID'=> $albumID,
 		));
 	}
 	

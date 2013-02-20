@@ -14,7 +14,7 @@ if (!Yii::app()->user->isGuest) {
 		array('label'=>'Editar Album', 'url'=>array('update', 'id'=>$model->id)),
 		array('label'=>'Eliminar Album', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Tem a certeza que pretende eliminar este item?')),
 		array('label'=>'Adicionar Fotografia', 'url'=>array('/fotografia/CreateInAlbum/AlbumID/'.$model->id)),
-		array('label'=>'Gerir Albuns', 'url'=>array('admin')),
+		array('label'=>'Gerir Fotografias', 'url'=>array('/fotografia/AdminInAlbum/AlbumID/'.$model->id)),
 
 	);
 }
@@ -48,7 +48,7 @@ if (!Yii::app()->user->isGuest) {
 
 	/* isto é só para testar */
 	/* faz o dump da variável $model->fotografias, ou seja, mostra todo o conteúdo da variável */
-	echo '<br/><br/><h2>Isto e o vardump da variavel $model->fotografias:</h2>';
-	echo CVarDumper::dump($model->fotografias, 3, true);
+	// echo '<br/><br/><h2>Isto e o vardump da variavel $model->fotografias:</h2>';
+	// echo CVarDumper::dump($model->fotografias, 3, true);
 	
 ?>

@@ -33,10 +33,11 @@
 		<?php echo $form->error($model,'produto_id'); ?>
 	</div>
 
+	<?php $model->orcamento_id = $orcamentoID;?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'orcamento_id'); ?>
-		<?php echo $form->textField($model,'orcamento_id'); ?>
-		<?php echo $form->error($model,'orcamento_id'); ?>
+		<?php //echo $form->labelEx($model,'orcamento_id'); ?>
+		<?php echo $form->hiddenField($model,'orcamento_id', array('type'=>"hidden")); ?>
+		<?php //echo $form->error($model,'orcamento_id'); ?>
 	</div>
 
 	<div class="row buttons">

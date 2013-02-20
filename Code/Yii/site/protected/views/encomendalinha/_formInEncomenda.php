@@ -21,10 +21,11 @@
 		<?php echo $form->error($model,'descricao'); ?>
 	</div>
 
+	<?php $model->encomenda_id = $encomendaID;?>
 	<div class="row">
-		<?php echo $form->labelEx($model,'encomenda_id'); ?>
-		<?php echo $form->textField($model,'encomenda_id'); ?>
-		<?php echo $form->error($model,'encomenda_id'); ?>
+		<?php // echo $form->labelEx($model,'encomenda_id'); ?>
+		<?php echo $form->hiddenField($model,'encomenda_id', array('type'=>"hidden")); ?>
+		<?php // echo $form->error($model,'encomenda_id'); ?>
 	</div>
 
 	<div class="row">
