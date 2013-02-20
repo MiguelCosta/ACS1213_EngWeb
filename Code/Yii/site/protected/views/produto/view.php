@@ -7,13 +7,15 @@ $this->breadcrumbs=array(
 	$model->id,
 );
 
-$this->menu=array(
-	array('label'=>'Ver Produtos', 'url'=>array('index')),
-	array('label'=>'Criar Produto', 'url'=>array('create')),
-	array('label'=>'Editar Produto', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Eliminar Produto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Gerir Produtos', 'url'=>array('admin')),
-);
+if (!Yii::app()->user->isGuest) {
+	$this->menu=array(
+		array('label'=>'Ver Produtos', 'url'=>array('index')),
+		array('label'=>'Criar Produto', 'url'=>array('create')),
+		array('label'=>'Editar Produto', 'url'=>array('update', 'id'=>$model->id)),
+		array('label'=>'Eliminar Produto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+		array('label'=>'Gerir Produtos', 'url'=>array('admin')),
+	);
+}
 ?>
 
 <h1>Produto #<?php echo $model->id; ?></h1>

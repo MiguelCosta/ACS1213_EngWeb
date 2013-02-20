@@ -9,6 +9,7 @@ if (!Yii::app()->user->isGuest) {
 	$this->menu=array(
 		array('label'=>'Criar Album', 'url'=>array('create')),
 		array('label'=>'Gerir Albuns', 'url'=>array('admin')),
+		array('label'=>'Gerir Fotografias', 'url'=>array('/fotografia/admin')),
 	);
 }
 ?>

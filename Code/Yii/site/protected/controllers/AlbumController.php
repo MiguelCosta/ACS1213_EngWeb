@@ -114,7 +114,13 @@ class AlbumController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model=$this->loadModel($id);
+
+		foreach($model->fotografias as $foto){
+			$foto->delete();
+		}
+		
+		$model->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
