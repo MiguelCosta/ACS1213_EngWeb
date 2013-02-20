@@ -13,6 +13,7 @@ $this->menu=array(
 	array('label'=>'Editar Encomenda', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Encomenda', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Gerir Encomendas', 'url'=>array('admin')),
+	array('label'=>'Adicionar Linha de Encomenda', 'url'=>array('/encomendalinha/CreateInEncomenda/EncomendaID/'.$model->id)),
 );
 ?>
 

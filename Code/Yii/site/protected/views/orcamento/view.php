@@ -13,6 +13,8 @@ $this->menu=array(
 	array('label'=>'Editar Orcamento', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Orcamento', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Gerir Orcamentos', 'url'=>array('admin')),
+	array('label'=>'Adicionar Linha de Orcamento', 'url'=>array('/orcamentolinha/CreateInOrcamento/OrcamentoID/'.$model->id)),
+
 );
 ?>
 

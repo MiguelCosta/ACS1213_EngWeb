@@ -143,6 +143,45 @@ class OrcamentolinhaController extends Controller
 		));
 	}
 
+
+	public function actionCreateInOrcamento()
+	{
+		$model=new Orcamentolinha;
+		$orcamentoID = 1;
+		
+		if(isset($_GET['OrcamentoID']))
+		{
+			$orcamentoID = $_GET['OrcamentoID'];
+		}
+		
+		// Uncomment the following line if AJAX validation is needed
+		//$this->performAjaxValidation($model);
+	
+		if(isset($_POST['Orcamentolinha']))
+		{
+		
+			$rnd = rand(0,9999);  // generate random number between 0-9999
+			$model->attributes=$_POST['Orcamentolinha'];
+			$model->orcamento_id = $orcamentoID;
+
+			Yii::log("OrcamentoID: $OrcamentoID", CLogger::LEVEL_INFO);
+				
+			if($model->save()){
+		
+				//$this->redirect(array('admin'));
+				$this->redirect(array('view','id'=>$model->id));
+	
+			}
+		}
+	
+		$this->render('actionCreateInOrcamento',array(
+				'model'=>$model,
+				'orcamentoID'=> $orcamentoID,
+		));
+	}
+
+
+
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
