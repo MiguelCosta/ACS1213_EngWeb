@@ -14,7 +14,7 @@ if (!Yii::app()->user->isGuest) {
 		array('label'=>'Editar Album', 'url'=>array('update', 'id'=>$model->id)),
 		array('label'=>'Eliminar Album', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Tem a certeza que pretende eliminar este item?')),
 		array('label'=>'Adicionar Fotografia', 'url'=>array('/fotografia/CreateInAlbum/AlbumID/'.$model->id)),
-		array('label'=>'Gerir Fotografias', 'url'=>array('/fotografia/AdminInAlbum/AlbumID/'.$model->id)),
+		array('label'=>'Gerir Fotografias', 'url'=>array('AdminFotos')),
 
 	);
 }
