@@ -3,14 +3,10 @@
 /* @var $model Fotografia */
 
 $this->breadcrumbs=array(
-	'Fotografias'=>array('index'),
+	'Album '.$albumID=>array('/album/'.$albumID),
 	'Criar',
 );
 
-$this->menu=array(
-	array('label'=>'Ver Fotografias', 'url'=>array('index')),
-	array('label'=>'Editar Fotografia', 'url'=>array('admin')),
-);
 ?>
 
 <h1>Criar Fotografia</h1>

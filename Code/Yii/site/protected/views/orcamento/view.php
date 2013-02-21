@@ -14,7 +14,7 @@ $this->menu=array(
 	array('label'=>'Eliminar Orcamento', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Gerir Orcamentos', 'url'=>array('admin')),
 	array('label'=>'Adicionar Linha de Orcamento', 'url'=>array('/orcamentolinha/CreateInOrcamento/OrcamentoID/'.$model->id)),
-
+	array('label'=>'Gerir Linhas', 'url'=>array('/orcamentolinha/admin?OrcamentoID='.$model->id)),
 );
 ?>
 
@@ -49,7 +49,7 @@ $this->menu=array(
 
 	/* isto é só para testar */
 	/* faz o dump da variável $model->fotografias, ou seja, mostra todo o conteúdo da variável */
-	echo '<br/><br/><h2>Isto e o vardump da variavel $model->fotografias:</h2>';
-	echo CVarDumper::dump($model->linhas, 3, true);
+	//echo '<br/><br/><h2>Isto e o vardump da variavel $model->fotografias:</h2>';
+	//echo CVarDumper::dump($model->linhas, 3, true);
 	
 ?>

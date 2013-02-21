@@ -26,24 +26,19 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Gerir Encomendalinhas</h1>
+<h1>Gerir Linhas da Encomenda</h1>
 
-<p>
-Pode utilizar os operadores (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-ou <b>=</b>) no inicio de cada pesquisa para especificar como a comparacao deve ser feita.
-</p>
-
-<?php echo CHtml::link('Pesquisa Avancada','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+<?php
+if($encomendaID != null)
+	$values = new CActiveDataProvider('Encomendalinha', array('criteria' => array('condition' => 'encomenda_id='. $encomendaID,)));
+else
+	$values = $model->search();
+	
+?>	
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'encomendalinha-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	'dataProvider'=>$values,
 	'columns'=>array(
 		'id',
 		'descricao',

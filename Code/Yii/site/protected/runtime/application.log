@@ -970,3 +970,39 @@ in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php 
 2013/02/20 22:42:04 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vidriluzyii`.`encomendalinha`, CONSTRAINT `fk_encomendalinha_encomenda1` FOREIGN KEY (`encomenda_id`) REFERENCES `encomenda` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION). A declaração SQL executada foi: DELETE FROM `encomenda` WHERE `encomenda`.`id`=2.
 in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/EncomendaController.php (113)
 in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 16:57:57 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'albumID' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `fotografia` `t` WHERE albumID = ?. Bound with 0='1'.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (172)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 16:57:58 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'albumID' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `fotografia` `t` WHERE albumID = ?. Bound with 0='1'.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (172)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 17:01:15 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'albumID' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `fotografia` `t` WHERE albumID = 1.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (174)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 17:01:16 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'albumID' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `fotografia` `t` WHERE albumID = 1.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (174)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 17:23:46 [warning] [application] Failed to set unsafe attribute "id" of "Fotografia".
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (178)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 17:23:46 [warning] [application] Failed to set unsafe attribute "path" of "Fotografia".
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (178)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 17:28:33 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.album_ide' in 'where clause'. A declaração SQL executada foi: SELECT * FROM fotografia t WHERE t.album_ide = 1.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (176)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 17:28:34 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.album_ide' in 'where clause'. A declaração SQL executada foi: SELECT * FROM fotografia t WHERE t.album_ide = 1.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (176)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/index.php (13)
+2013/02/21 17:53:07 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. A declaração SQL executada foi: SELECT COUNT(*) FROM `fotografia` `t` WHERE album_id= .
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/views/fotografia/admin.php (58)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php (47)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (178)
+2013/02/21 17:53:08 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. A declaração SQL executada foi: SELECT COUNT(*) FROM `fotografia` `t` WHERE album_id= .
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/views/fotografia/admin.php (58)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php (47)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (178)
+2013/02/21 18:01:29 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetchColumn(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. A declaração SQL executada foi: SELECT COUNT(*) FROM `fotografia` `t` WHERE album_id=.
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/views/fotografia/admin.php (51)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/extensions/yii-debug-toolbar/components/YiiDebugViewRenderer.php (47)
+in /Applications/XAMPP/xamppfiles/htdocs/ACS1213_EngWeb/Code/Yii/site/protected/controllers/FotografiaController.php (178)

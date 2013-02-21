@@ -135,11 +135,15 @@ class EncomendalinhaController extends Controller
 	{
 		$model=new Encomendalinha('search');
 		$model->unsetAttributes();  // clear any default values
+		
+		$encomendaID = $_GET['EncomendaID'];
+		
 		if(isset($_GET['Encomendalinha']))
 			$model->attributes=$_GET['Encomendalinha'];
 
 		$this->render('admin',array(
 			'model'=>$model,
+				'encomendaID'=>$encomendaID
 		));
 	}
 

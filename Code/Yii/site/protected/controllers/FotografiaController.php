@@ -127,6 +127,7 @@ class FotografiaController extends Controller
 				
 			}
 		}
+		
 
 		$this->render('update',array(
 			'model'=>$model,
@@ -165,11 +166,15 @@ class FotografiaController extends Controller
 	{
 		$model=new Fotografia('search');
 		$model->unsetAttributes();  // clear any default values
+		
+		$albumID = $_GET['AlbumID'];
+		
 		if(isset($_GET['Fotografia']))
 			$model->attributes=$_GET['Fotografia'];
-
+		
 		$this->render('admin',array(
 			'model'=>$model,
+				'albumID'=>$albumID
 		));
 	}
 

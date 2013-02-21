@@ -3,7 +3,7 @@
 /* @var $model Fotografia */
 
 $this->breadcrumbs=array(
-	'Fotografias'=>array('index'),
+	'Gerir Fotografias'=>array('/fotografia/admin?AlbumID='.$model->getAttribute('album_id')),
 	$model->id,
 );
 
@@ -12,7 +12,7 @@ $this->menu=array(
 	array('label'=>'Criar Fotografia', 'url'=>array('create')),
 	array('label'=>'Editar Fotografia', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Fotografia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Gerir Fotografias', 'url'=>array('admin')),
+	array('label'=>'Gerir Fotografias', 'url'=>array('/fotografia/admin?AlbumID='.$model->getAttribute('album_id'))),
 );
 ?>
 

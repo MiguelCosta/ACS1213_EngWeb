@@ -135,11 +135,15 @@ class OrcamentolinhaController extends Controller
 	{
 		$model=new Orcamentolinha('search');
 		$model->unsetAttributes();  // clear any default values
+		
+		$orcamentoID = $_GET['OrcamentoID'];
+		
 		if(isset($_GET['Orcamentolinha']))
 			$model->attributes=$_GET['Orcamentolinha'];
 
 		$this->render('admin',array(
 			'model'=>$model,
+				'orcamentoID'=>$orcamentoID
 		));
 	}
 
