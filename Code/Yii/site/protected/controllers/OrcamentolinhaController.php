@@ -173,7 +173,7 @@ class OrcamentolinhaController extends Controller
 			if($model->save()){
 		
 				//$this->redirect(array('admin'));
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('Orcamento/view','id'=>$model->orcamento_id));
 	
 			}
 		}

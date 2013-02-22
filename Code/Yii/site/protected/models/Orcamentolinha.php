@@ -94,4 +94,9 @@ class Orcamentolinha extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function LinhaToArray(){
+		$produto = Produto::model()->findByPk($this->produto_id);
+		return array($this->id, $this->descricao, $produto->nome, number_format($this->valor, 2, ',', ' '));	
+	}
 }

@@ -77,7 +77,7 @@ class Orcamento extends CActiveRecord
 			'data' => 'Data',
 			'anexos' => 'Anexos',
 			'estado' => 'Estado',
-			'valortotal' => 'Valortotal',
+			'valortotal' => 'Valor Total',
 			'users_id' => 'Users',
 		);
 	}
@@ -105,5 +105,25 @@ class Orcamento extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	public function GetValorTotal(){
+		$result = 0;
+		foreach ($this->linhas as $l){
+			$result += $l->valor;
+		}	
+		return number_format($result, 2, ',', ' ');
+	}
+	
+	public function GetLinhasArray(){
+		$result = array();
+		foreach ($this->linhas as $l){
+			array_push($result,$l->LinhaToArray());
+		}
+		return $result;
+	}
+	
+	public function GetCodigo(){
+		return $this->serie . '/' . $this->numero;	
 	}
 }

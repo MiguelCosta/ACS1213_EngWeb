@@ -29,7 +29,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'produto_id'); ?>
-		<?php echo $form->textField($model,'produto_id'); ?>
+		<?php echo $form->dropDownList($model,'produto_id',
+				CHtml::listData(Produto::model()->findAll(array('order' => 'nome')), 'id', 'nome'),
+				array('empty'=>'Escolha o produto...'));?>
 		<?php echo $form->error($model,'produto_id'); ?>
 	</div>
 

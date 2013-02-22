@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Orcamentos'=>array('index'),
-	$model->id,
+	$model->GetCodigo(),
 );
 
 $this->menu=array(
@@ -18,7 +18,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Orcamento #<?php echo $model->id; ?></h1>
+<h1>Orcamento <?php echo $model->GetCodigo(); ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -29,27 +29,37 @@ $this->menu=array(
 		'data',
 		'anexos',
 		'estado',
-		'valortotal',
-		'users_id',
+		//'valortotal',
+		//'users_id',
+		array(
+			'name'=>'users_id',
+			//'type'=>'html',
+			'value'=>User::model()->findByPk($model->users_id)->username,
+		),
+		array(
+			'name'=>'valortotal',
+			'value'=>$model->GetValorTotal(),
+		),
 	),
 )); ?>
 
-<br/>
-<h1> Pedidos </h1>
-<?php
-	/* http://www.yiiframework.com/wiki/428/drills-search-by-a-has_many-relation/ */
-	/* http://www.yiiframework.com/doc/guide/1.1/en/database.arr */
-	
-	foreach ($model->linhas as $linha){
-		echo '<br/><br/>';
-		echo '<h6>ID da Linha:</h6>'.$linha->id;
-		echo '<h6>Descrição:</h6>'.$linha->descricao;
-		echo '<h6>Produto:</h6>'.$linha->produto_id;
-	}
 
-	/* isto é só para testar */
-	/* faz o dump da variável $model->fotografias, ou seja, mostra todo o conteúdo da variável */
-	//echo '<br/><br/><h2>Isto e o vardump da variavel $model->fotografias:</h2>';
-	//echo CVarDumper::dump($model->linhas, 3, true);
+
+<?php
+
+$columnsArray = array('ID','Descri��o','Produto','Valor');
+$rowsArray = $model->GetLinhasArray();
+
+$this->widget('ext.htmlTableUi.htmlTableUi',array(
+		'collapsed'=>false,
+		//'editable'=>true,
+		'enableSort'=>true,
+		'exportUrl'=>'site/exportTable',
+		'title'=>'Detalhes',
+		//'subtitle'=>'Rev 1.3.3',
+		'columns'=>$columnsArray,
+		'rows'=>$rowsArray,
+		'footer'=>'Valor Total: '.$model->GetValorTotal(),
+));
 	
 ?>
