@@ -3,14 +3,10 @@
 /* @var $model Encomenda */
 
 $this->breadcrumbs=array(
-	'Encomendas'=>array('index'),
+	'Encomendas'=>array('indexByUser?UserID='.Yii::app()->user->id),
 	'Criar',
 );
 
-$this->menu=array(
-	array('label'=>'Ver Encomendas', 'url'=>array('index')),
-	array('label'=>'Gerir Encomendas', 'url'=>array('admin')),
-);
 ?>
 
 <h1>Criar Encomenda</h1>

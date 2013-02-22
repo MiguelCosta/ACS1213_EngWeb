@@ -3,7 +3,7 @@
 /* @var $model Encomendalinha */
 
 $this->breadcrumbs=array(
-	'Encomendalinhas'=>array('index'),
+	'Encomenda'=>array('encomenda/'.$encomendaID),
 	'Criar',
 );
 ?>

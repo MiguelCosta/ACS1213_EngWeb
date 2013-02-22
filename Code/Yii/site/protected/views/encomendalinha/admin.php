@@ -3,14 +3,10 @@
 /* @var $model Encomendalinha */
 
 $this->breadcrumbs=array(
-	'Encomendalinhas'=>array('index'),
+	'Encomenda'=>array('encomenda/'.$encomendaID),
 	'Gerir',
 );
 
-$this->menu=array(
-	array('label'=>'Ver Encomendalinhas', 'url'=>array('index')),
-	array('label'=>'Criar Encomendalinha', 'url'=>array('create')),
-);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

@@ -3,16 +3,9 @@
 /* @var $model Encomenda */
 
 $this->breadcrumbs=array(
-	'Encomendas'=>array('index'),
+	'Encomendas'=>array('indexByUser?UserID='.Yii::app()->user->id),
 	$model->id=>array('view','id'=>$model->id),
 	'Editar',
-);
-
-$this->menu=array(
-	array('label'=>'Ver Encomendas', 'url'=>array('index')),
-	array('label'=>'Criar Encomenda', 'url'=>array('create')),
-	array('label'=>'Ver Encomenda', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Gerir Encomendas', 'url'=>array('admin')),
 );
 ?>
 

@@ -82,6 +82,9 @@ class Encomenda extends CActiveRecord
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
+	
+	
+	
 	public function search()
 	{
 		// Warning: Please modify the following code to remove attributes that
@@ -101,4 +104,17 @@ class Encomenda extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public function GetLinhasArray(){
+		$result = array();
+		foreach ($this->linhas as $l){
+			array_push($result,$l->LinhaToArray());
+		}
+		return $result;
+	}
+	
+	public function GetCodigo(){
+		return $this->serie . '/' . $this->numero;
+	}
+
 }

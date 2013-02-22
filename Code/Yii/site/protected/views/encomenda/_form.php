@@ -17,13 +17,22 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'serie'); ?>
-		<?php echo $form->textField($model,'serie',array('size'=>45,'maxlength'=>45)); ?>
+		<?php echo $form->textField($model,'serie',array('readonly'=>true)); ?>
 		<?php echo $form->error($model,'serie'); ?>
 	</div>
+	
+	<?php 
+	if($model->numero == null || $model->numero == 0  ){
+		// vai buscar o numero max’mo existente na tabela de orcamentos
+		$enc = Yii::app()->db->createCommand()->select('numero')->from('encomenda')->order('numero DESC')->queryRow();
+				$model->numero = $enc['numero']+1;
+	}
+	?>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'numero'); ?>
-		<?php echo $form->textField($model,'numero'); ?>
+		<?php echo $form->textField($model,'numero', array('readonly'=>true)); ?>
 		<?php echo $form->error($model,'numero'); ?>
 	</div>
 
@@ -34,9 +43,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'anexos'); ?>
-		<?php echo $form->textField($model,'anexos',array('size'=>60,'maxlength'=>1024)); ?>
-		<?php echo $form->error($model,'anexos'); ?>
+		<?php //echo $form->labelEx($model,'anexos'); ?>
+		<?php echo $form->hiddenField($model,'anexos',array('size'=>60,'maxlength'=>1024)); ?>
+		<?php //echo $form->error($model,'anexos'); ?>
 	</div>
 
 	<div class="row">

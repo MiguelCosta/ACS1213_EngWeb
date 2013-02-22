@@ -29,14 +29,16 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'produto_id'); ?>
-		<?php echo $form->textField($model,'produto_id'); ?>
+		<?php echo $form->dropDownList($model,'produto_id',
+				CHtml::listData(Produto::model()->findAll(array('order' => 'nome')), 'id', 'nome'),
+				array('empty'=>'produto_id'));?>
 		<?php echo $form->error($model,'produto_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'orcamento_id'); ?>
-		<?php echo $form->textField($model,'orcamento_id'); ?>
-		<?php echo $form->error($model,'orcamento_id'); ?>
+		<?php //echo $form->labelEx($model,'orcamento_id'); ?>
+		<?php echo $form->hiddenField($model,'orcamento_id'); ?>
+		<?php //echo $form->error($model,'orcamento_id'); ?>
 	</div>
 
 	<div class="row buttons">

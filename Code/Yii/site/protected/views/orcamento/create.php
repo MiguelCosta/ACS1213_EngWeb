@@ -6,11 +6,6 @@ $this->breadcrumbs=array(
 	'Orcamentos'=>array('indexByUser?UserID='.Yii::app()->user->id),
 	'Criar',
 );
-
-$this->menu=array(
-	array('label'=>'Ver Orcamentos', 'url'=>array('index')),
-	array('label'=>'Gerir Orcamentos', 'url'=>array('admin')),
-);
 ?>
 
 <h1>Criar Orcamento</h1>

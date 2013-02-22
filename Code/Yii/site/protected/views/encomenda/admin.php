@@ -9,7 +9,6 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Ver Encomendas', 'url'=>array('index')),
-	array('label'=>'Criar Encomenda', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

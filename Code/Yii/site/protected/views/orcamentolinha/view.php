@@ -3,7 +3,8 @@
 /* @var $model Orcamentolinha */
 
 $this->breadcrumbs=array(
-	'Orcamento'=>array('orcamentolinha/admin?OrcamentoID='.$model->orcamento_id),
+	'Orcamento'=>array('orcamento/'.$model->orcamento_id),
+	'Gerir'=>array('orcamentolinha/admin?OrcamentoID='.$model->orcamento_id),
 	$model->id,
 );
 
@@ -13,7 +14,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>Linha do Orcamento #<?php echo $model->id; ?></h1>
+<h1>Linha <?php echo $model->id; ?> do Orcamento</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

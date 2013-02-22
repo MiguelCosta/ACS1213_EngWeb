@@ -10,6 +10,6 @@ $this->breadcrumbs=array(
 
 ?>
 
-<h1>Editar Orcamentolinha <?php echo $model->id; ?></h1>
+<h1>Editar Linha <?php echo $model->id; ?> do Orcamento</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
