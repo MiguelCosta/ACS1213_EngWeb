@@ -8,7 +8,6 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Criar Orcamento', 'url'=>array('create')),
-	array('label'=>'Gerir Orcamentos', 'url'=>array('admin')),
 );
 ?>
 

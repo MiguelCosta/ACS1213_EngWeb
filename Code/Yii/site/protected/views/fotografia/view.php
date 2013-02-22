@@ -8,11 +8,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Ver Fotografias', 'url'=>array('index')),
-	array('label'=>'Criar Fotografia', 'url'=>array('create')),
+	array('label'=>'Gerir Fotografias', 'url'=>array('/fotografia/admin?AlbumID='.$model->getAttribute('album_id'))),
 	array('label'=>'Editar Fotografia', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Fotografia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Gerir Fotografias', 'url'=>array('/fotografia/admin?AlbumID='.$model->getAttribute('album_id'))),
 );
 ?>
 

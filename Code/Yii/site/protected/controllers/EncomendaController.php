@@ -28,11 +28,11 @@ class EncomendaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','indexByUser'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -128,10 +128,19 @@ class EncomendaController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
+	{		
 		$dataProvider=new CActiveDataProvider('Encomenda');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+		));
+	}
+	
+	public function actionIndexByUser()
+	{
+		$userID = $_GET['UserID'];
+		$dataProvider=new CActiveDataProvider('Encomenda', array('criteria' => array('condition' => 'users_id='. $userID,)));
+		$this->render('index',array(
+				'dataProvider'=>$dataProvider,
 		));
 	}
 

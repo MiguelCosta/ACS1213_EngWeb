@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 	'Produtos',
 );
 
-if (!Yii::app()->user->isGuest) {
+if (Yii::app()->user->isAdmin()) {
 $this->menu=array(
 	array('label'=>'Criar Produto', 'url'=>array('create')),
 	array('label'=>'Gerir Produtos', 'url'=>array('admin')),

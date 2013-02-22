@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Criar Encomenda', 'url'=>array('create')),
-	array('label'=>'Gerir Encomendas', 'url'=>array('admin')),
+	array('label'=>'Gerir Encomendas', 'url'=>array('admin'), 'visible'=>Yii::app()->user->isAdmin()),
 );
 ?>
 

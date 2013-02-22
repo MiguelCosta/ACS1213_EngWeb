@@ -9,7 +9,6 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Ver Orcamentos', 'url'=>array('index')),
-	array('label'=>'Criar Orcamento', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

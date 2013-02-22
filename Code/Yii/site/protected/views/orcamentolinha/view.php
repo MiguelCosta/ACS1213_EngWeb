@@ -3,20 +3,17 @@
 /* @var $model Orcamentolinha */
 
 $this->breadcrumbs=array(
-	'Orcamentolinhas'=>array('index'),
+	'Orcamento'=>array('orcamentolinha/admin?OrcamentoID='.$model->orcamento_id),
 	$model->id,
 );
 
 $this->menu=array(
-	array('label'=>'Ver Orcamentolinhas', 'url'=>array('index')),
-	array('label'=>'Criar Orcamentolinha', 'url'=>array('create')),
-	array('label'=>'Editar Orcamentolinha', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Eliminar Orcamentolinha', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Gerir Orcamentolinhas', 'url'=>array('admin')),
+	array('label'=>'Editar Linha', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Eliminar Linha', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 );
 ?>
 
-<h1>Orcamentolinha #<?php echo $model->id; ?></h1>
+<h1>Linha do Orcamento #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

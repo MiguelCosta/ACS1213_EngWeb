@@ -3,7 +3,7 @@
 /* @var $model Orcamento */
 
 $this->breadcrumbs=array(
-	'Orcamentos'=>array('index'),
+	'Orcamentos'=>array('indexByUser?UserID='.Yii::app()->user->id),
 	'Criar',
 );
 

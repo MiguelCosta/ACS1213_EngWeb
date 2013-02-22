@@ -3,16 +3,13 @@
 /* @var $model Orcamento */
 
 $this->breadcrumbs=array(
-	'Orcamentos'=>array('index'),
+	'Orcamentos'=>array('indexByUser?UserID='.Yii::app()->user->id),
 	$model->GetCodigo(),
 );
 
 $this->menu=array(
-	array('label'=>'Ver Orcamentos', 'url'=>array('index')),
-	array('label'=>'Criar Orcamento', 'url'=>array('create')),
 	array('label'=>'Editar Orcamento', 'url'=>array('update', 'id'=>$model->id)),
 	array('label'=>'Eliminar Orcamento', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Gerir Orcamentos', 'url'=>array('admin')),
 	array('label'=>'Adicionar Linha de Orcamento', 'url'=>array('/orcamentolinha/CreateInOrcamento/OrcamentoID/'.$model->id)),
 	array('label'=>'Gerir Linhas', 'url'=>array('/orcamentolinha/admin?OrcamentoID='.$model->id)),
 );
@@ -47,7 +44,7 @@ $this->menu=array(
 
 <?php
 
-$columnsArray = array('ID','Descrição','Produto','Valor');
+$columnsArray = array('ID','Descricao','Produto','Valor');
 $rowsArray = $model->GetLinhasArray();
 
 $this->widget('ext.htmlTableUi.htmlTableUi',array(

@@ -3,14 +3,10 @@
 /* @var $model Orcamentolinha */
 
 $this->breadcrumbs=array(
-	'Orcamentolinhas'=>array('index'),
+	'Orcamento'=>array('orcamento/'.$orcamentoID),
 	'Gerir',
 );
 
-$this->menu=array(
-	array('label'=>'Ver Orcamentolinhas', 'url'=>array('index')),
-	array('label'=>'Criar Orcamentolinha', 'url'=>array('create')),
-);
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -26,7 +22,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Gerir Linhas de Oramento</h1>
+<h1>Gerir Linhas de Orcamento</h1>
 
 <?php
 if($orcamentoID != null)

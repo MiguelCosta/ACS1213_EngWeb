@@ -3,7 +3,7 @@
 /* @var $model OrcamentoLinha */
 
 $this->breadcrumbs=array(
-	'Linhas de Orcamento'=>array('index'),
+	'Orcamento'=>array('orcamento/'.$orcamentoID),
 	'Criar',
 );
 

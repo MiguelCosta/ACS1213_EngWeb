@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 	$model->nome,
 );
 
-if (!Yii::app()->user->isGuest) {
+if (Yii::app()->user->isAdmin()) {
 	$this->menu=array(
 		array('label'=>'Todos os Albuns', 'url'=>array('index')),
 		array('label'=>'Editar Album', 'url'=>array('update', 'id'=>$model->id)),

@@ -32,7 +32,7 @@ class OrcamentolinhaController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','createInOrcamento'),
+				'actions'=>array('create','update','createInOrcamento','admin','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
