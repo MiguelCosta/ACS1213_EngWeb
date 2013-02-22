@@ -5,3 +5,12 @@
 /Code/Yii/site/assets/*
 /Code/Yii/site/.project
 /Code/Yii/site/.buildpath
+
+/Code/Yii/site/protected/runtime/application.log
+
+/Code/Yii/site/protected/runtime/gii-1.1.13
+/Code/Yii/site/protected/runtime/gii-1.1.13/ModelCode.php
+
+/Code/Yii/site/protected/runtime/gii-1.1.13/FormCode.php
+
+/Code/Yii/site/protected/runtime/gii-1.1.13/CrudCode.php
