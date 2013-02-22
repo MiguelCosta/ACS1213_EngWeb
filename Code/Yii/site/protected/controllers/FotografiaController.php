@@ -205,7 +205,7 @@ class FotografiaController extends Controller
 			$model->attributes=$_POST['Fotografia'];
 			$model->album_id = $albumID;
 
-			Yii::log("AlbumID: $albumID", CLogger::LEVEL_INFO);
+			//Yii::log("AlbumID: $albumID", CLogger::LEVEL_INFO);
 			
 			$uploadedFile=CUploadedFile::getInstance($model,'path');
 			$fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
@@ -214,11 +214,11 @@ class FotografiaController extends Controller
 			if($model->save()){
 	
 				$fullpath = Yii::app()->params['fotospath'].$fileName;
-				Yii::log("FULL PATH: $fullpath", CLogger::LEVEL_INFO);
+				//Yii::log("FULL PATH: $fullpath", CLogger::LEVEL_INFO);
 				$uploadedFile->saveAs($fullpath);  // image will uplode to rootDirectory/images/fotos/
 	
 				//$this->redirect(array('admin'));
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('Album/view','id'=>$model->album_id));
 	
 			}
 		}

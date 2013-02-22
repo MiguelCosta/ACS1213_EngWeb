@@ -20,6 +20,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'application.extensions.*',
+		'application.extensions.galleria.*',
 		'application.modules.user.models.*',
         'application.modules.user.components.*',
 	),

@@ -33,21 +33,11 @@ if (Yii::app()->user->isAdmin()) {
 <br/>
 <h1>Fotografias</h1>
 
-<?php
-	/* http://www.yiiframework.com/wiki/428/drills-search-by-a-has_many-relation/ */
-	/* http://www.yiiframework.com/doc/guide/1.1/en/database.arr */
-	
-	// este foreach devolve todo o caminho da fotografia
-	foreach ($model->fotografias as $foto){
-		echo '<br/><br/>';
-		echo CHtml::image(Yii::app()->request->baseUrl.'/images/fotos/'.$foto->path,"image",array("width"=>200));
-		echo '<h6>Descricao:</h6>'.$foto->descricao;
-		echo '<h6>ID do produto:</h6>'.$foto->produto_id;
-	}
+<?php $this->beginWidget('galleria');
 
-	/* isto é só para testar */
-	/* faz o dump da variável $model->fotografias, ou seja, mostra todo o conteúdo da variável */
-	// echo '<br/><br/><h2>Isto e o vardump da variavel $model->fotografias:</h2>';
-	// echo CVarDumper::dump($model->fotografias, 3, true);
-	
+foreach ($model->fotografias as $foto){
+	echo '<img src="'.Yii::app()->request->baseUrl.'/images/fotos/'.$foto->path.'" alt="'.$foto->descricao.'" title="Imagem" />';
+}
+
+$this->endWidget();
 ?>
