@@ -48,9 +48,25 @@
 		<?php // echo $form->error($model,'anexos'); ?>
 	</div>
 
+	<?php 
+	if(is_null($model->estado))$model->estado = 'Para analise';
+	?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado',array('size'=>45,'maxlength'=>45)); ?>
+		<?php 
+		$op = array('size'=>45,'maxlength'=>45);
+		if(!Yii::app()->user->isAdmin()){ 
+			$op = array('readonly'=> True);
+		}
+		echo $form->textField($model,'estado', $op); 
+		
+		if(!Yii::app()->user->isAdmin()){
+			echo '<p class="hint">O estado vai sendo alterado pela administracao.</p>';
+		}
+		
+		?>
+		
+		
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
 

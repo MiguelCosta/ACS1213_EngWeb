@@ -23,7 +23,16 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'valor'); ?>
-		<?php echo $form->textField($model,'valor',array('size'=>10,'maxlength'=>10)); ?>
+		<?php 
+			$op = array('size'=>10,'maxlength'=>10);
+			if(!Yii::app()->user->isAdmin()) $op = array('readonly'=> True);
+			
+			echo $form->textField($model,'valor',$op); 
+			if(!Yii::app()->user->isAdmin()){
+				echo '<p class="hint">O valor vai ser indicado pela administracao.</p>';
+			}
+			
+			?>
 		<?php echo $form->error($model,'valor'); ?>
 	</div>
 

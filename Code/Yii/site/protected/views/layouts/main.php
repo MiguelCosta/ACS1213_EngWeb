@@ -39,7 +39,7 @@
 									array('label'=>'Gerir albuns','url'=>array('/album/admin'), 'visible'=>Yii::app()->user->isAdmin()),
 							)),
 							array('label'=>'|', 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Orçamentos','url'=>array('/orcamento/indexByUser?UserID='.Yii::app()->user->id), 'items'=>array(
+							array('label'=>'Orçamentos','url'=>array('/orcamento/index'), 'items'=>array(
 									array('label'=>'Todos os orçamentos','url'=>array('/orcamento/index'), 'visible'=>Yii::app()->user->isAdmin()),
 									array('label'=>'Gerir orçamentos','url'=>array('/orcamento/admin'), 'visible'=>Yii::app()->user->isAdmin()),
 							), 'visible'=>!Yii::app()->user->isGuest),
@@ -74,8 +74,8 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by Grupo 2.<br/>
+		Todos os direitos reservados.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
 

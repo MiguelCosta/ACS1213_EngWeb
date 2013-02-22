@@ -71,7 +71,7 @@ class OrcamentolinhaController extends Controller
 		{
 			$model->attributes=$_POST['Orcamentolinha'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('Orcamento/view','id'=>$model->orcamento_id));
 		}
 
 		$this->render('create',array(
@@ -95,7 +95,7 @@ class OrcamentolinhaController extends Controller
 		{
 			$model->attributes=$_POST['Orcamentolinha'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('Orcamento/view','id'=>$model->orcamento_id));
 		}
 
 		$this->render('update',array(
@@ -114,7 +114,7 @@ class OrcamentolinhaController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('Orcamento/index'));
 	}
 
 	/**
@@ -167,8 +167,6 @@ class OrcamentolinhaController extends Controller
 			$rnd = rand(0,9999);  // generate random number between 0-9999
 			$model->attributes=$_POST['Orcamentolinha'];
 			$model->orcamento_id = $orcamentoID;
-
-			Yii::log("OrcamentoID: $orcamentoID", CLogger::LEVEL_INFO);
 				
 			if($model->save()){
 		
@@ -198,6 +196,8 @@ class OrcamentolinhaController extends Controller
 		$model=Orcamentolinha::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
+		if(Yii::app()->user->isGuest)
+			throw new CHttpException(405, 'Nao tem permissao');
 		return $model;
 	}
 

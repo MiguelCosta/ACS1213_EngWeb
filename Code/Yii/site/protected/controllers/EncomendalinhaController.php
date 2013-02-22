@@ -156,24 +156,19 @@ class EncomendalinhaController extends Controller
 			{
 				$encomendaID = $_GET['EncomendaID'];
 			}
-		
+	
 			// Uncomment the following line if AJAX validation is needed
 			//$this->performAjaxValidation($model);
 		
 			if(isset($_POST['Encomendalinha']))
 			{
 		
-				$rnd = rand(0,9999);  // generate random number between 0-9999
 				$model->attributes=$_POST['Encomendalinha'];
 				$model->encomenda_id = $encomendaID;
 		
-				Yii::log("EncomendaID: $encomendaID", CLogger::LEVEL_INFO);
-		
 				if($model->save()){
-		
 					//$this->redirect(array('admin'));
-					$this->redirect(array('view','id'=>$model->id));
-		
+					$this->redirect(array('Encomenda/view','id'=>$model->encomenda_id));
 				}
 			}
 		
@@ -182,8 +177,6 @@ class EncomendalinhaController extends Controller
 					'encomendaID'=> $encomendaID,
 			));
 	}
-
-
 
 
 	/**
