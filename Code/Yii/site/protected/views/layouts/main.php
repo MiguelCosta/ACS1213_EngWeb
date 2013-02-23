@@ -47,7 +47,7 @@
 									array('label'=>'Todas as encomendas','url'=>array('/encomenda/index'), 'visible'=>Yii::app()->user->isAdmin()),
 									array('label'=>'Gerir encomendas','url'=>array('/encomenda/admin'), 'visible'=>Yii::app()->user->isAdmin()),
 							), 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Acerca', 'url'=>array('/site/page', 'view'=>'about'), 'visible'=>Yii::app()->user->isGuest),
+							array('label'=>'Sobre a Empresa', 'url'=>array('/site/page', 'view'=>'about'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'Contactos', 'url'=>array('/site/contact'), 'visible'=>Yii::app()->user->isGuest),
 							array('label'=>'|'),
 							array('label'=>'Procurar', 'url'=>array('/site/search')),
