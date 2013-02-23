@@ -6,6 +6,14 @@ $this->pageTitle=Yii::app()->name;
 
 <h1>Bem Vindo!</h1>
 
-<p>Seja bem vindo ao nosso website.
-É com orgulho, prazer e satisfação que lhe mostramos a nossa nova cara, a nossa nova imagem.
-Foi a pensar nos nossos clientes que melhoramos o nosso website para que toda a informação esteja acessível de forma mais rápida e organizada a todos os interessados.</p>
+<p>Seja bem vindo ao nosso website.</p>
+<p>Este website foi construido no ambito do módulo Engenharia Web da Unidade Curricular de Especialização Análise e Concepção de Software, do Mestrado em Engenharia Informática.</p>
+
+<p>O nosso grupo de trabalho (Grupo 2) é constituido pelos seguintes elementos:</p>
+<ul>
+<li> Miguel Costa - pg21488</li>
+<li> Hugo Frade- pg21492</li>
+<li> Milton Nunes- pg22797</li>
+</ul>
+
+<p> Este projeto teve como base a construção de um website para um empresa dedicada à industria vidreira. Para mais informações sobre esta empresa, visite o separador <b>Sobre a empresa</b>.</p>
