@@ -24,8 +24,11 @@
 
 	<div id="header">
 		<div id="logo">
-			<img src="../../grande.png" style="width: 30%">
-			<?php // echo CHtml::encode(Yii::app()->name);  ?>
+			<?php 
+				echo '<img src="'.Yii::app()->request->baseUrl.'/grande.png'.'" style="width: 30%" />'
+
+			// echo CHtml::encode(Yii::app()->name);  
+			?>
 		</div>
 	</div><!-- header -->
 
