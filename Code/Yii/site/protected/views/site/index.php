@@ -15,5 +15,3 @@ $this->pageTitle=Yii::app()->name;
 <li> Hugo Frade- pg21492</li>
 <li> Milton Nunes- pg22797</li>
 </ul>
-
-<p> Este projeto teve como base a construção de um website para um empresa dedicada à industria vidreira. Para mais informações sobre esta empresa, visite o separador <b>Sobre a empresa</b>.</p>
