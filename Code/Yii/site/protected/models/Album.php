@@ -87,4 +87,13 @@ class Album extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}		
+	
+	public function getCapa(){
+		$result = '';
+		
+		foreach ($this->fotografias as $foto){
+			$result = $foto->path;
+		}
+		return $result;
+	}
 }
