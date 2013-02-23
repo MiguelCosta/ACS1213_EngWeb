@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Produtos'=>array('index'),
-	$model->id,
+	$model->nome,
 );
 
 if (Yii::app()->user->isAdmin()) {
@@ -17,7 +17,7 @@ if (Yii::app()->user->isAdmin()) {
 }
 ?>
 
-<h1>Produto #<?php echo $model->id; ?></h1>
+<h1>Produto <?php echo $model->nome; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -33,3 +33,17 @@ if (Yii::app()->user->isAdmin()) {
 		'caixa',
 	),
 )); ?>
+
+<h1>Fotografias</h1>
+
+<?php $this->beginWidget('galleria');
+
+foreach ($model->fotografias as $foto){
+	echo '<img src="'.Yii::app()->request->baseUrl.'/images/fotos/'.$foto->path.'" alt="'.$foto->descricao.'" title="Imagem" />';
+}
+
+$this->endWidget();
+?>
+
+
+<?php $this->widget('application.extensions.WSocialButton', array('style'=>'box'));?>

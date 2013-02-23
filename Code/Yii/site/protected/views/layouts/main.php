@@ -43,7 +43,7 @@
 									array('label'=>'Todos os orçamentos','url'=>array('/orcamento/index'), 'visible'=>Yii::app()->user->isAdmin()),
 									array('label'=>'Gerir orçamentos','url'=>array('/orcamento/admin'), 'visible'=>Yii::app()->user->isAdmin()),
 							), 'visible'=>!Yii::app()->user->isGuest),
-							array('label'=>'Encomendas','url'=>array('/encomenda/indexByUser?UserID='.Yii::app()->user->id), 'items'=>array(
+							array('label'=>'Encomendas','url'=>array('/encomenda/index'), 'items'=>array(
 									array('label'=>'Todas as encomendas','url'=>array('/encomenda/index'), 'visible'=>Yii::app()->user->isAdmin()),
 									array('label'=>'Gerir encomendas','url'=>array('/encomenda/admin'), 'visible'=>Yii::app()->user->isAdmin()),
 							), 'visible'=>!Yii::app()->user->isGuest),

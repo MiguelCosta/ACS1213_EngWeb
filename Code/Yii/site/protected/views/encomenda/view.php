@@ -3,7 +3,7 @@
 /* @var $model Encomenda */
 
 $this->breadcrumbs=array(
-	'Encomendas'=>array('indexByUser?UserID='.Yii::app()->user->id),
+	'Encomendas'=>array('index'),
 	$model->GetCodigo(),
 );
 
@@ -26,7 +26,12 @@ $this->menu=array(
 		'data',
 		'anexos',
 		'estado',
-		'users_id',
+		//'users_id',
+		array(
+			'name'=>'users_id',
+			//'type'=>'html',
+			'value'=>User::model()->findByPk($model->users_id)->username,	
+		),
 	),
 )); ?>
 <br/>

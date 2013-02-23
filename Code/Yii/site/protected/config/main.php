@@ -10,6 +10,8 @@ return array(
 	'name'=>'Vidriluz',
 	
 	'language' => 'pt',
+		
+	//'theme'=>'bootstrap',
 	
 		
 	// preloading 'log' component
@@ -23,6 +25,10 @@ return array(
 		'application.extensions.galleria.*',
 		'application.modules.user.models.*',
         'application.modules.user.components.*',
+			
+			'ext.bootstrap-theme.widgets.*',
+			'ext.bootstrap-theme.helpers.*',
+			'ext.bootstrap-theme.behaviors.*',
 	),
 
 	'modules'=>array(

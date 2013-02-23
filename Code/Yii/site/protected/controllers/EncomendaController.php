@@ -28,7 +28,7 @@ class EncomendaController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','indexByUser'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -129,18 +129,17 @@ class EncomendaController extends Controller
 	 */
 	public function actionIndex()
 	{		
-		$dataProvider=new CActiveDataProvider('Encomenda');
+		$userID = Yii::app()->user->id;
+		if($userID == null || Yii::app()->user->isGuest)
+			throw new CHttpException(405, 'Não tem permissao');
+		
+		if (Yii::app()->user->isAdmin())
+			$dataProvider=new CActiveDataProvider('Encomenda');
+		else
+			$dataProvider=new CActiveDataProvider('Encomenda', array('criteria' => array('condition' => 'users_id='. $userID)));
+		
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
-		));
-	}
-	
-	public function actionIndexByUser()
-	{
-		$userID = $_GET['UserID'];
-		$dataProvider=new CActiveDataProvider('Encomenda', array('criteria' => array('condition' => 'users_id='. $userID,)));
-		$this->render('index',array(
-				'dataProvider'=>$dataProvider,
 		));
 	}
 

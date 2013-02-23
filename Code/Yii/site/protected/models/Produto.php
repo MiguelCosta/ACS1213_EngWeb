@@ -60,6 +60,7 @@ class Produto extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+				'fotografias' => array(self::HAS_MANY, 'Fotografia', 'produto_id'),
 		);
 	}
 

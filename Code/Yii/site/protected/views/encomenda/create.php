@@ -3,7 +3,7 @@
 /* @var $model Encomenda */
 
 $this->breadcrumbs=array(
-	'Encomendas'=>array('indexByUser?UserID='.Yii::app()->user->id),
+	'Encomendas'=>array('index'),
 	'Criar',
 );
 
