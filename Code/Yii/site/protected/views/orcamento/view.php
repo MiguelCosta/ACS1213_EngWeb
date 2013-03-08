@@ -49,7 +49,7 @@ $rowsArray = $model->GetLinhasArray();
 
 $this->widget('ext.htmlTableUi.htmlTableUi',array(
 		'collapsed'=>false,
-		//'editable'=>true,
+		'editable'=>true,
 		'enableSort'=>true,
 		'exportUrl'=>'site/exportTable',
 		'title'=>'Detalhes',

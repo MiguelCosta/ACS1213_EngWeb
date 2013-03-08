@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var config = {
-		siteURL		: 'di.uminho.pt/',	// Change this to your site
+		siteURL		: 'vidriluz.valedosousa.net/',	// Change this to your site
 		searchSite	: true,
 		type		: 'web',
 		append		: false,
